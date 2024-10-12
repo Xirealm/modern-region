@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>登录界面</title>
+    <link
+      rel="stylesheet"
+      href="static/css/login.css"
+    />
+    <link
+      rel="stylesheet"
+      href="static/css/common.css"
+    />
+    <link
+      rel="stylesheet"
+      href="static/css/bootsnav1.css"
+    />
+    <link
+      href="static/css/font.css"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="static/css/login.css"> -->
+  </head>
+
+  <body>
+    <div class="all">
+      <!-- 头部导航条 -->
+      <!-- <div class="header-content">
+      <div class="head-nav">
+        <div class="head-nav-content">
+          <div class="head-logo">
+            <a href="index.html">
+              <img src="static/image/login1.png" alt="">
+            </a>
+          </div>
+          <ul class="header-left">
+            <li>
+              <a href="data.html">数据中心</a>
+            </li>
+            <li>
+              <a href="map.html">民俗文化</a>
+            </li>
+            <li>
+              <a href="xiangqing.html">详细信息</a>
+            </li>
+            <li>
+              <a href="#">区域可视化</a>
+            </li>
+            <li>
+              <a href="#">生态合作</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+      <nav
+        class="navbar bg-gray navbar-default attr-border navbar-fixed dark no-background bootsnav"
+        style="position: fixed"
+      >
+        <div class="container-full">
+          <!-- Start Atribute Navigation -->
+          <!-- <div class="attr-nav" id="logOut">
+              <ul>
+                  <li><a href="login.html">登录</a></li>
+                  <li><a href="register.html">注册</a></li>
+              </ul>
+          </div>
+          <div class="attr-nav" id="logIn" style="margin-left: 15px; min-height: 90px; padding-left: 10px; position: relative; z-index: 1;display: none;">
+              <a href="geren.html"><img id="personal" src="static/image/user_1.png" alt="" style="position: absolute;margin-left: -50px;margin-top: 30px;" title="个人中心"></a>
+              <a href=""><img id="quit" src="static/image/quit.png" alt="" style="margin-top: 30px;margin-left: 10px;" title="退出登录"></a>
+          </div> -->
+          <!-- End Atribute Navigation -->
+
+          <!-- Start Header Navigation -->
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#navbar-menu"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+            <!-- <a class="navbar-brand" href="index.html" style="margin-top: 15px;">
+              山西区域化
+          </a> -->
+            <a href="index.html">
+              <img
+                src="static/image/login1.png"
+                alt=""
+                style="margin-top: 22%"
+              />
+            </a>
+          </div>
+          <!-- End Header Navigation -->
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div
+            class="collapse navbar-collapse"
+            id="navbar-menu"
+            style="float: left"
+          >
+            <ul
+              class="nav navbar-nav navbar-right"
+              data-in="fadeInDown"
+              data-out="fadeOutUp"
+            >
+              <li class="dropdown">
+                <span
+                  style="cursor: pointer"
+                  id="btn1"
+                  >数据中心</span
+                >
+              </li>
+              <li class="dropdown">
+                <span
+                  style="cursor: pointer"
+                  id="btn2"
+                  >空间视窗</span
+                >
+              </li>
+              <li class="dropdown">
+                <span
+                  style="cursor: pointer"
+                  id="btn3"
+                  >区域可视化</span
+                >
+              </li>
+              <li class="dropdown">
+                <span
+                  style="cursor: pointer"
+                  id="btn4"
+                  >山西风采</span
+                >
+              </li>
+         
+              <li class="dropdown">
+                <span style="cursor:pointer;" id="btn5">专家智库</span>
+            </li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+      </nav>
+
+      <!-- 中间主体内容：账号密码登录 -->
+      <div class="content">
+        <div style="height: 100%">
+          <div class="center-content">
+            <img
+              src="static/image/img_3.png"
+              alt=""
+              class="img"
+            />
+
+            <!-- 账号密码登录 -->
+            <div
+              class="content-form_user"
+              id="content-form_user"
+            >
+              <div class="log__QPGOQ">
+                <div>
+                  <div class="welcomeBox__2tLuf">
+                    <span class="welcome__3mq4X">欢迎回来</span
+                    ><span class="registerText__2aAsJ">
+                      <!-- react-text: 38 -->还没有帐号?
+                      <!-- /react-text --><a
+                        class="loginLink__3LCXI"
+                        href="register.html"
+                        >立即注册</a
+                      >
+                    </span>
+                  </div>
+                  <div class="loginMode__2qV3o">
+                    <a
+                      href="javascript:void(0);"
+                      class="loginTab__ZQfna actived"
+                      >帐号密码登录</a
+                    ><a
+                      href="javascript:void(0);"
+                      class="loginTab__ZQfna"
+                      id="massage_"
+                      >短信验证码登录</a
+                    >
+                  </div>
+                  <form class="ant-form ant-form-inline form__1m2D1">
+                    <div class="ant-row ant-form-item formItem__DOic4">
+                      <div class="ant-form-item-control-wrapper">
+                        <div class="ant-form-item-control">
+                          <div
+                            id="userName"
+                            data-__meta="[object Object]"
+                          >
+                            <img
+                              src="static/image/user.png"
+                              class="userIMG__3l5qu"
+                            /><input
+                              type="text"
+                              class="ant-input userNameInput__1ZmnK"
+                              id="user_login"
+                              placeholder="请输入用户名/手机号码/邮箱"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ant-row ant-form-item formItem__DOic4">
+                      <div class="ant-form-item-control-wrapper">
+                        <div class="ant-form-item-control">
+                          <div
+                            id="password"
+                            data-__meta="[object Object]"
+                          >
+                            <img
+                              src="static/image/password.png"
+                              class="passIMG__179jR"
+                            /><input
+                              type="password"
+                              class="ant-input passInput__1xMp2"
+                              id="password_login"
+                              placeholder="请输入密码"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="loginLinks__2qoJM">
+                      <img
+                        class="savePassIMG__t8wly"
+                        src="static/image/block-1.png"
+                      /><span class="savePassOnTheWeek__2m6zf"
+                        >一周内记住帐号信息</span
+                      ><span class="forgetPass__1ltBI">
+                        <!-- react-text: 61 -->
+                        <!-- /react-text --><a
+                          class="info__pvsGK"
+                          href="#/reset/1"
+                          >忘记密码?</a
+                        >
+                      </span>
+                    </div>
+                    <div class="ant-row ant-form-item">
+                      <div class="ant-form-item-control-wrapper">
+                        <div class="ant-form-item-control">
+                          <button
+                            id="submit"
+                            type="button"
+                            class="loginBottom__2Tthx btn btn-blue"
+                            onclick="loginUser()"
+                          >
+                            登录
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="tip__3QRjC">
+                      如果登录出现异常, 请清理浏览器缓存后再尝试
+                    </p>
+                  </form>
+                </div>
+                <div id="popup-captcha"></div>
+              </div>
+            </div>
+
+            <!-- 短信验证码登录 -->
+            <div
+              class="content-form_massage"
+              id="content-form_massage"
+            >
+              <div class="log__R-ChG">
+                <div>
+                  <div class="welcomeBox__1tBEB">
+                    <span class="welcome__2PRmv">欢迎回来</span
+                    ><span class="registerText__2qzRZ">
+                      还没有帐号?
+                      <a
+                        class="loginLink__2lwQV"
+                        href="register.html"
+                        >立即注册</a
+                      >
+                    </span>
+                  </div>
+                  <div class="loginMode__hWo67">
+                    <a
+                      class="loginTab__L4NZc"
+                      href="javascript:void(0);"
+                      id="account_"
+                      >帐号密码登录</a
+                    ><a
+                      href="javascript:void(0);"
+                      class="loginTab__L4NZc actived"
+                      >短信验证码登录</a
+                    >
+                  </div>
+                  <form class="ant-form ant-form-inline form__dRquc">
+                    <div class="ant-row ant-form-item formItem__3xsb6">
+                      <div class="ant-form-item-control-wrapper">
+                        <div class="ant-form-item-control">
+                          <div
+                            id="mobilePhone"
+                            data-__meta="[object Object]"
+                          >
+                            <img
+                              src="static/image/user.png"
+                              class="userIMG__tHtKY"
+                            /><input
+                              type="text"
+                              class="ant-input userNameInput__20FBz"
+                              placeholder="请输入手机号码"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ant-row ant-form-item formItem__3xsb6">
+                      <div class="ant-form-item-control-wrapper">
+                        <div class="ant-form-item-control">
+                          <div
+                            id="verifyCode"
+                            data-__meta="[object Object]"
+                          >
+                            <img
+                              src="static/image/number.png"
+                              class="userIMG__tHtKY"
+                            /><input
+                              type="text"
+                              class="ant-input userNameInput__20FBz"
+                              placeholder="请输入手机号码获得的验证码"
+                            /><button
+                              type="button"
+                              id="getVerificationCodeBtn"
+                              class="getVerificationCode__3bGpM btn btn-grayLight"
+                              disabled=""
+                            >
+                              获取验证码
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="loginLinks__L0yD7">
+                      <span class="forgetPass__3FVb5">
+                        <a
+                          class="info__qEvEa"
+                          href="#/reset/1"
+                          style="font-size: 12px"
+                        >
+                          忘记密码?
+                        </a>
+                      </span>
+                    </div>
+                    <div class="ant-row ant-form-item">
+                      <div class="ant-form-item-control-wrapper">
+                        <div class="ant-form-item-control">
+                          <button
+                            type="submit"
+                            class="loginBottom__1TFHR btn btn-blue"
+                          >
+                            登录
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="tip__S7f_n">
+                      如果登录出现异常, 请清理浏览器缓存后再尝试
+                    </p>
+                  </form>
+                </div>
+                <div id="mobile-login-popup-captchas"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-content">
+          <div class="footer-list">
+            <ul class="">
+              <li>产品系列</li>
+              <li>
+                <a
+                  href="data.html"
+                  class="higgs-footer-hover"
+                  >数据中心</a
+                >
+              </li>
+              <li>
+                <a
+                  href="map.html"
+                  class="higgs-footer-hover"
+                  >空间视窗</a
+                >
+              </li>
+              <li>
+                <a
+                  href="xiangqing.html"
+                  class="higgs-footer-hover"
+                  >区域可视化</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="higgs-footer-hover"
+                  >山西风采</a
+                >
+              </li>
+              
+              <li><a href="form.html" class="higgs-footer-hover">专家智库</a></li>
+            </ul>
+            <ul class="">
+              <li>关于我们</li>
+              <li>
+                <a
+                  target="_blank"
+                  href="#"
+                  class="higgs-footer-hover"
+                  >研究方向</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="#"
+                  class="higgs-footer-hover"
+                  >专家团队</a
+                >
+              </li>
+            </ul>
+            <ul class="">
+              <li>详细介绍</li>
+              <li>
+                <span>
+                  <span>
+                    <span
+                      style="
+                        color: rgb(38, 208, 255);
+                        font-size: 16px;
+                        font-weight: 700;
+                      "
+                    >
+                    山西省区域现代化研究中心
+                    </span>
+                    <span
+                      style="
+                        color: rgb(41, 46, 51);
+                        padding: 0px 11px;
+                        margin-left: 6px;
+                        background-color: rgb(255, 255, 255);
+                        line-height: 24px;
+                        font-size: 12px;
+                        border-radius: 4px;
+                        display: inline-block;
+                      "
+                    >
+                      <a href="http://base.ipbd.net/pslab/contact.html"
+                        >联系我们</a
+                      >
+                    </span>
+                  </span>
+                </span>
+              </li>
+              <li>
+                <a href="http://base.ipbd.net/pslab/index.html"
+                  >http://base.ipbd.net/pslab/index.html</a
+                >
+              </li>
+            </ul>
+            <ul class="footer-lastUl">
+              <li>关注方式</li>
+              <li>
+                <span>
+                  <span
+                    class="wechat"
+                    style="position: relative; cursor: pointer"
+                  >
+                    <img
+                      src="static/image/weixin.png"
+                      style="margin-right: 10px"
+                    />
+                    <span>公众号</span>
+                  </span>
+                </span>
+              </li>
+              <div class="code">
+                <img
+                  src="static/image/QR.jpg"
+                  width="150px"
+                  height="150px"
+                />
+              </div>
+            </ul>
+          </div>
+          <div class="footer-details">
+            <div class="footer-details-box">
+              <p>
+                Copyright©2020-2020 &nbsp;BusinessBigData.
+                All&nbsp;Rights&nbsp;Reserved&nbsp;&nbsp;
+              </p>
+              <span>建议分辨率：1920*1080及以上</span
+              ><span>建议浏览器：Chrome浏览器能带来更好使用体验</span
+              ><span>Chrome及最新IE浏览器</span
+              ><a
+                target="_blank"
+                href="https://browsehappy.com/"
+                >下载</a
+              >
+              <div
+                class="footer-police"
+                style="margin-top: 3px"
+              >
+                <a
+                  target="_blank"
+                  href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001931"
+                  style="
+                    display: inline-block;
+                    text-decoration: none;
+                    height: 20px;
+                    line-height: 20px;
+                  "
+                >
+                  <img
+                    src="static/image/police.png"
+                    style="float: left"
+                  />
+                  <p style="float: left; margin: 0 0 0 5px">
+                    晋公网安备 14070202000170号
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var userLogins = document.getElementById('user_login')
+      var passwordLogin = document.getElementById('password_login')
+      var button = document.getElementById('submit')
+
+      // localStorage.setItem("login", "true");
+      function ready() {
+        if (localStorage['login'] === 'true') {
+          window.location.href = 'index.html'
+        }
+      }
+      document.addEventListener('DOMContentLoaded', ready)
+
+      function loginUser() {
+        localStorage.setItem('login', 'true')
+        localStorage.setItem('username', userLogins.value)
+        window.location.href = 'index.html'
+        return
+        var xhr = new XMLHttpRequest()
+        xhr.open('POST', '/sxqyhapi/yun/user/login', true)
+        xhr.setRequestHeader('Content-Type', 'application/json') //请求头
+        xhr.send(
+          JSON.stringify({
+            username: userLogins.value,
+            password: passwordLogin.value
+          })
+        )
+        xhr.onload = function () {
+          if (xhr.status == 200) {
+            console.log('登录成功')
+            localStorage.setItem('login', 'true')
+            localStorage.setItem('username', userLogins.value)
+            window.location.href = 'index.html'
+          } else {
+            console.log('账号不存在')
+          }
+        }
+      }
+    </script>
+    <script src="static/js/index.js"></script>
+    <script>
+      var userLogin = document.getElementById('content-form_user')
+      var massageLogin = document.getElementById('content-form_massage')
+      var userBtn = document.getElementById('account_')
+      var massageBtn = document.getElementById('massage_')
+
+      userBtn.onclick = function () {
+        userLogin.style.display = 'block'
+        massageLogin.style.display = 'none'
+      }
+      massageBtn.onclick = function () {
+        userLogin.style.display = 'none'
+        massageLogin.style.display = 'block'
+      }
+    </script>
+    <!-- 导航条 -->
+     <script>
+    var btn1 = document.getElementById("btn1");
+    btn1.onclick = function() {
+    window.location.href = "data.html"
+    }
+    var btn2 = document.getElementById("btn2");
+    btn2.onclick = function() {
+    window.location.href = "map.html"
+    }
+    var btn3 = document.getElementById("btn3");
+    btn3.onclick = function() {
+    window.location.href = "xiangqing.html"
+    }
+    var btn4 = document.getElementById("btn4");
+    btn4.onclick = function() { // window.location.href="data.html"
+    }
+    var btn5 = document.getElementById("btn5");
+    btn5.onclick = function() {
+      window.location.href = "form.html"  // window.location.href="data.html"
+    }
+</script> 
+  </body>
+</html>

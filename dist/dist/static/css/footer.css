@@ -1,0 +1,127 @@
+@charset"UTF-8";
+/* 底部 */
+
+.footer {
+    background-color: transparent;
+    height: 310px;
+    background: #183158;
+    text-align: center;
+    margin: 0;
+}
+
+.footer .footer-content {
+    width: 1280px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.footer .footer-content .footer-list {
+    /* margin-bottom: 15px; */
+    display: inline-block;
+}
+
+.footer .footer-content ul {
+    text-align: left;
+    margin-top: 39px;
+    margin-right: 235px;
+    float: left;
+    font-size: 14px;
+}
+
+.footer .footer-content ul li:first-child {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.footer .footer-content ul li {
+    color: #b8c2cc;
+    line-height: 100%;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #b8c2cc;
+}
+
+.footer .footer-content ul li:not(:first-child) {
+    height: 27px;
+    line-height: 24px;
+}
+
+.footer .footer-content .footer-lastUl {
+    margin-right: 0!important;
+}
+
+.footer .footer-content ul {
+    text-align: left;
+    margin-top: 39px;
+    margin-right: 270px;
+    float: left;
+    font-size: 14px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #b8c2cc!important;
+}
+
+.footer img {
+    border-style: none;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.footer .footer-copyRight {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer .footer-details .footer-details-box {
+    display: inline-block;
+    position: relative;
+}
+
+.footer .footer-details p {
+    margin-bottom: 4px;
+    color: #b8c2cc;
+}
+
+.footer .footer-details span:nth-child(2) {
+    margin-right: 16px;
+}
+
+.footer .footer-details span {
+    color: #b8c2cc;
+}
+
+.footer .higgs-footer-details span:nth-child(3) {
+    margin-right: 12px;
+}
+
+.footer .higgs-footer-details a {
+    margin-left: 12px;
+    color: #b8c2cc;
+}
+
+.footer img {
+    border-style: none;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+#listbox {
+    background-color: rgb(93, 113, 129, 0.7);
+    width: 84.3%;
+    margin-top: 2px;
+}
+
+.code {
+    position: absolute;
+    width: 150px;
+    margin-left: -70px;
+    display: none;
+}

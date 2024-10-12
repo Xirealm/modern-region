@@ -1,0 +1,487 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: url("../images/background.png");
+    position: relative;
+}
+
+.all {
+    min-width: 1280px;
+    min-height: 600px;
+    position: relative;
+    background-color: #0A1933;
+}
+
+a:hover {
+    color: #49a9ee;
+}
+
+
+/* 中间主体内容——账号密码登录*/
+
+.content {
+    height: 666px;
+}
+
+.content .center-content {
+    position: relative;
+    height: 100%;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.content .center-content .img {
+    position: absolute;
+    top: 116px;
+}
+
+.content .center-content .content-form_user {
+    width: 500px;
+    right: 0;
+    top: 120px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.welcomeBox__2tLuf {
+    padding: 54px 29px 0;
+}
+
+.welcomeBox__2tLuf .welcome__3mq4X {
+    font-size: 18px;
+    font-weight: 700;
+    color: #456;
+    vertical-align: bottom;
+}
+
+.welcomeBox__2tLuf .registerText__2aAsJ {
+    float: right;
+    font-size: 14px;
+    margin-top: 8px;
+    color: #89a;
+    vertical-align: bottom;
+}
+
+.welcomeBox__2tLuf .loginLink__3LCXI {
+    font-size: 16px;
+    font-weight: 700;
+    color: #275a9d;
+}
+
+a {
+    color: #108ee9;
+    background: transparent;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+.loginMode__2qV3o {
+    text-align: center;
+    margin: 34px 0 0;
+}
+
+.loginMode__2qV3o .actived {
+    cursor: auto;
+    color: #275a9d;
+    background-color: #fff;
+}
+
+.loginMode__2qV3o .loginTab__ZQfna {
+    width: 230px;
+    height: 40px;
+    background-color: #f7fafc;
+    border: 1px solid #dae0e5;
+    display: inline-block;
+    line-height: 40px;
+    color: #89a;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.loginMode__2qV3o .loginTab__ZQfna {
+    width: 230px;
+    height: 40px;
+    background-color: #f7fafc;
+    border: 1px solid #dae0e5;
+    display: inline-block;
+    line-height: 40px;
+    color: #89a;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.form__1m2D1 {
+    padding: 0 60px 48px;
+}
+
+.log__QPGOQ .formItem__DOic4 {
+    height: 50px;
+    margin-bottom: 0!important;
+    margin-top: 20px;
+    margin-right: 0;
+}
+
+.ant-form-inline .ant-form-item {
+    display: inline-block;
+    margin-right: 16px;
+    margin-bottom: 0;
+}
+
+.ant-form-item {
+    font-size: 12px;
+    margin-bottom: 24px;
+    color: rgba(0, 0, 0, .65);
+    vertical-align: top;
+}
+
+.ant-row {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    zoom: 1;
+    display: block;
+}
+
+.ant-form-inline .ant-form-item>div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ant-form-item-control {
+    line-height: 31.9999px;
+    position: relative;
+    zoom: 1;
+}
+
+.loginMode__2qV3o .actived {
+    cursor: auto;
+    color: #275a9d;
+    background-color: #fff;
+}
+
+.log__QPGOQ .passIMG__179jR,
+.log__QPGOQ .phoneIMG__QNVjZ,
+.log__QPGOQ .userIMG__3l5qu {
+    margin-right: -16px;
+    position: relative;
+    background-color: #fff;
+    left: 2px;
+}
+
+.log__QPGOQ .passInput__1xMp2,
+.log__QPGOQ .userNameInput__1ZmnK {
+    width: 380px;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #daede5!important;
+    box-shadow: none!important;
+    text-indent: 20px;
+    height: 50px;
+    font-size: 14px;
+    background: none;
+}
+
+.ant-input {
+    position: relative;
+    display: inline-block;
+    padding: 4px 7px;
+    width: 100%;
+    height: 28px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, .65);
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    transition: all .3s;
+}
+
+.ant-input:hover,
+.ant-input:focus {
+    outline: none;
+}
+
+.log__QPGOQ .eyeIMG__NE1L6 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.log__QPGOQ .loginLinks__2qoJM {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.log__QPGOQ .savePassIMG__t8wly {
+    margin-right: 10px;
+    vertical-align: top;
+    float: left;
+}
+
+*,
+ :after,
+ :before,
+img {
+    box-sizing: border-box;
+}
+
+img {
+    border-style: none;
+    vertical-align: middle;
+}
+
+.log__QPGOQ .savePassOnTheWeek__2m6zf {
+    color: #89a;
+    float: left;
+}
+
+.log__QPGOQ .forgetPass__1ltBI {
+    color: #89a;
+    cursor: pointer;
+    float: right;
+}
+
+.info__pvsGK,
+.tip__3QRjC {
+    color: #8898aa;
+}
+
+.form__1m2D1 .loginBottom__2Tthx {
+    width: 380px;
+    height: 40px;
+    margin-top: 40px;
+}
+
+.btn-blue {
+    background-color: #2d96c9;
+    border: 1px solid transparent;
+    color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #e7ebee;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    /* background-color: #fff; */
+    color: #ffffff;
+    outline: 0;
+    cursor: pointer;
+}
+
+.info__pvsGK,
+.tip__3QRjC {
+    color: #8898aa;
+}
+
+.tip__3QRjC {
+    font-size: 12px;
+    margin-top: 21px;
+    text-align: center;
+}
+
+
+/* 短信验证码登录 */
+
+.content-form_massage {
+    width: 500px;
+    right: 0;
+    top: 120px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 4px;
+    display: none;
+}
+
+.welcomeBox__1tBEB {
+    padding: 54px 29px 0;
+}
+
+.welcomeBox__1tBEB .welcome__2PRmv {
+    font-size: 18px;
+    font-weight: 700;
+    color: #456;
+    vertical-align: bottom;
+}
+
+.welcomeBox__1tBEB .registerText__2qzRZ {
+    float: right;
+    font-size: 14px;
+    margin-top: 8px;
+    color: #89a;
+    vertical-align: bottom;
+}
+
+.welcomeBox__1tBEB .loginLink__2lwQV {
+    font-size: 16px;
+    font-weight: 700;
+    color: #275a9d;
+}
+
+.loginMode__hWo67 {
+    text-align: center;
+    margin: 34px 0 0;
+}
+
+.loginMode__hWo67 .loginTab__L4NZc {
+    width: 230px;
+    height: 40px;
+    background-color: #f7fafc;
+    border: 1px solid #dae0e5;
+    display: inline-block;
+    line-height: 40px;
+    color: #89a;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.loginMode__hWo67 .actived {
+    cursor: auto;
+    color: #275a9d;
+    background-color: #fff;
+}
+
+.form__dRquc {
+    padding: 0 60px 48px;
+}
+
+.log__R-ChG .formItem__3xsb6 {
+    height: 50px;
+    margin-bottom: 0!important;
+    margin-top: 20px;
+    margin-right: 0;
+}
+
+.ant-form-inline .ant-form-item>div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ant-form-item-control {
+    line-height: 31.9999px;
+    position: relative;
+    zoom: 1;
+}
+
+.log__R-ChG .passIMG__1emWR,
+.log__R-ChG .phoneIMG__30bQK,
+.log__R-ChG .userIMG__tHtKY {
+    margin-right: -16px;
+    position: relative;
+    background-color: #fff;
+    left: 2px;
+}
+
+img {
+    border-style: none;
+    vertical-align: middle;
+}
+
+.log__R-ChG .passInput__3wfF6,
+.log__R-ChG .userNameInput__20FBz {
+    width: 380px;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #daede5!important;
+    box-shadow: none!important;
+    text-indent: 20px;
+    height: 50px;
+    font-size: 14px;
+    background: none;
+}
+
+input[type=text],
+textarea {
+    -webkit-appearance: none;
+}
+
+.ant-input {
+    position: relative;
+    display: inline-block;
+    padding: 4px 7px;
+    width: 100%;
+    height: 28px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, .65);
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    transition: all .3s;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+    -webkit-appearance: button;
+}
+
+.getVerificationCode__3bGpM {
+    position: absolute;
+    right: -4px;
+    top: 10px;
+}
+
+.btn-grayLight {
+    background-color: #cacfd5;
+    border: 1px solid transparent;
+    color: #fff;
+}
+
+.log__R-ChG .loginLinks__L0yD7 {
+    margin-top: 20px;
+}
+
+.log__R-ChG .forgetPass__3FVb5 {
+    color: #89a;
+    cursor: pointer;
+    float: right;
+}
+
+.info__qEvEa,
+.tip__S7f_n {
+    color: #8898aa;
+}
+
+.form__dRquc .loginBottom__1TFHR {
+    width: 380px;
+    height: 40px;
+    margin-top: 40px;
+}
+
+.tip__S7f_n {
+    font-size: 12px;
+    margin-top: 21px;
+    text-align: center;
+}
+
+.code {
+    position: absolute;
+    display: none;
+}

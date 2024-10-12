@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="static/css/xiangqing.css"
+    />
+    <link
+      rel="stylesheet"
+      href="static/css/bootsnav1.css"
+    />
+    <link
+      href="static/css/font.css"
+      rel="stylesheet"
+    />
+    <title>区域可视化——PDF</title>
+  </head>
+
+  <body>
+    <div id="home">
+      <!--蓝色背景部分-->
+      <div class="upper">
+        <!--导航条部分-->
+        <!-- <div class="higgs-header"style="background-color:transparent;">
+                        <div class="container-c">
+                            <div class="higgs-header-content">
+                                <div class="higgs-header-log">
+                                    <a href="index.html">
+                                        <img src="static/image/login1.png" alt="" style="margin-top: 8%;">
+                                      </a>
+                                </div>
+                                <ul class="higgs-header-left">
+                                        <li class="higgs-header-active">
+                                            <a href="data.html">数据中心</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="map.html">民俗文化</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="xiangqing.html">详细信息</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="">区域可视化</a>
+                                        </li>
+                                        <li class="">
+                                            <a  href="">生态合作</a>
+                                        </li>
+                                </ul>
+                        <div class="higgs-header-right">
+                            <div class="higgs-header-userInfo">
+                                <div>
+                                    <a class="higgs-header-notify" href="">
+                                        <img src="static/image/message.png" title="通知消息"></a>
+                                        <a href="geren.html"><img src="static/image/user_1.png" title="个人中心"></a>
+                                            <img id="quit" src="static/image/quit.png" title="退出系统">
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+                    </div> -->
+        <!--导航条部分-->
+        <nav
+          class="navbar bg-gray navbar-default attr-border navbar-fixed dark no-background bootsnav"
+          style="position: fixed; background-color: #183158"
+        >
+          <div
+            class="container-full"
+            style="width: 1280px; margin: 0 auto"
+          >
+            <!-- Start Atribute Navigation -->
+            <!-- <div class="attr-nav" id="logOut">
+                            <ul>
+                                <li><a href="login.html">登录</a></li>
+                                <li><a href="register.html">注册</a></li>
+                            </ul>
+                        </div> -->
+            <div
+              class="attr-nav"
+              id="logIn"
+              style="
+                margin-left: 15px;
+                min-height: 90px;
+                padding-left: 10px;
+                position: relative;
+                z-index: 1;
+              "
+            >
+              <a href="geren.html"
+                ><img
+                  id="personal"
+                  src="static/image/user_1.png"
+                  alt=""
+                  style="
+                    position: absolute;
+                    margin-left: -50px;
+                    margin-top: 30px;
+                  "
+                  title="个人中心"
+              /></a>
+              <a href="javascript:void(0);"
+                ><img
+                  id="quit"
+                  src="static/image/quit.png"
+                  alt=""
+                  style="margin-top: 30px; margin-left: 10px"
+                  title="退出登录"
+              /></a>
+            </div>
+            <!-- End Atribute Navigation -->
+
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+              <button
+                type="button"
+                class="navbar-toggle"
+                data-toggle="collapse"
+                data-target="#navbar-menu"
+              >
+                <i class="fa fa-bars"></i>
+              </button>
+              <!-- <a class="navbar-brand" href="index.html" style="margin-top: 15px;">
+                            山西区域化
+                        </a> -->
+              <a href="index.html">
+                <img
+                  src="static/image/login1.png"
+                  alt=""
+                  style="margin-top: 22%"
+                />
+              </a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div
+              class="collapse navbar-collapse"
+              id="navbar-menu"
+              style="float: left"
+            >
+              <ul
+                class="nav navbar-nav navbar-right"
+                data-in="fadeInDown"
+                data-out="fadeOutUp"
+              >
+                <li class="dropdown">
+                  <span
+                    style="cursor: pointer"
+                    id="btn1"
+                    >数据中心</span
+                  >
+                </li>
+                <li class="dropdown">
+                  <span
+                    style="cursor: pointer"
+                    id="btn2"
+                    >空间视窗</span
+                  >
+                </li>
+                <li class="dropdown">
+                  <span
+                    style="cursor: pointer"
+                    id="btn3"
+                    >区域可视化</span
+                  >
+                </li>
+                <li class="dropdown">
+                  <span
+                    style="cursor: pointer"
+                    id="btn4"
+                    >山西风采</span
+                  >
+                </li>
+              
+                <li class="dropdown">
+                  <span
+                  style="cursor: pointer"
+                  id="btn5"
+                  >专家智库</span
+                >
+              </li>
+              </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+          </div>
+        </nav>
+        <div class="container-a">
+          <!--搜索框上方文字-->
+          <div class="headline">
+            <h1>山西省区域现代化</h1>
+          </div>
+          <!--搜索框-->
+          <div
+            class="higgs-search-input higgs-condition-up-box higgs-width-760"
+            style="margin: 0px auto; width: 760px"
+          >
+            <div class="higgs-condition-box">
+              <ul
+                id="navBar"
+                class="higgs-condition"
+              >
+                <li class="111">城市</li>
+                <li class="111">收入</li>
+                <li class="111">常住人口数量</li>
+                <li class="111">GDP</li>
+                <li class="111">人均GDP</li>
+                <li class="111">人均可支配收入</li>
+                <li class="higgs-condition-active">综合</li>
+              </ul>
+            </div>
+            <div class="higgs-input-box">
+              <input
+                type="text"
+                id="search"
+                autocomplete="off"
+                placeholder="请输入城市名，如“太原市”"
+                value=""
+              />
+              <div id="listbox"></div>
+              <div
+                class="higgs-text"
+                id="searchBtn"
+              >
+                查询
+              </div>
+              <ul class="higgs-search-list hide"></ul>
+            </div>
+            <div
+              class="higgs-input-box"
+              style="display: none"
+            >
+              <input
+                type="text"
+                id="search"
+                autocomplete="off"
+                placeholder="请输入公共预算收入,如“373.23亿元”"
+                value=""
+              />
+              <div id="listbox"></div>
+              <div class="higgs-text">查询</div>
+              <ul class="higgs-search-list hide"></ul>
+            </div>
+            <div
+              class="higgs-input-box"
+              style="display: none"
+            >
+              <input
+                type="text"
+                id="search"
+                autocomplete="off"
+                placeholder="请输入常住人口数量,如“442.15万人”"
+                value=""
+              />
+              <div id="listbox"></div>
+              <div class="higgs-text">查询</div>
+              <ul class="higgs-search-list hide"></ul>
+            </div>
+            <div
+              class="higgs-input-box"
+              style="display: none"
+            >
+              <input
+                type="text"
+                id="search"
+                autocomplete="off"
+                placeholder="请输入GDP,如“3884.48亿元”"
+                value=""
+              />
+              <div id="listbox"></div>
+              <div class="higgs-text">查询</div>
+              <ul class="higgs-search-list hide"></ul>
+            </div>
+            <div
+              class="higgs-input-box"
+              style="display: none"
+            >
+              <input
+                type="text"
+                id="search"
+                autocomplete="off"
+                placeholder="请输入人均GDP,如“8.83万元”"
+                value=""
+              />
+              <div id="listbox"></div>
+              <div
+                class="higgs-text"
+                id="searchBtn"
+              >
+                查询
+              </div>
+              <ul class="higgs-search-list hide"></ul>
+            </div>
+            <div
+              class="higgs-input-box"
+              style="display: none"
+            >
+              <input
+                type="text"
+                id="search"
+                autocomplete="off"
+                placeholder="请输入人均可支配收入,如“3.1万元”"
+                value=""
+              />
+              <div id="listbox"></div>
+              <div class="higgs-text">查询</div>
+              <ul class="higgs-search-list hide"></ul>
+            </div>
+            <div
+              class="higgs-input-box"
+              style="display: none"
+            >
+              <input
+                type="text"
+                id="search"
+                autocomplete="off"
+                placeholder="请输入城市名、常住人口数量或组合关键词,多关键词用空格隔开，如“太原市 373.23亿元”"
+                value=""
+              />
+              <div id="listbox"></div>
+              <div class="higgs-text">查询</div>
+              <ul class="higgs-search-list hide"></ul>
+            </div>
+          </div>
+          <!--搜索框下方文字-->
+          <div class="sentence">
+            <p>精准呈现城市各个方面发展情况</p>
+          </div>
+        </div>
+      </div>
+      <!--灰色背景部分-->
+      <div class="lower">
+        <div class="container-b">
+          <div class="content">
+            <!--我的报告标题和搜索框部分-->
+            <div class="title">
+              <h4>
+                <span class="">我的报告</span>
+              </h4>
+            </div>
+            <div class="list">
+              <!--下载报告部分-->
+              <div class="report">
+                <ul class="aaa"></ul>
+              </div>
+              <!--分页-->
+              <div class="pagination">
+                <div class="total">
+                  <span>
+                    共
+                    <span id="all"></span> 个
+                  </span>
+                </div>
+                <ul class="ant-pagination">
+                  <li
+                    title="上一页"
+                    class="ant-pagination-prev"
+                  >
+                    <a
+                      id="last"
+                      class="ant-pagination-item-link"
+                    >
+                      <</a
+                    >
+                  </li>
+                  <li class="ant-pagination-item-1">
+                    <a id="number"></a>
+                  </li>
+                  <li
+                    title="下一页"
+                    class="ant-pagination-next"
+                  >
+                    <a
+                      id="next"
+                      class="ant-pagination-item-link"
+                      >></a
+                    >
+                  </li>
+                  <li class="ant-pagination-options">
+                    <div class="ant-pagination-options-jumper">
+                      跳至
+                      <input
+                        class="jump"
+                        type="text"
+                        id="txt"
+                      />页
+                      <button id="jumpto">跳转</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 底部 -->
+      <div class="footer">
+        <div class="footer-content">
+          <div class="footer-list">
+            <ul class="">
+              <li>产品系列</li>
+              <li>
+                <a
+                  href="data.html"
+                  class="higgs-footer-hover"
+                  >数据中心</a
+                >
+              </li>
+              <li>
+                <a
+                  href="map.html"
+                  class="higgs-footer-hover"
+                  >空间视窗</a
+                >
+              </li>
+              <li>
+                <a
+                  href="xiangqing.html"
+                  class="higgs-footer-hover"
+                  >区域可视化</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="higgs-footer-hover"
+                  >山西风采</a
+                >
+              </li>
+          
+              <li><a href="form.html" class="higgs-footer-hover">专家智库</a></li>
+            </ul>
+            <ul class="">
+              <li>关于我们</li>
+              <li>
+                <a
+                  target="_blank"
+                  href="#"
+                  class="higgs-footer-hover"
+                  >研究方向</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="#"
+                  class="higgs-footer-hover"
+                  >专家团队</a
+                >
+              </li>
+            </ul>
+            <ul class="">
+              <li>详细介绍</li>
+              <li>
+                <span>
+                  <span>
+                    <span
+                      style="
+                        color: rgb(38, 208, 255);
+                        font-size: 16px;
+                        font-weight: 700;
+                      "
+                    >
+                    山西省区域现代化研究中心
+                    </span>
+                    <span
+                      style="
+                        color: rgb(41, 46, 51);
+                        padding: 0px 11px;
+                        margin-left: 6px;
+                        background-color: rgb(255, 255, 255);
+                        line-height: 24px;
+                        font-size: 12px;
+                        border-radius: 4px;
+                        display: inline-block;
+                      "
+                    >
+                      <a href="http://base.ipbd.net/pslab/contact.html"
+                        >联系我们</a
+                      >
+                    </span>
+                  </span>
+                </span>
+              </li>
+              <li>
+                <a href="http://base.ipbd.net/pslab/index.html"
+                  >http://base.ipbd.net/pslab/index.html</a
+                >
+              </li>
+            </ul>
+            <ul class="footer-lastUl">
+              <li>关注方式</li>
+              <li>
+                <span>
+                  <span
+                    class="wechat"
+                    style="position: relative; cursor: pointer"
+                  >
+                    <img
+                      src="static/image/weixin.png"
+                      style="margin-right: 10px"
+                    />
+                    <span>公众号</span>
+                  </span>
+                </span>
+              </li>
+              <div
+                class="code"
+                style="position: absolute; display: none"
+              >
+                <img
+                  src="static/image/QR.jpg"
+                  width="150px"
+                  height="150px"
+                />
+              </div>
+            </ul>
+          </div>
+          <div class="footer-details">
+            <div class="footer-details-box">
+              <p>
+                Copyright©2020-2020 &nbsp;BusinessBigData.
+                All&nbsp;Rights&nbsp;Reserved&nbsp;&nbsp;
+              </p>
+              <span>建议分辨率：1920*1080及以上</span
+              ><span>建议浏览器：Chrome浏览器能带来更好使用体验</span
+              ><span>Chrome及最新IE浏览器</span
+              ><a
+                target="_blank"
+                href="https://browsehappy.com/"
+                >下载</a
+              >
+              <div
+                class="footer-police"
+                style="margin-top: 3px"
+              >
+                <a
+                  target="_blank"
+                  href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001931"
+                  style="
+                    display: inline-block;
+                    text-decoration: none;
+                    height: 20px;
+                    line-height: 20px;
+                  "
+                >
+                  <img
+                    src="static/image/police.png"
+                    style="float: left"
+                  />
+                  <p style="float: left; margin: 0 0 0 5px">
+                    晋公网安备 14070202000170号
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./static/js/search-box.js"></script>
+    <script src="./static/js/search.js"></script>
+    <script src="static/js/jquery-1.12.4.min.js"></script>
+    <script>
+      var searchBtn = document.getElementById('searchBtn')
+      var search = document.getElementById('search')
+      searchBtn.onclick = function () {
+        xhr.open('POST', '/sxqyhapi/yun/region/listByName')
+        xhr.setRequestHeader('Content-Type', 'application/json', true) //请求头
+        xhr.send(
+          JSON.stringify({
+            name: search.value
+          })
+        )
+        xhr.onload = function () {
+          // debugger
+          console.log(xhr.response)
+          if (xhr.status == 200) {
+            console.log('接收成功')
+            window.location.href =
+              'xiangqing.html?name=' + encodeURI(search.value)
+          }
+        }
+      }
+    </script>
+    <!-- 导航条 -->
+    <script>
+      var quit = document.getElementById('quit')
+      quit.onclick = function () {
+        window.location.href = 'index.html'
+        localStorage.setItem('login', 'false')
+      }
+
+      var btn1 = document.getElementById('btn1')
+      btn1.onclick = function () {
+        window.location.href = 'data.html'
+      }
+      var btn2 = document.getElementById('btn2')
+      btn2.onclick = function () {
+        window.location.href = 'map.html'
+      }
+      var btn3 = document.getElementById('btn3')
+      btn3.onclick = function () {
+        window.location.href = 'xiangqing.html'
+      }
+      var btn4 = document.getElementById('btn4')
+      btn4.onclick = function () {
+        window.location.href = 'shanxifengcai.html'
+      }
+      var btn5 = document.getElementById('btn5')
+      btn5.onclick = function () {
+        window.location.href = "form.html"
+      }
+    </script>
+  </body>
+</html>

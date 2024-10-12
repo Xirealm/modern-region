@@ -1,0 +1,283 @@
+<link href="static/css/font.css" rel="stylesheet">
+<style>
+  #input1:focus {
+    border: palegoldenrod;
+    border-color: powderblue;
+  }
+
+  #reset {
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+  }
+</style>
+<div class="rightContent userSetting__3EVym">
+  <div class="title" style="border-bottom: none;">
+    <p>帐号设置</p>
+  </div>
+  <div class="tabsBox">
+    <div class="ant-tabs ant-tabs-top ant-tabs-line">
+      <div role="tablist" class="ant-tabs-bar" tabindex="0">
+        <div class="ant-tabs-nav-container"><span unselectable="unselectable"
+            class="ant-tabs-tab-prev ant-tabs-tab-btn-disabled"><span class="ant-tabs-tab-prev-icon"></span></span><span
+            unselectable="unselectable" class="ant-tabs-tab-next ant-tabs-tab-btn-disabled"><span
+              class="ant-tabs-tab-next-icon"></span></span>
+          <div class="ant-tabs-nav-wrap">
+            <div class="ant-tabs-nav-scroll">
+              <div class="ant-tabs-nav ant-tabs-nav-animated">
+                <div id="line1" class="ant-tabs-ink-bar ant-tabs-ink-bar-animated"
+                  style="display: block; transform: translate3d(0px, 0px, 0px); width: 104px;"></div>
+                <div id="Btn1" class="ant-tabs-tab-active ant-tabs-tab">基本资料
+                </div>
+                <div id="Btn2" class="ant-tabs-tab">修改密码</div>
+                <div id="line2" class="ant-tabs-ink-bar ant-tabs-ink-bar-animated"
+                  style="display: none; transform: translate3d(130px, 0px, 0px); width: 104px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ant-tabs-content ant-tabs-content-animated" style="margin-left: 0%;">
+        <div role="tabpanel" id="box1" style="display: block;" class="ant-tabs-tabpane ant-tabs-tabpane-active ">
+          <div class="userInfoContainer__1N0CE"><img class="greenLabel__3e2B2" src="static/image/ye.png">
+            <div class="userInfoContent__2xPea" style="border-bottom: 1px solid rgb(222, 229, 234);"><span
+                class="prefixText__3pUc6">用户名：</span><span>山西区域化</span></div>
+            <div class="userInfoContent__2xPea"><span id="textPhone" class="prefixText__3pUc6">手机号码：</span><span>
+                <span class="phone__2POOA" id="phone">185xxxxxxx</span>
+                <button id="reset" class="btn btn-blue btn__3xpXP">修改</button>
+              </span></div>
+            <div class="userInfoContent__2xPea" style="border-top: 1px solid rgb(222, 229, 234);"><span
+                class="prefixText__3pUc6">邮箱：</span>
+              <div class="d-ib emailInput__33Zhc">
+                <!-- <input type="text" id="email" placeholder="还未绑定邮箱" class="ant-input" value=""> -->
+                <span id="email0">1939040030@qq.com</span>
+                <button id="submit" class="btn btn-blue btn__3xpXP">修改</button>
+                <p class="tip__33Xaw emailTip__7qSag"></p>
+              </div>
+            </div><!-- react-empty: 5666 -->
+            <!-- react-empty: 5667 -->
+            <!-- react-empty: 5668 -->
+            <div id="popup-captcha"></div>
+          </div>
+        </div>
+        <div role="tabpanel" id="box2" style="display: none;" class="ant-tabs-tabpane ant-tabs-tabpane-active ">
+          <div class="modifyPassword__3yO1r">
+            <form autocomplete="off" class="ant-form ant-form-horizontal ant-form-hide-required-mark">
+              <div class="ant-row ant-form-item">
+                <div class="ant-form-item-label ant-col-xs-24 ant-col-sm-7"><label for="newPassword"
+                    class="ant-form-item-required" title="新密码">新密码</label></div>
+                <div class="ant-form-item-control-wrapper ant-col-xs-3 ant-col-sm-17">
+                  <div class="ant-form-item-control ">
+                    <input type="text" placeholder="请输入新密码" value="" id="newPassword" data-__meta="[object Object]"
+                      class="ant-input ant-input-lg">
+                  </div>
+                </div>
+              </div>
+              <div class="ant-row ant-form-item">
+                <div class="ant-form-item-label ant-col-xs-24 ant-col-sm-7">
+                  <label for="confirm_Password" class="ant-form-item-required" title="确认新密码">确认新密码</label>
+                </div>
+                <div class="ant-form-item-control-wrapper ant-col-xs-3 ant-col-sm-17">
+                  <div class="ant-form-item-control ">
+                    <input type="text" placeholder="确认新密码" value="" id="newPassword2" data-__meta="[object Object]"
+                      class="ant-input ant-input-lg">
+                  </div>
+                </div>
+              </div>
+              <div class="ant-row">
+                <button type="button" class="btn btn-blue sbumit__KPDOy" onclick="resetPassword()">确认提交</button>
+              </div>
+            </form><!-- react-empty: 337 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="static/js/jquery-1.12.4.min.js">  </script>
+<script>
+  $(() => {
+    // 1.发请求   
+    username = localStorage.getItem("username");
+    $.post("http://8.142.73.77:7979/yun/user/getByName/" + username, null, function (data) {
+      // debugger
+      console.log(data.user[0]);
+      let user = data.user[0];
+      let phone = user.phone;
+      let email = user.email;
+      if (phone != null && phone != "") {
+        $("#phone")[0].innerHTML = phone;
+      }
+      if (email != null && email != "") {
+        $("#email0")[0].innerHTML = email;
+      }
+      haha();
+    }, "json")
+  })
+
+  var haha = function () {
+
+    var box1 = document.getElementById("box1");
+    var box2 = document.getElementById("box2");
+    var btn1 = document.getElementById("Btn1");
+    var btn2 = document.getElementById("Btn2");
+    var line1 = document.getElementById("line1");
+    var line2 = document.getElementById("line2");
+    var newPassword = document.getElementById("newPassword");
+    var newPassword2 = document.getElementById("newPassword2");
+
+
+    btn1.onclick = function () {
+      box1.style.display = "block";
+      box2.style.display = "none";
+      line1.style.display = "block";
+      line2.style.display = "none";
+      // console.log(1111);
+      $("#Btn2").removeClass("ant-tabs-tab-active");
+      $("#Btn1").addClass("ant-tabs-tab-active");
+    }
+    btn2.onclick = function () {
+      box1.style.display = "none";
+      box2.style.display = "block";
+      line1.style.display = "none";
+      line2.style.display = "block";
+      $("#Btn1").removeClass("ant-tabs-tab-active");
+      $("#Btn2").addClass("ant-tabs-tab-active");
+    }
+
+    // var resetPassword = document.getElementById("resetPassword");
+    function resetPassword() {
+      var xhr = new XMLHttpRequest();
+      if (newPassword.value != newPassword2.value) {
+        alert("两次密码输入不同，请重新输入！")
+        return;
+      }
+      xhr.open('POST', 'http://8.142.73.77:7979/yun/user/update', true);
+      xhr.setRequestHeader('Content-Type', 'application/json'); //请求头
+      xhr.send(JSON.stringify({ "username": localStorage.getItem("username"), "password": newPassword.value }));
+      xhr.onload = function () {
+        console.log(localStorage.getItem("username"));
+        if (xhr.status == 200) {
+          if (newPassword.value == newPassword2.value) {
+            alert("密码修改成功")
+          }
+        } else {
+          console.log("账号不存在");
+        }
+      }
+    }
+
+
+    // var reset = document.getElementById("reset"); 
+    // var submit = document.getElementById("submit");
+    // var phone = document.getElementById("phone");
+    var nextxt;
+    $(function () {
+      $('#reset').click(function () {
+        var td = $('#phone'); //为后面文本框变成文本铺垫
+        var text = $('#phone').text();
+        var input = $('<input type="text" id="input1" class="edit" style="width: 120px;height: 30px;line-height: 40px;font-size: 14px;background-color: #fff;background-image: none;border: 0.2px solid #fff;border-radius: 4px;transition: all 0.3s;" value="' + text + '">');
+        $('#phone').html(input);
+        // $('#input').css
+        $('#input').append("<style>#input:focus{border-color:#fff;}</style>");
+        $('#input1').click(function () {
+          return false;
+        }); //阻止表单默认点击行为
+
+        $('#input1').select(); //点击自动全选中表单的内容
+
+        $('#input1').blur(function () {
+          nextxt = $(this).val();
+          td.html(nextxt);
+          console.log(nextxt);
+          localStorage.setItem("phone", nextxt);
+
+          // 发送请求
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', 'http://8.142.73.77:7979/yun/user/update', true);
+          xhr.setRequestHeader('Content-Type', 'application/json'); //请求头
+          xhr.send(JSON.stringify({ "username": localStorage.getItem("username"), "phone":nextxt }));
+          xhr.onload = function () {
+            console.log(localStorage.getItem("username"));
+            if (xhr.status == 200) {
+
+            } else {
+              console.log("账号不存在");
+            }
+          }
+
+        }); //表单失去焦点文本框变成文本
+
+
+      });
+
+
+      // $('#submit').click(function () {
+      //   var textValue = $('#textPhone').innerHTML;
+      //   var email = $('#email').val();
+      //   // console.log(email);
+      //   // console.log(textValue);
+      //   $('#email').select();
+      //   $('#email').blur(function () {
+      //     nextxt2 = $(this).val();
+      //     $('#email').html(nextxt2);
+      //   });
+      //   var xhr = new XMLHttpRequest();
+      //   xhr.open('POST', 'http://8.142.73.77:7979/yun/user/update', true);
+      //   xhr.setRequestHeader('Content-Type', 'application/json'); //请求头
+      //   xhr.send(JSON.stringify({ "username": localStorage.getItem("username"),  "email": email }));
+      //   xhr.onload = function () {
+      //     console.log(localStorage.getItem("username"));
+      //     if (xhr.status == 200) {
+
+      //     } else {
+      //       console.log("账号不存在");
+      //     }
+      //   }
+      // })
+        
+      $('#submit').click(function () {
+        var td = $('#email0'); //为后面文本框变成文本铺垫
+        var text = $('#email0').text();
+        var input = $('<input type="text" id="input2" class="edit" style="width: 180px;height: 30px;line-height: 40px;font-size: 14px;background-color: #fff;background-image: none;border: 0.2px solid #fff;border-radius: 4px;transition: all 0.3s;" value="' + text + '">');
+        $('#email0').html(input);
+        // $('#input').css
+        // $('#email0').append("<style>#input:focus{border-color:#fff;}</style>");
+        $('#input2').click(function () {
+          return false;
+        }); //阻止表单默认点击行为
+
+        $('#input2').select(); //点击自动全选中表单的内容
+
+        $('#input2').blur(function () {
+          nextxt2 = $(this).val();
+          td.html(nextxt2);
+          console.log(nextxt2);
+          localStorage.setItem("email", nextxt2);
+
+          // 发送请求
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', 'http://8.142.73.77:7979/yun/user/update', true);
+          xhr.setRequestHeader('Content-Type', 'application/json'); //请求头
+          xhr.send(JSON.stringify({ "username": localStorage.getItem("username"), "email":nextxt2 }));
+          xhr.onload = function () {
+            console.log(localStorage.getItem("username"));
+            if (xhr.status == 200) {
+
+            } else {
+              console.log("账号不存在");
+            }
+          }
+
+        }); //表单失去焦点文本框变成文本
+
+
+      });
+      })
+  }
+
+  haha();
+
+
+
+</script>

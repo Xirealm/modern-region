@@ -1,0 +1,272 @@
+<link href="static/css/font.css" rel="stylesheet">
+<!-- <style>
+  /* 触发弹窗图片的样式 */
+  #myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  #myImg:hover {
+    opacity: 0.7;
+  }
+
+  /* 弹窗背景 */
+  .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* 设置显示的优先层级级别 */
+    z-index: 1234;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+  }
+
+  /* 设置弹出图片的样式 */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 40%;
+    max-width: 430px;
+  }
+
+  /* 设置文本内容的样式 */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+  /* 设置弹出图片的动画，添加动画 */
+  .modal-content,
+  #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @-webkit-keyframes zoom {
+    from {
+      -webkit-transform: scale(0)
+    }
+
+    to {
+      -webkit-transform: scale(1)
+    }
+  }
+
+  @keyframes zoom {
+    from {
+      transform: scale(0)
+    }
+
+    to {
+      transform: scale(1)
+    }
+  }
+
+  /* 设置span标签的关闭按钮样式 */
+  .close {
+    position: absolute;
+    top: 55px;
+    right: 415px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* 小屏幕中图片宽度为 100% */
+  @media only screen and (max-width: 700px) {
+    .modal-content {
+      width: 100%;
+    }
+  }
+</style> -->
+
+<div class="rightContent financialManagement__1cXhX">
+  <p class="title">财务管理</p>
+  <div class="tabsBox">
+    <div class="ant-tabs ant-tabs-top ant-tabs-line">
+      <div role="tablist" class="ant-tabs-bar" tabindex="0">
+        <div class="ant-tabs-nav-container"><span unselectable="unselectable"
+            class="ant-tabs-tab-prev ant-tabs-tab-btn-disabled"><span class="ant-tabs-tab-prev-icon"></span></span><span
+            unselectable="unselectable" class="ant-tabs-tab-next ant-tabs-tab-btn-disabled"><span
+              class="ant-tabs-tab-next-icon"></span></span>
+          <div class="ant-tabs-nav-wrap">
+            <div class="ant-tabs-nav-scroll">
+              <div class="ant-tabs-nav ant-tabs-nav-animated">
+                <div class="ant-tabs-ink-bar ant-tabs-ink-bar-animated"
+                  style="display: block; transform: translate3d(0px, 0px, 0px); width: 104px;"></div>
+                <div role="tab" aria-disabled="false" aria-selected="true" class="ant-tabs-tab-active ant-tabs-tab">在线充值
+                </div>
+                <div role="tab" aria-disabled="false" aria-selected="false" class=" ant-tabs-tab">充值记录</div>
+                <div role="tab" aria-disabled="false" aria-selected="false" class=" ant-tabs-tab">开票申请</div>
+                <div role="tab" aria-disabled="false" aria-selected="false" class=" ant-tabs-tab">开票记录</div>
+                <div role="tab" aria-disabled="false" aria-selected="false" class=" ant-tabs-tab">时长购买</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ant-tabs-content ant-tabs-content-animated" style="margin-left: 0%;" id="leftCtr">
+        <div role="tabpanel" aria-hidden="false" class="ant-tabs-tabpane ant-tabs-tabpane-active">
+          <div class="onlineRecharge__1ddq3">
+            <p class="tips__2n8Vn">1. 如果充值金额过大或需要公司转账, 请联系公司电话 123-456-7890 ,渠道经理会和你沟通相关事宜.</p>
+            <p class="tips__2n8Vn">2. 充值完成后, 金额仅用于平台消费购买报告或开通相关产品使用权限, 账户金额不予提现.</p>
+            <div class="rechargeBox__39aaS">
+              <p class="rechargeIllustrate__3tRzC">充值预付款金额(元)</p>
+              <form target="_blank" class="ant-form ant-form-inline">
+                <div class="ant-row ant-form-item">
+                  <div class="ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control "><input type="text" placeholder="输入充值金额"
+                        class="ant-input ant-input-lg priceInput__2CFv8" value="" id="amount"
+                        data-__meta="[object Object]"></div>
+                  </div>
+                </div>
+                <div class="ant-row ant-form-item">
+                  <div class="ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control ">
+                      <button type="button" class="ant-btn submit__6iKqS ant-btn-lg"
+                        id="submitBtn"><span>提交充值</span></button>
+                    </div>
+                    <div id="qrcode" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+   
+        <div role="tabpanel" aria-hidden="true" class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div>
+        <div role="tabpanel" aria-hidden="true" class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div>
+        <div role="tabpanel" aria-hidden="true" class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div>
+        <div role="tabpanel" aria-hidden="true" class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div>
+      </div>
+    </div>
+                  <!-- 微信支付二维码 -->
+                  <!-- 弹窗 -->
+                  <!-- <div id="myModal" class="modal"> -->
+                    <!-- 关闭按钮 -->
+                    <!-- <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span> -->
+                    <!-- 弹窗内容 -->
+                    <!-- 属性设置为模态框 -->
+                    <!-- <div class="modal-content" id="qrcode" /> -->
+                    <!-- 文本描述 -->
+                    <!-- <div id="caption">请使用微信扫码支付</div> -->
+                  <!-- </div> -->
+  </div>
+</div>
+
+<script src="./static/js/qrcode.js"></script>
+
+<script>
+  var submitBtn = document.getElementById('submitBtn');
+  var amount = document.getElementById('amount');
+  var postData = { "userId": '1', "money": "1" };
+  var codeUrl = "";
+  var orderNo = "";
+  var timer = null;
+  submitBtn.onclick = function () {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://41e4-111-52-86-65.ngrok.io/api/wx-pay/native', true);
+    xhr.setRequestHeader('Content-Type', 'application/json'); //请求头
+    xhr.send(JSON.stringify(
+      {
+        "userId": "1",
+        "money": "1"
+      }
+    ));
+    xhr.onload = function () {
+      if (xhr.status == 200) {
+        var res = JSON.parse(xhr.responseText);
+        codeUrl = res.codeData.codeUrl
+        orderNo = res.codeData.orderNo
+        // openDiago(); // 打开弹窗
+        // 正常二维码
+    var qrcode = new QRCode(document.getElementById("qrcode"), codeUrl);
+    // 启动定时器
+    timer = setInterval(() => {
+      queryOrderStatus()
+    }, 3000)
+      }
+    }
+  }
+
+  // 打开弹窗
+  var openDiago = function () {
+    // 获取DIV弹窗
+    var modal = document.getElementById('myModal');
+    // 正常二维码
+    var qrcode = new QRCode(document.getElementById("qrcode"), codeUrl);
+    modal.style.display = "block"; //此元素将显示为块级元素，此元素前后会带有换行符。
+
+    // 获取 <span> 元素，样式设置为关闭按钮
+    var span = document.getElementsByClassName("close")[0];
+
+    // 当点击 (x), 关闭弹窗
+    span.onclick = function () {
+      modal.style.display = "none"; //将模态框属性设置为不可见
+    }
+
+    // 当点击 图片, 关闭弹窗，实现点击空白处关闭图片
+    modal.onclick = function () {
+      modal.style.display = "none"; //将模态框属性设置为不可见
+    }
+    // 启动定时器
+    timer = setInterval(() => {
+      queryOrderStatus()
+    }, 3000)
+
+  }
+
+  // 查询订单状态
+  var queryOrderStatus = function () {
+    // get请求
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://41e4-111-52-86-65.ngrok.io/orderInfo/query-order-status/' + orderNo, true);
+    xhr.setRequestHeader('Content-Type', 'application/json'); //请求头
+    xhr.send();
+    xhr.onload = function () {
+      if (xhr.status == 200) {
+        var res = JSON.parse(xhr.responseText);
+        let payPtatus = res.payStatus
+        // 正常二维码
+        if (payPtatus != null) {
+          clearInterval(timer)
+          // 三秒后跳转到订单列表
+          setTimeout(() => {
+            window.location.reload();
+          }, 1000)
+        }
+      }
+    }
+  }
+
+</script>

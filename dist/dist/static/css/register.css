@@ -1,0 +1,182 @@
+.content{
+  height: 666px;
+}
+.content .center-content{
+  position: relative;
+  height: 100%;
+  width: 1280px;
+  margin: 0 auto;
+}
+.content .center-content .img{
+  position: absolute;
+  top: 76px;
+}
+.formContent__2PMXC {
+  width: 500px;
+  right: 0;
+  top: 60px;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.welcomeBox__3zrVT {
+  padding: 54px 29px 0;
+}
+.welcomeBox__3zrVT .welcome__cXwfP {
+  font-size: 18px;
+  font-weight: 700;
+  color: #456;
+  vertical-align: bottom;
+}
+.welcomeBox__3zrVT .registerText__2M5BU {
+  float: right;
+  font-size: 14px;
+  margin-top: 8px;
+  color: #89a;
+  vertical-align: bottom;
+}
+.welcomeBox__3zrVT .loginLink__PUnAN {
+  font-size: 16px;
+  font-weight: 700;
+  color: #275a9d;
+}
+a {
+  color: #108ee9;
+  background: transparent;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  transition: color .3s ease;
+}
+.form__2-0bm {
+  padding: 0 60px 48px;
+}
+.ant-form-inline .ant-form-item {
+  display: inline-block;
+  margin-right: 16px;
+  margin-bottom: 0;
+}
+.formItem__1RWCS {
+  height: 50px;
+  margin-bottom: 0!important;
+  margin-top: 20px;
+}
+.ant-form-item {
+  font-size: 12px;
+  margin-bottom: 24px;
+  color: rgba(0,0,0,.65);
+  vertical-align: top;
+}
+.ant-row {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  height: auto;
+  zoom: 1;
+  display: block;
+}
+.ant-form-inline .ant-form-item>div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.ant-form-item-control {
+  line-height: 31.9999px;
+  position: relative;
+  zoom: 1;
+}
+.passIMG__1BNgg, .phoneIMG__3v0uL, .userIMG__3q8jI {
+  margin-right: -16px;
+  position: relative;
+  background-color: #fff;
+  left: 2px;
+}
+input[type=text], textarea {
+  -webkit-appearance: none;
+}
+
+.ant-input {
+  position: relative;
+  display: inline-block;
+  padding: 4px 7px;
+  width: 100%;
+  height: 28px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(0,0,0,.65);
+  /* background-color: #fff; */
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  transition: all .3s;
+}
+.passInput__1VVWh, .userNameInput__5QI_X {
+  width: 380px;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #daede5!important;
+  box-shadow: none!important;
+  text-indent: 20px;
+  height: 50px;
+  font-size: 14px;
+  background: none;
+}
+.eyeIMG__3GHrq {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.getVerificationCode__2vWYV {
+  position: absolute;
+  right: -4px;
+  top: 10px;
+}
+.btn-grayLight {
+  background-color: #cacfd5;
+  border: 1px solid transparent;
+  color: #fff;
+}
+
+
+.form__2-0bm .loginBottom__2Pq77 {
+  width: 380px;
+  height: 40px;
+  margin-top: 40px;
+}
+.btn-blue {
+  background-color: #2d96c9;
+  border: 1px solid transparent;
+  color: #fff;
+}
+.btn {
+  display: inline-block;
+  width: 100px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #e7ebee;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  /* background-color: #fff; */
+  color: #ffffff;
+  outline: 0;
+  cursor: pointer;
+}
+.ant-btn>i, .ant-btn>span {
+  pointer-events: none;
+}
+.info__OJKsx, .tip__12WnR {
+  color: #8898aa;
+}
+.tip__12WnR {
+  font-size: 12px;
+  margin-top: 21px;
+  text-align: center;
+}
+.ant-input:hover{
+  outline: none;
+}
+.ant-input:focus, .ant-input:hover {
+  border-color: #49a9ee;
+  outline: none;
+}

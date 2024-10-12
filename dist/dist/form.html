@@ -1,0 +1,762 @@
+<!DOCTYPE html> <link href="static/css/bootstrap.min1-data.css" rel="stylesheet">
+    <link href="static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="static/css/themify-icons.css" rel="stylesheet">
+    <link href="static/css/themify-icons.css" rel="stylesheet">
+    <link href="static/iconfont2/iconfont.css" rel="stylesheet">
+    <!-- <link href="static/css/magnific-popup.css" rel="stylesheet"> -->
+    <!-- <link href="static/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/css/owl.theme.default.min.css" rel="stylesheet"> -->
+    <!-- <link href="static/css/animate.css" rel="stylesheet"> -->
+    <link href="static/css/bootsnav1-data.css" rel="stylesheet">
+    <link href="static/css/style1-data.css" rel="stylesheet">
+    <!-- <link href="static/css/responsive1.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="static/css/data.css">
+    <script src="./static/js/jquery-1.12.4.min.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.7.0/echarts.min.js"></script>
+    <!-- ========== End Stylesheet ========== -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5/html5shiv.min.js"></script>
+      <script src="assets/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ========== Google Fonts ========== -->
+    <link href="static/css/css2.css" rel="stylesheet">
+    <link href="static/css/font.css" rel="stylesheet">
+<html>
+ 
+<head>
+    <meta charset="UTF-8">
+   
+    <title>专家智库</title>
+</head>
+<style>
+  body{
+    background-color: #183158;
+  }
+
+  #app{
+    margin-top: 150px;
+    border: 1px solid #183158;
+    width: 80%;
+    margin-left:10%;
+  }
+
+    /*修改table 的背景颜色和文字颜色*/
+    .el-table td, .el-table th.is-leaf,.el-table--border, .el-table--group{
+    border-color: black;
+    background-color:#183158;
+    color: white;
+  }
+  /*修改element-ui的table 在鼠标悬停hover时的高亮颜色*/
+  .el-table tbody tr:hover>td {
+    background-color:rgb(72, 69, 69)!important
+  }
+
+  .el-table-column{
+    background-color:#183158;
+  }
+
+  .el-table,
+    .el-table__expanded-cell {
+        background-color: #3f5c6d2c;
+    }
+
+
+
+
+</style>
+ 
+<body>
+
+  <header id="home">
+
+    <!-- Start Navigation -->
+    <nav class="navbar bg-gray navbar-default attr-border navbar-fixed dark no-background bootsnav" style="position: fixed; background-color:#183158 ;">
+
+        <div class="container-full">
+
+            <!-- Start Atribute Navigation -->
+            <!-- <div class="attr-nav" id="logOut">
+                <ul>
+                    <li><a href="login.html">登录</a></li>
+                    <li><a href="register.html">注册</a></li>
+                </ul>
+            </div> -->
+            <div class="attr-nav" id="logIn" style="margin-left: 15px; min-height: 90px; padding-left: 10px; position: relative; z-index: 1;">
+                <a href="geren.html"><img id="personal" src="static/image/user_1.png" alt="" style="position: absolute;margin-left: -50px;margin-top: 30px;" title="个人中心"></a>
+                <a href="javascript:void(0);"><img id="quit" src="static/image/quit.png" alt="" style="margin-top: 30px;margin-left: 10px;" title="退出登录"></a>
+            </div>
+            <!-- End Atribute Navigation -->
+
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- <a class="navbar-brand" href="index.html" style="margin-top: 15px;">
+                山西区域化
+            </a> -->
+                <a href="index.html">
+                    <img src="static/image/login1.png" alt="" style="margin-top: 22%;">
+                </a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu" style="float: left;">
+                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="dropdown">
+                        <a href="data.html" style="font-weight: 500;font-size: 18px; color:white;">数据中心</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="map.html" style="font-weight: 500;font-size: 18px; color:white;">空间视窗</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="xiangqing.html" style="font-weight: 500;font-size: 18px; color:white;">区域可视化</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="shanxifengcai.html" style="font-weight: 500;font-size: 18px; color:white;">山西风采</a>
+                    </li>
+                   
+                    <li class="dropdown">
+                        <a href="form.html" style="font-weight: 500;font-size: 18px; color:white;">专家智库</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- End Navigation -->
+</header>
+    <div id="app">
+      <!-- <el-card>
+        <div slot="header" class="clearfix" >
+          <span style="font-size: 18px;color:#183158;">专家智库</span> -->
+        <el-table  class="custom-table"
+        :data="tableData.slice((currentPage-1)*pageSize,currentPage*pageSize)"
+        :row-style="getRowClass" :header-row-style="getRowClass" :header-cell-style="getRowClass"
+        border
+        style="width: 100%; ">
+        <el-table-column
+          prop="id"
+          label="id"
+          width="180"
+          align="center">
+        </el-table-column>
+        <el-table-column
+          prop="ch_name"
+          label="姓名"
+          width="180"
+          align="center">
+        </el-table-column>
+        <el-table-column
+          prop="nationality"
+          label="民族"
+          align="center">
+        </el-table-column>
+        <el-table-column
+        prop="nation"
+        label="国籍"
+        align="center">
+      </el-table-column>
+      <el-table-column
+      prop="birth"
+      label="出生年"
+      align="center">
+    </el-table-column>
+    <el-table-column
+    prop="school"
+    label="毕业学校"
+    align="center">
+  </el-table-column>
+  <el-table-column
+  prop="region_id"
+  label="地区id"
+  align="center">
+</el-table-column>
+      </el-table>
+
+      <el-pagination
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :current-page="currentPage"
+      :page-sizes="[10, 25, 50]"
+      :page-size="10"
+      layout="total, sizes, prev, pager, next, jumper"
+      :total="tableData.length"
+      align="center"
+      style="margin-top: 15px;">
+    </el-pagination>
+  <!-- </el-card>
+
+    </div> -->
+    </div>
+    
+</div>
+
+
+    <div class="footer">
+      <div class="footer-content">
+          <div class="footer-list">
+              <ul class="">
+                  <li>产品系列</li>
+                  <li><a href="data.html" class="higgs-footer-hover">数据中心</a></li>
+                  <li><a href="map.html" class="higgs-footer-hover">空间视窗</a></li>
+                  <li><a href="xiangqing.html" class="higgs-footer-hover">区域可视化</a></li>
+                  <li><a href="shanxifengcai.html" class="higgs-footer-hover">山西风采</a></li>
+                
+                  <li><a href="form.html" class="higgs-footer-hover">专家智库</a></li>
+              </ul>
+              <ul class="">
+                  <li>关于我们</li>
+                  <li><a target="_blank" href="#" class="higgs-footer-hover">研究方向</a></li>
+                  <li><a target="_blank" href="#" class="higgs-footer-hover">专家团队</a></li>
+              </ul>
+              <ul class="">
+                  <li>详细介绍</li>
+                  <li>
+                      <span>
+                  <span>
+                      <span style="color: rgb(38, 208, 255); font-size: 16px; font-weight: 700;">
+                          山西省区域现代化研究中心
+                      </span>
+                      <span style="color: rgb(41, 46, 51); padding: 0px 11px; margin-left: 6px; background-color: rgb(255, 255, 255); line-height: 24px; font-size: 12px; border-radius: 4px; display: inline-block;">
+                          <a href="http://base.ipbd.net/pslab/contact.html">联系我们</a>
+                      </span>
+                      </span>
+                      </span>
+                  </li>
+                  <li><a href="http://base.ipbd.net/pslab/index.html">http://base.ipbd.net/pslab/index.html</a>
+                  </li>
+              </ul>
+              <ul class="footer-lastUl">
+                  <li>关注方式</li>
+                  <li>
+                      <span>
+                  <span class="wechat" style="position: relative;cursor: pointer;" >
+                      <img src="static/image/weixin.png" style="margin-right: 10px;">
+                      <span>公众号</span>
+                      </span>
+                      </span>
+                  </li>
+                  <div class="code" style="position: absolute;display: none;">
+                      <img src="static/image/QR.jpg" width="150px" height="150px">
+                  </div>
+              </ul>
+          </div>
+          <div class="footer-details">
+              <div class="footer-details-box">
+                  <p>Copyright©2020-2020 &nbsp;BusinessBigData. All&nbsp;Rights&nbsp;Reserved&nbsp;&nbsp;
+                  </p>
+                  <span>建议分辨率：1920*1080及以上</span><span>建议浏览器：Chrome浏览器能带来更好使用体验</span><span>Chrome及最新IE浏览器</span><a target="_blank" href="https://browsehappy.com/">下载</a>
+                  <div class="footer-police" style="margin-top:3px">
+                      <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001931" style="display: inline-block;text-decoration: none;height: 20px;line-height: 20px;">
+                          <img src="static/image/police.png" style="float: left;">
+                          <p style="float: left;margin: 0 0 0 5px;">晋公网安备 14070202000170号</p>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+   
+</body>
+<!-- import Vue before Element -->
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+        return {  
+        tableData: [
+        {
+      id: 1,
+      ch_name: "陈莞",
+      nationality: "汉族",
+      nation: "中国",
+      birth: "1987年",
+      school: "福州大学",
+      region_id:17
+         },
+    {
+    id: 2,
+     ch_name: "张学良",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "1978年",
+     school: "上海财经大学",
+     region_id: 26
+    },
+    {
+    id: 3,
+     ch_name: "刘勇",
+     nationality: "汉族",
+    nation: "中国",
+     birth: null,
+     school: "北京协和医院",
+     region_id: 1
+    },
+    {
+    id: 4,
+     ch_name: "刘云刚",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "1973年",
+     school: "中山大学",
+     region_id: 3
+    },
+    {
+    id: 5,
+     ch_name: "陆铭",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "1973年3月",
+     school: "复旦大学",
+     region_id: 26
+    },
+    {
+    id: 6,
+     ch_name: "沈体雁",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "1971年",
+     school: "北京大学",
+     region_id: 1
+    },
+    {
+    id: 7,
+     ch_name: "孙久文",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "1956年12月",
+     school: "中国人民大学",
+     region_id: 1
+    },
+    {
+    id: 8,
+     ch_name: "王晓红",
+     nationality: "汉族",
+    nation: "中国",
+     birth: null,
+     school: "中国传媒大学",
+     region_id: 1
+    },
+    {
+    id: 9,
+     ch_name: "周蜀秦",
+     nationality: "汉族",
+    nation: "中国",
+     birth: null,
+     school: "南京市社会科学院城市发展研究所",
+     region_id: 18
+    },
+    {
+    id: 10,
+     ch_name: "郑金平",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19680122",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 11,
+     ch_name: "张文平",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19680123",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 12,
+     ch_name: "苗聪秀",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19650127",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 13,
+     ch_name: "郑文",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19851123",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 14,
+     ch_name: "郝少峰",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19710529",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 15,
+     ch_name: "牛晓红",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19731118",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 16,
+     ch_name: "杨建洲",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19760918",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 17,
+     ch_name: "茹小光",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19650209",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 18,
+     ch_name: "张丽芳",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19720129",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 19,
+     ch_name: "李俊峰",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19700307",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 20,
+     ch_name: "李部霞",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19630918",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 21,
+     ch_name: "黄龙卫",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19770213",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 22,
+     ch_name: "孙敏娜",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19840331",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 23,
+     ch_name: "石春花",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19810204",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 24,
+     ch_name: "李志芳",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19780228",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 25,
+     ch_name: "武步强",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19670504",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 26,
+     ch_name: "秦江波",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19730315",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 27,
+     ch_name: "郭兴",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19720215",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 28,
+     ch_name: "连亚军",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19760621",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 29,
+     ch_name: "姜胜",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19760612",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 30,
+     ch_name: "孙左奇",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19610401",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 31,
+     ch_name: "常建兰",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19780405",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 32,
+     ch_name: "李燕",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19800607",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 33,
+     ch_name: "李瑞霞",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19790626",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 34,
+     ch_name: "毕浩字",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19741222",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 35,
+     ch_name: "李菲",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19830409",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 36,
+     ch_name: "王玉红",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19771101",
+     school: "山西省医疗机构管理研究所",
+     region_id: 13
+    },
+    {
+    id: 37,
+     ch_name: "李亭",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19760425",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 38,
+     ch_name: "郝文延",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19770512",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 39,
+     ch_name: "降凌燕",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19820402",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 40,
+     ch_name: "李向东",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19801107",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 41,
+     ch_name: "杨浩",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19790711",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 42,
+     ch_name: "刘杰英",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19820726",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 43,
+     ch_name: "姬军军",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19790228",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 44,
+     ch_name: "原宁",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19820114",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 45,
+     ch_name: "申延令",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19671222",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 46,
+     ch_name: "李平",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19890121",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 47,
+     ch_name: "马恺",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19900209",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 48,
+     ch_name: "张昊天",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19940713",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+    id: 49,
+     ch_name: "王亚慧",
+     nationality: "汉族",
+    nation: "中国",
+     birth: "19930326",
+     school: "长治医学院健康大数据中心",
+     region_id: 13
+    },
+    {
+      id: 50,
+      ch_name: "王字江",
+      nationality: "汉族",
+      nation: "中国",
+      birth: "19810810",
+      school: "长治医学院健康大数据中心",
+      region_id: 13
+    }
+       
+] ,
+currentPage: 1,
+pageSize: 10, // 每页显示的条数
+total:50
+}
+    },
+        methods:{
+           
+      handleSizeChange(size) {
+        this.pageSize = size;
+      this.currentPage = 1; 
+      },
+      handleCurrentChange(page) {
+      this.currentPage = page;
+    },
+    getRowClass({ row, column, rowIndex, columnIndex }) {
+                return "background:#3f5c6d2c;color:#000;";
+            },
+       
+      }
+     
+    })
+
+    
+</script>
+ 
+</html>

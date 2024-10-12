@@ -1,0 +1,72 @@
+{
+  "id": "3231106",
+  "name": "个人详情",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "145738",
+      "name": "信封_填充",
+      "font_class": "xinfengtianchong",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    },
+    {
+      "icon_id": "315959",
+      "name": "user",
+      "font_class": "weibiaoti1",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "1137785",
+      "name": "财务",
+      "font_class": "caiwu",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
+    },
+    {
+      "icon_id": "1220600",
+      "name": "BBd关注",
+      "font_class": "guanzhu",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "1727422",
+      "name": "205设置",
+      "font_class": "shezhi",
+      "unicode": "e8b8",
+      "unicode_decimal": 59576
+    },
+    {
+      "icon_id": "2170949",
+      "name": "消息-消息",
+      "font_class": "xiaoxi-xiaoxi",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "10483775",
+      "name": "余额",
+      "font_class": "yue",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "16372637",
+      "name": "沙漏/等待",
+      "font_class": "shalou",
+      "unicode": "e6f9",
+      "unicode_decimal": 59129
+    },
+    {
+      "icon_id": "18977367",
+      "name": "订单",
+      "font_class": "dingdan",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    }
+  ]
+}

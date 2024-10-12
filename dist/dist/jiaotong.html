@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交通运输</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="./static/css/footer.css">
+    <link rel="stylesheet" href="./static/layui/css/layui.css">
+    <link rel="stylesheet" href="./static/dtree/dtree.css">
+    <link rel="stylesheet" href="static/css/bootsnav1.css">
+    <link href="static/css/font.css" rel="stylesheet">
+    <link href="static/css/style1-data.css" rel="stylesheet">
+    <link href="static/css/bootsnav1-data.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_3249312_3iafpzabsuy.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./static/layui/layui.js"></script>
+    <script src="./static/dtree/dtree.js"></script>
+    <script src="./static/js/echarts.js"></script>
+    <link rel="stylesheet" href="static/css/yuedu.css">
+
+</head>
+
+<body>
+
+    <!--导航条-->
+    <header id="home">
+
+        <!-- Start Navigation -->
+        <nav class="navbar bg-gray navbar-default attr-border navbar-fixed dark no-background bootsnav" style="position: fixed;background-color: #183158;">
+            <div class="container-full">
+                <!-- Start Atribute Navigation -->
+                <!-- <div class="attr-nav" id="logOut">
+                        <ul>
+                            <li><a href="login.html">登录</a></li>
+                            <li><a href="register.html">注册</a></li>   <a href="form.html" style="font-weight: 500;font-size: 18px; color: white;">专家智库</a>
+
+                        </ul>
+                    </div> -->
+                <div class="attr-nav" id="logIn" style="margin-left: 15px; min-height: 90px; padding-left: 10px; position: relative; z-index: 1;">
+                    <a href="geren.html"><img id="personal" src="static/image/user_1.png" alt="" style="position: absolute;margin-left: -50px;margin-top: 30px;" title="个人中心"></a>
+                    <a href="javascript:void(0);"><img id="quit" src="static/image/quit.png" alt="" style="margin-top: 30px;margin-left: 10px;" title="退出登录"></a>
+                </div>
+                <!-- End Atribute Navigation -->
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <!-- <a class="navbar-brand" href="index.html" style="margin-top: 15px;">
+                        山西区域化
+                    </a> -->
+                    <a href="index.html">
+                        <img src="static/image/login1.png" alt="" style="margin-top: 22%;">
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu" style="float: left;">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="dropdown">
+                            <span style="cursor:pointer;" id="btn1">数据中心</span>
+                        </li>
+                        <li class="dropdown">
+                            <span style="cursor:pointer;" id="btn2">空间视窗</span>
+                        </li>
+                        <li class="dropdown">
+                            <span style="cursor:pointer;" id="btn3">区域可视化</span>
+                        </li>
+                        <li class="dropdown">
+                            <span style="cursor:pointer;" id="btn4">山西风采</span>
+                        </li>
+                       
+                        <li class="dropdown">
+                            <span style="cursor:pointer;" id="btn5">专家智库</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+
+    <!--表格-->
+    <div class="layui-fluid">
+        <div class="layui-row layui-col-space15">
+            <i class="icon iconfont icon-icon_Monitor"></i>
+            <p class="headline">月度数据</p>
+        </div>
+        <div class="layui-row layui-col-space10">
+            <!-- 左树 -->
+            <div class="layui-col-sm12 layui-col-md4 layui-col-lg3">
+                <div class="layui-card">
+                    <div class="layui-card-body mini-bar" id="ltTree">
+                    </div>
+                </div>
+            </div>
+            <!-- 右表 -->
+            <div class="layui-col-sm12 layui-col-md8 layui-col-lg9" style="position:relative;top:-58px;">
+                <div class="layui-tab layui-tab-card">
+                    <!--切换-->
+                    <div>
+                        <div style="float:left">
+                            <ul class="layui-tab-title">
+                                <li class="layui-this" lay-id="1">基本信息</li>
+                                <li lay-id="2">数据表格</li>
+                                <li lay-id="3" class="btn3">饼状图</li>
+                            </ul>
+                        </div>
+                        <div style="float:right;padding:5px;">
+                            <select name="year" lay-verify="required" style="height:30px;width:200px;" id="select">
+                                <option selected value="5">近5年</option>
+                                <option value="10">近10年</option>
+                                <option value="15">近15年</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="layui-tab-content" style="height: 100px;">
+                        <!--基本信息-->
+                        <div class="layui-tab-item layui-show">
+    
+                            <table class="layui-table" id="rtTable" lay-filter="rtTable">
+                            </table>
+                        </div>
+                        <!--数据表格-->
+                        <div class="layui-tab-item">
+                            <div class="chart" id="main_chart1" style="display: block;clear:both"></div>
+                        </div>
+                        <div class="layui-tab-item">
+                            <div class="chart" id="main_chart2" style="display:block;clear:both;margin-top:50px;"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <!--底部-->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-list">
+                <ul class="">
+                    <li>产品系列</li>
+                    <li><a href="data.html" class="higgs-footer-hover">数据中心</a></li>
+                    <li><a href="map.html" class="higgs-footer-hover">空间视窗</a></li>
+                    <li><a href="xiangqing.html" class="higgs-footer-hover">区域可视化</a></li>
+                    <li><a href="#" class="higgs-footer-hover">山西风采</a></li>
+                 
+                    <li><a href="form.html" class="higgs-footer-hover">专家智库</a></li>
+                </ul>
+                <ul class="">
+                    <li>关于我们</li>
+                    <li><a target="_blank" href="#" class="higgs-footer-hover">研究方向</a></li>
+                    <li><a target="_blank" href="#" class="higgs-footer-hover">专家团队</a></li>
+                </ul>
+                <ul class="">
+                    <li>详细介绍</li>
+                    <li>
+                        <span>
+                            <span>
+                                <span style="color: rgb(38, 208, 255); font-size: 16px; font-weight: 700;">
+                                    山西省区域现代化研究中心
+                                </span>
+                                <span
+                                    style="color: rgb(41, 46, 51); padding: 0px 11px; margin-left: 6px; background-color: rgb(255, 255, 255); line-height: 24px; font-size: 12px; border-radius: 4px; display: inline-block;">
+                                    <a href="http://base.ipbd.net/pslab/contact.html">联系我们</a>
+                                </span>
+                            </span>
+                        </span>
+                    </li>
+                    <li><a href="http://base.ipbd.net/pslab/index.html">http://base.ipbd.net/pslab/index.html</a>
+                    </li>
+                </ul>
+                <ul class="footer-lastUl">
+                    <li>关注方式</li>
+                    <li>
+                        <span>
+                            <span class="wechat" style="position: relative;cursor: pointer;">
+                                <img src="static/image/weixin.png" style="margin-right: 10px;">
+                                <span>公众号</span>
+                            </span>
+                        </span>
+                    </li>
+                    <div class="code" style="position: absolute;display: none;">
+                        <img src="static/image/QR.jpg" width="150px" height="150px">
+                    </div>
+                </ul>
+            </div>
+            <div class="footer-details">
+                <div class="footer-details-box">
+                    <p>Copyright©2020-2020 &nbsp;BusinessBigData. All&nbsp;Rights&nbsp;Reserved&nbsp;&nbsp;
+                    </p>
+                    <span>建议分辨率：1920*1080及以上</span><span>建议浏览器：Chrome浏览器能带来更好使用体验</span><span>Chrome及最新IE浏览器</span><a
+                        target="_blank" href="https://browsehappy.com/">下载</a>
+                    <div class="footer-police" style="margin-top:3px">
+                        <a target="_blank"
+                            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001931"
+                            style="display: inline-block;text-decoration: none;height: 20px;line-height: 20px;">
+                            <img src="static/image/police.png" style="float: left;">
+                            <p style="float: left;margin: 0 0 0 5px;">晋公网安备 14070202000170号</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var haha = "";
+        var nowId = null;
+        var myCol = [
+            { field: 'name', align: 'center', title: '地区名' },
+            { field: 'labelcn', align: 'center', sort: true, title: '指标' },
+            { field: 'y2020', align: 'center', sort: true, title: '2020年' },
+            { field: 'y2019', align: 'center', sort: true, title: '2019年' },
+            { field: 'y2018', align: 'center', sort: true, title: '2018年' },
+            { field: 'y2017', align: 'center', sort: true, title: '2017年' },
+        ];
+        var BigYear = 5;
+
+        // layui初始化
+        $(() => {
+            ins1();
+            createTree();
+            creatEcharts();
+        })
+        getYear();
+        function getYear() {
+            var select = document.getElementById('select');
+            var options = select.children;
+            var year = 0;
+            select.onchange = function () {
+                let index = select.selectedIndex;//获取选择的option对应的索引；
+                year = options[index].value;
+                BigYear = year;
+                let newCol = [{ field: 'name', align: 'center', title: '地区名' },
+                { field: 'labelcn', align: 'center', sort: true, title: '指标' }];
+
+                for(let i = 0; i < year; ++ i) {
+                    let nowYear = 2020 - i;
+                    newCol.push(
+                    { field: 'y' + nowYear, align: 'center', sort: true, title: nowYear + '年' }
+                );
+                }
+                myCol = newCol;
+                ins1(nowId, "dict_code", "");
+                debugger
+                creatEcharts();
+            };
+        }
+
+        // 渲染表格
+        var ins1 = function (webnodesid, cloumn, Keyword) {
+            var myUrl = '/sxqyhapi/yun/niandu/list?webnodesid=' + ((webnodesid == null || webnodesid == "") ? "10256" : webnodesid);
+            haha = myUrl;
+            $.ajax({
+                url: myUrl,
+                dataType: 'json',
+                type: 'get',
+                success: (res) => {
+                    layui.use(['form', 'table'], (res) => {
+                        var form = layui.form;
+                        var table = layui.table;
+
+                        table.render({
+                            elem: '#rtTable',
+                            url: myUrl,
+                            request: {
+                                pageName: 'page' //页码的参数名称，默认：page
+                                , limitName: 'limit' //每页数据量的参数名，默认：limit
+                            },
+                            parseData: function (res) { //res 即为原始返回的数据
+                                return {
+                                    "code": res.code, //解析接口状态
+                                    "msg": res.msg, //解析提示文本
+                                    "count": res.page.totalCount, //解析数据长度
+                                    "data": res.page.list //解析数据列表
+                                };
+                            },
+                            page: true,
+                            cellMinWidth: 100,
+                            height: 480,
+                            cols: [myCol],
+                        });
+                    })
+                }
+            })
+        }
+
+        // 渲染树形结构
+        var createTree = function () {
+            $.ajax({
+                type: 'get',
+                url: '/sxqyhapi/yun/niandutree/listTreeWith',
+                dataType: 'json',
+                success: res => {
+                    var myData = res.nianduTreeEntities;
+                    for(let i = 0; i < myData.length; ++ i) {
+                        if(myData[i].id == "10054") {
+                            myData[i].spread = true;
+                        }
+                    }
+                    layui.use(['tree'], () => {
+                        var dtree = layui.tree;
+                        // 树形渲染
+                        var dictTree = dtree.render({
+                            elem: '#ltTree',
+                            initLevel: '1',//默认展开层级，当该值大于level时，则会展开树的节点，直到不大于当前待展开节点的level
+                            data: myData,
+                            showLine: false,
+                            click: obj => {
+                                if (obj.data.children.length == 0) {
+                                    var clickNode = obj.data;
+                                    nowId = clickNode.id;
+                                    ins1(nowId, "dict_code", "");
+                                }
+                            }
+                        });
+                    })
+
+                }
+            })
+        }
+
+        var creatEcharts = function () {
+            $.ajax({
+                url: haha,
+                dataType: 'json',
+                type: 'get',
+                success: (res) => {   
+                    var data2 = [];
+                    for(let i = 0; i < BigYear && i < 14; ++ i) {
+                        let nowYear = 2020 - i;
+                        data2.push(nowYear + '');
+                    };
+                    var data1 = res.page.list;
+                    var xAixsData = [];
+                    var yAxisData = [];
+                    var bingtuData=[];
+                    for (var i = 0; i < data2.length; i++) {
+                        xAixsData.push(data2[i]);
+                        yAxisData.push(data1[i].ysum)
+                        bingtuData.push({value:data1[i].ysum,name:data2[i]})
+                    }
+                    var myChart = echarts.init(document.getElementById('main_chart1'));
+                    option = {
+                        backgroundColor: 'rgba(255,255,255,0)',
+                        title: {
+                            // text: '数据',
+                            color: ['#c23531'],
+                        },
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        },
+                        grid: {
+                            left: '3%',
+                            right: '4%',
+                            bottom: '3%',
+                            containLabel: true
+                        },
+                        xAxis: {
+                            type: 'category',
+                            data: xAixsData,
+                            axisLine:{
+                                    lineStyle:{
+                                        color:'#fff',
+                                    }
+                                }
+                        },
+                        yAxis: {
+                            type: 'value',
+                            boundaryGap: [0, 0.01],
+                            axisLine:{
+                                    lineStyle:{
+                                        color:'#fff',
+                                    }
+                                }
+                        },
+                        series: [
+                            {
+                                name: '2011',
+                                type: 'bar',
+                                data: yAxisData
+                            },
+                        ]
+                    };
+                    myChart.setOption(option);
+
+                    var myChart2 = echarts.init(document.getElementById("main_chart2"));
+                    // var yDataArr = [2600, 2800, 900, 1000, 3000, 2700, 1400, 1300, 900, 1000, 800];
+                    var option2 = {
+                        tooltip: {
+                            trigger: 'item',
+                            // formatter: '{a} <br/>{b}: {c} ({d}%)'
+                            formatter: '{b} : {c} ({d}%)'
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            left: 10,
+                            data: xAixsData,
+                            textStyle:{
+                                color:'#fff',
+                                }
+                        },
+                        toolbox: {
+                            feature: {
+                                saveAsImage: {}, //导出图片
+                            }
+                        },
+                        series: [{
+                            name: '访问来源',
+                            type: 'pie',
+                            radius: ['40%', '70%'],
+                            avoidLabelOverlap: false,
+                            itemStyle: {
+                                borderRadius: 20,
+                                borderColor: '#fff',
+                                borderWidth: 2
+                            },
+                            label: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                label: {
+                                    show: true,
+                                    fontSize: '40',
+                                    fontWeight: 'bold'
+                                }
+                            },
+                            labelLine: {
+                                show: false
+                            },
+                            data: bingtuData
+                        }]
+                    }
+                    myChart2.setOption(option2);
+                }
+            })
+        }
+    </script>
+
+<script>
+    var quit = document.getElementById("quit");
+    quit.onclick = function() {
+        window.location.href = "index.html";
+        localStorage.setItem("login", "false");
+    }
+
+    var btn1 = document.getElementById("btn1");
+    btn1.onclick = function() {
+        window.location.href = "data.html"
+    }
+    var btn2 = document.getElementById("btn2");
+    btn2.onclick = function() {
+        window.location.href = "map.html"
+    }
+    var btn3 = document.getElementById("btn3");
+    btn3.onclick = function() {
+        window.location.href = "xiangqing.html"
+    }
+    var btn4 = document.getElementById("btn4");
+    btn4.onclick = function() {  window.location.href="shanxifengcai.html"
+    }
+    var btn5 = document.getElementById("btn5");
+    btn5.onclick = function() {
+        window.location.href = "form.html"  // window.location.href="data.html"
+    }
+    </script>
+    <script src="static/js/index.js"></script>
+
+</html>

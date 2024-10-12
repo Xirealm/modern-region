@@ -1,0 +1,355 @@
+<link href="static/css/font.css" rel="stylesheet">
+<div class="rightContent consume__2jslW">
+  <p class="title noMenu">我的订单</p>
+  <div class="sreach__3CD9y"><span>共
+    <b id="all"></b>条记录
+    </span>
+    <div class="sreachBox">
+      <input type="text" placeholder="请输入订单内容关键字查询" id="searchContent" class="ant-input inputSreach">
+      <img id="search" src="/static/image/search.png"></div>
+  </div>
+  <div class="listBox__2nLTR">
+    <div>
+      <div class="ant-table-wrapper">
+        <div class="ant-spin-nested-loading">
+          <div class="ant-spin-container">
+            <div class="ant-table ant-table-large ant-table-scroll-position-left">
+              <div class="ant-table-content">
+                <div class="ant-table-body">
+                  <table class="">
+                    <colgroup>
+                      <col style="width: 20%; min-width: 20%;">
+                      <col style="width: 19%; min-width: 19%;">
+                      <col style="width: 22%; min-width: 22%;">
+                      <col style="width: 18%; min-width: 18%;">
+                      <col style="width: 14%; min-width: 14%;">
+                    </colgroup>
+                    <thead class="ant-table-thead">
+                      <tr>
+                        <th class=""><span>
+                            <!-- react-text: 4404 -->下单时间
+                            <!-- /react-text -->
+                          </span></th>
+                        <th class=""><span>
+                            <!-- react-text: 4407 -->订单编号
+                            <!-- /react-text -->
+                          </span></th>
+                        <th class=""><span>
+                            <!-- react-text: 4410 -->订单内容
+                            <!-- /react-text -->
+                          </span></th>
+                        <th class=""><span>
+                            <!-- react-text: 4413 -->订单金额(元)
+                            <!-- /react-text -->
+                          </span></th>
+                        <th class=""><span>
+                            <!-- react-text: 4416 -->订单状态
+                            <!-- /react-text -->
+                          </span></th>
+                      </tr>
+                    </thead>
+                    <tbody class="ant-table-tbody">
+                      <!-- <tr class="ant-table-row  ant-table-row-level-0">
+                        <td class="">
+                          2021-10-25 17:14:24
+                        </td>
+                        <td class="">
+                          2110251714100106840
+                        </td>
+                        <td class="">
+                          山西文旅集团信息技术有限公司-阿拉丁分</td>
+                        <td class=""><span class="money__1wCIo">
+                            30
+                          </span></td>
+                        <td class="">
+                          <div>交易成功</div>
+                        </td>
+                      </tr> -->
+                                            
+                      <!-- <tr class="ant-table-row  ant-table-row-level-0">
+                        <td class="">
+                          2021-10-04 12:28:44
+                        </td>
+                        <td class="">
+                          2110041228100106806
+                        </td>
+                        <td class=""><span class="companyname__J9tYt">
+                            山西文旅集团信息技术有限公司-分析报告 
+                          </span></td>
+                        <td class=""><span class="money__1wCIo">
+                            80
+                          </span></td>
+                        <td class="">
+                          <div>交易成功</div>
+                        </td>
+                      </tr> -->
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="ant-pagination pageSaze" unselectable="unselectable" style="padding: 0px 0px 40px;">
+        <li title="上一页" tabindex="0" class="ant-pagination-disabled ant-pagination-prev" aria-disabled="true">
+          <a class="ant-pagination-item-link"></a>
+        </li>
+        <li title="上一页" id="last" class="ant-pagination-item ">
+          <a></a>
+        </li>
+        <!-- 分页的数字 -->
+        <li class="ant-pagination-item">
+          <a id="number"></a>
+        </li>
+        <li title="下一页" id="next" class="ant-pagination-item " >
+          <a>></a>
+        </li>
+        <li title="" tabindex="0" class=" ant-pagination-next" aria-disabled="false"><a
+            class="ant-pagination-item-link"></a></li>
+        <li class="ant-pagination-options">
+          <div class="ant-pagination-options-size-changer ant-select ant-select-enabled">
+            <div class="ant-select-selection
+  ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false"
+              tabindex="0">
+              <div class="ant-select-selection__rendered">
+                <div class="ant-select-selection-selected-value" id="jumpto" title="">跳转
+                </div>
+              </div>
+              <span class="ant-select-arrow" unselectable="unselectable" style="user-select: none;"><b></b></span>
+            </div>
+          </div>
+          <div class="ant-pagination-options-quick-jumper">
+            跳至
+            <input type="text" value="" id="txt">页
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="higgs-result-modal-container higgs-modal-hide">
+    <div class="higgs-bg"> </div>
+    <div class="higgs-resultContainer">
+      <h3 class="higgs-title">支付提示</h3><span class="higgs-close"><img
+          src="/static/images/aaecbf7f5f06af8972118805e20f6bbe.png"></span>
+      <div class="higgs-line"> </div>
+      <div class="higgs-img"><img src="/static/images/06b3f4fa58770ab2ad6f2d8fb88ed2ca.png"></div>
+      <p class="higgs-tips">
+        <!-- react-text: 4432 -->应付金额：
+        <!-- /react-text --><b class="higgs-price"></b><!-- react-text: 4434 --> 元
+        <!-- /react-text -->
+      </p>
+      <div class="higgs-btns"><button class="btn btn-blueLight">余额支付</button><button class="btn btn-blue">在线支付</button>
+      </div>
+    </div>
+  </div>
+  <div class="higgs-result-modal-container higgs-modal-hide">
+    <div class="higgs-bg"> </div>
+    <div class="higgs-resultContainer">
+      <h3 class="higgs-title">支付提示</h3><span class="higgs-close"><img
+          src="/static/images/aaecbf7f5f06af8972118805e20f6bbe.png"></span>
+      <div class="higgs-line"> </div>
+      <div class="higgs-img"><img src="/static/images/1dcf4a30089d31d74b46b29274e492e2.png"></div>
+      <p class="higgs-tips">余额不足</p>
+      <div class="higgs-btns"><button class="btn btn-blueLight">去充值</button><button class="btn btn-blue">在线支付</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="static/js/jquery-1.12.4.min.js"></script>
+<script>
+  // 动态渲染
+  var xhr = new XMLHttpRequest();
+  xhr.onload = function () {
+    if (xhr.status == 200) {
+      var data = JSON.parse(xhr.responseText);
+      data = data.page.list;
+      console.log(data);
+      var container = document.querySelector(".ant-table-tbody");
+      container.innerHTML = data.map((v, i) => {
+        return `
+              <tr class="ant-table-row  ant-table-row-level-0">
+              <td class="">
+                  ${v.payTime}
+              </td>
+              <td class="">
+                ${v.payCode}
+              </td>
+              <td class="">
+                ${v.payContent}
+              </td>
+              <td class="">
+                <span class="money__1wCIo">
+                  ${v.payMoney}
+                </span></td>
+              <td class="">
+                <div>${v.payType}</div>
+              </td>
+            </tr>
+        `
+      }).join('')
+    }
+  }
+  xhr.open('GET', 'http://8.142.73.77:7979/new/paylog/list', true);
+  xhr.setRequestHeader('Content-Type', 'application/json')
+  xhr.send(JSON.stringify());
+  function haha(data1) {
+    debugger  
+        var page = data1.page.currPage
+        count = data1.page.totalPage;
+        console.log(count);
+        //总数
+        all.innerHTML = data1.page.totalCount+"&nbsp;";
+        // container.innerHTML = "";
+        var container = document.querySelector(".ant-table-tbody");
+        container.innerHTML = data1.page.list.map((v, i) => {
+          return `
+              <tr class="ant-table-row  ant-table-row-level-0">
+              <td class="">
+                  ${v.payTime}
+              </td>
+              <td class="">
+                ${v.payCode}
+              </td>
+              <td class="">
+                ${v.payContent}
+              </td>
+              <td class="">
+                <span class="money__1wCIo">
+                  ${v.payMoney}
+                </span></td>
+              <td class="">
+                <div>${v.payType}</div>
+              </td>
+            </tr>
+        `
+        }).join('');
+}
+
+  getMessage();
+  function getMessage() {
+    var next = document.getElementById('next');
+    var last = document.getElementById('last');
+    var number = document.getElementById('number');
+    var jumpto = document.getElementById('jumpto');
+    var all = document.getElementById("all");
+
+    var xhr1 = new XMLHttpRequest();
+    var page = 1
+    var count = 1
+    xhr1.onload = function () {
+      if (xhr1.status == 200) {
+        haha(JSON.parse(xhr1.responseText));
+      }
+    };
+    number.innerHTML = 1;
+    xhr1.open('GET', 'http://8.142.73.77:7979/new/paylog/list?page=1', true);
+    xhr1.setRequestHeader('Content-Type', 'application/json');
+    xhr1.send();
+    //下一页
+    next.onclick = function getPage() {
+      if (page < count) {
+        page++;
+      } else {
+      }
+      number.innerHTML = page;
+      xhr1.open('GET', 'http://8.142.73.77:7979/new/paylog/list?page='+ page, true);
+      xhr1.setRequestHeader('Content-Type', 'application/json');
+      xhr1.send();
+      var data1 = JSON.parse(xhr1.responseText)
+      haha(data1);
+    }
+    //上一页
+    last.onclick = function getPage() {
+      if (page > 1) {
+        page--;
+      } else {
+      }
+      number.innerHTML = page;
+      xhr1.open('GET', 'http://8.142.73.77:7979/new/paylog/list?page='+ page, true);
+      xhr1.setRequestHeader('Content-Type', 'application/json');
+      xhr1.send();
+      var data1 = JSON.parse(xhr1.responseText)
+      haha(data1);
+    }
+    //跳转
+    jumpto.onclick = function sub() {
+      var content = document.getElementById("txt");
+      if (content.value <= count && content.value > 0) {
+        xhr1.open('GET', 'http://8.142.73.77:7979/new/paylog/list?page='+ content.value, true);
+        xhr1.setRequestHeader('Content-Type', 'application/json');
+        xhr1.send();
+        number.innerHTML = content.value;
+        var data1 = JSON.parse(xhr1.responseText)
+        haha(data1);
+      }
+      else { }
+    }
+    
+    var search = document.getElementById("search");
+    search.onclick = function search() {
+      // debugger
+    var searchContent = document.getElementById("searchContent").value;
+      xhr1.open('GET', 'http://8.142.73.77:7979/new/paylog/list?page=' + page +'&key='+ searchContent, true);
+ 
+      xhr1.setRequestHeader('Content-Type', 'application/json');
+      xhr1.send();
+      var data1 = JSON.parse(xhr1.responseText)
+      haha(data1);
+
+    }
+  }
+
+
+  // 静态渲染
+  // var data = [{
+  //   "id": 1,
+  //   "time": "2022-1-15 17:14:24",
+  //   "bookId": "2110251714100106840",
+  //   "bookContent": "山西文旅集团信息技术有限公司-阿拉丁分",
+  //   "bookMony": "48",
+  //   "state": "交易成功",
+  // },
+  // {
+  //   "id": 1,
+  //   "time": "2022-1-15 17:14:24",
+  //   "bookId": "2110251714100106840",
+  //   "bookContent": "山西文旅集团信息技术有限公司-阿拉丁分",
+  //   "bookMony": "50",
+  //   "state": "交易成功",
+  // }]
+
+  // var container=document.querySelector(".ant-table-tbody");
+  // container.innerHTML = data.map((v,i) => {
+  //   return `
+  //             <tr class="ant-table-row  ant-table-row-level-0">
+  //             <td class="">
+  //                 ${v.time}
+  //             </td>
+  //             <td class="">
+  //               ${v.bookId}
+  //             </td>
+  //             <td class="">
+  //               ${v.bookContent}
+  //             </td>
+  //             <td class="">
+  //               <span class="money__1wCIo">
+  //                 ${v.bookMony}
+  //               </span></td>
+  //             <td class="">
+  //               <div>${v.state}</div>
+  //             </td>
+  //           </tr>
+  //       `
+  // }).join('')
+
+  // var xhr=new XMLHttpRequest();
+  // xhr.onload = function(){
+  //   if(xhr.status == 200){
+  //     var data
+  //   }
+  // }  
+
+</script>

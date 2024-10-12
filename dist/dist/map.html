@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>山西区域化-地图页面</title>
+    <link
+      rel="stylesheet"
+      href="http://at.alicdn.com/t/font_3249312_ygp88xyjar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="static/css/map.css"
+    />
+    <link
+      rel="stylesheet"
+      href="static/css/bootsnav1.css"
+    />
+  </head>
+
+  <body>
+    <div class="top">
+      <nav
+        class="navbar bg-gray navbar-default attr-border navbar-fixed dark no-background bootsnav"
+        style="position: fixed; background-color: #183158"
+      >
+        <div
+          class="container-full"
+          style="width: 1280px; margin: 0 auto"
+        >
+          <!-- Start Atribute Navigation -->
+          <!-- <div class="attr-nav" id="logOut">
+                    <ul>
+                        <li><a href="login.html">登录</a></li>
+                        <li><a href="register.html">注册</a></li>
+                    </ul>
+                </div> -->
+          <div
+            class="attr-nav"
+            id="logIn"
+            style="
+              margin-left: 15px;
+              min-height: 90px;
+              padding-left: 10px;
+              position: relative;
+              z-index: 1;
+            "
+          >
+            <a href="geren.html"
+              ><img
+                id="personal"
+                src="static/image/user_1.png"
+                alt=""
+                style="position: absolute; margin-left: -50px; margin-top: 30px"
+                title="个人中心"
+            /></a>
+            <a href="javascript:void(0);"
+              ><img
+                id="quit"
+                src="static/image/quit.png"
+                alt=""
+                style="margin-top: 30px; margin-left: 10px"
+                title="退出登录"
+            /></a>
+          </div>
+          <!-- End Atribute Navigation -->
+
+          <!-- Start Header Navigation -->
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#navbar-menu"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+            <!-- <a class="navbar-brand" href="index.html" style="margin-top: 15px;">
+                    山西区域化
+                </a> -->
+            <a href="index.html">
+              <img
+                src="static/image/login1.png"
+                alt=""
+                style="margin-top: 22%"
+              />
+            </a>
+          </div>
+          <!-- End Header Navigation -->
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div
+            class="collapse navbar-collapse"
+            id="navbar-menu"
+            style="float: left"
+          >
+            <ul
+              class="nav navbar-nav navbar-right"
+              data-in="fadeInDown"
+              data-out="fadeOutUp"
+            >
+              <li class="dropdown">
+                <span
+                  style="cursor: pointer"
+                  id="btn1"
+                  >数据中心</span
+                >
+              </li>
+              <li class="dropdown">
+                <span
+                  style="cursor: pointer"
+                  id="btn2"
+                  >空间视窗</span
+                >
+              </li>
+              <li class="dropdown">
+                <span
+                  style="cursor: pointer"
+                  id="btn3"
+                  >区域可视化</span
+                >
+              </li>
+              <li class="dropdown">
+                <span
+                  style="cursor: pointer"
+                  id="btn4"
+                  >山西风采</span
+                >
+              </li>
+          
+
+              <li class="dropdown">
+                <span style="cursor:pointer;" id="btn5">专家智库</span>
+            </li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+      </nav>
+      <div class="monitorCount">
+        <div class="monitorCountDetail">
+          <div class="travel">
+            <p><span class="number">20</span>处</p>
+            <p>旅游胜地</p>
+          </div>
+          <div class="ancientCity">
+            <p><span class="number">8</span>处</p>
+            <p>古都古城</p>
+          </div>
+          <div class="landform">
+            <p><span class="number">3</span>处</p>
+            <p>独特地貌</p>
+          </div>
+          <div class="travelCity">
+            <p><span class="number">2</span>处</p>
+            <p>知名旅游城市</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mainContainer">
+      <div class="control_city">
+        <button class="btn MonitorMore">监控更多</button>
+        <button class="btn PushSet">推送设置</button>
+        <!-- <div class="input inputCtr">
+                <div id="input">
+                    <span>请选择时间</span>
+                    <i class="icon iconfont icon-sousuoxiao" style="z-index:10001"></i>
+                </div>
+                <ul class="list-group" id="TimeList">
+                    <li>2021</li>
+                    <li>2020</li>
+                    <li>2019</li>
+                    <li>2018</li>
+                    <li>2017</li>
+                </ul>
+            </div> -->
+      </div>
+      <div class="cityList">
+        <div class="cityHandle">
+          <div class="allCheck"><input type="checkbox" /><span>全选</span></div>
+          <div class="defaultGroup"><a href="#">默认分组</a></div>
+          <div class="groupHandle">
+            <i class="icon iconfont icon-groups-manage"></i>
+            <a>分组管理</a>
+          </div>
+        </div>
+        <div class="mapMenuBar">
+          <ul
+            class="firstMenu"
+            id="firstMenu"
+          ></ul>
+        </div>
+        <div
+          class="mapRightDemo"
+          id="mapRightDemo"
+        >
+          <div
+            class="rightDemoTitle"
+            id="rightDemoTitle"
+          >
+            您还没有选择
+          </div>
+          <ul class="rightDemoCtr"></ul>
+        </div>
+        <div
+          class="mapContainer"
+          id="mapContainer"
+        ></div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-list">
+          <ul class="">
+            <li>产品系列</li>
+            <li>
+              <a
+                href="data.html"
+                class="higgs-footer-hover"
+                >数据中心</a
+              >
+            </li>
+            <li>
+              <a
+                href="map.html"
+                class="higgs-footer-hover"
+                >空间视窗</a
+              >
+            </li>
+            <li>
+              <a
+                href="xiangqing.html"
+                class="higgs-footer-hover"
+                >区域可视化</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="higgs-footer-hover"
+                >山西风采</a
+              >
+            </li>
+          
+            <li><a href="form.html" class="higgs-footer-hover">专家智库</a></li>
+          </ul>
+          <ul class="">
+            <li>关于我们</li>
+            <li>
+              <a
+                target="_blank"
+                href="#"
+                class="higgs-footer-hover"
+                >研究方向</a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="#"
+                class="higgs-footer-hover"
+                >专家团队</a
+              >
+            </li>
+          </ul>
+          <ul class="">
+            <li>详细介绍</li>
+            <li>
+              <span>
+                <span>
+                  <span
+                    style="
+                      color: rgb(38, 208, 255);
+                      font-size: 16px;
+                      font-weight: 700;
+                    "
+                  >
+                  山西省区域现代化研究中心
+                  </span>
+                  <span
+                    style="
+                      color: rgb(41, 46, 51);
+                      padding: 0px 11px;
+                      margin-left: 6px;
+                      background-color: rgb(255, 255, 255);
+                      line-height: 24px;
+                      font-size: 12px;
+                      border-radius: 4px;
+                      display: inline-block;
+                    "
+                  >
+                    <a href="http://base.ipbd.net/pslab/contact.html"
+                      >联系我们</a
+                    >
+                  </span>
+                </span>
+              </span>
+            </li>
+            <li>
+              <a href="http://base.ipbd.net/pslab/index.html"
+                >http://base.ipbd.net/pslab/index.html</a
+              >
+            </li>
+          </ul>
+          <ul class="footer-lastUl">
+            <li>关注方式</li>
+            <li>
+              <span>
+                <span
+                  class="wechat"
+                  style="position: relative; cursor: pointer"
+                >
+                  <img
+                    src="static/image/weixin.png"
+                    style="margin-right: 10px"
+                  />
+                  <span>公众号</span>
+                </span>
+              </span>
+            </li>
+            <div
+              class="code"
+              style="position: absolute; display: none"
+            >
+              <img
+                src="static/image/QR.jpg"
+                width="150px"
+                height="150px"
+              />
+            </div>
+          </ul>
+        </div>
+        <div class="footer-details">
+          <div class="footer-details-box">
+            <p>
+              Copyright©2020-2020 &nbsp;BusinessBigData.
+              All&nbsp;Rights&nbsp;Reserved&nbsp;&nbsp;
+            </p>
+            <span>建议分辨率：1920*1080及以上</span
+            ><span>建议浏览器：Chrome浏览器能带来更好使用体验</span
+            ><span>Chrome及最新IE浏览器</span
+            ><a
+              target="_blank"
+              href="https://browsehappy.com/"
+              >下载</a
+            >
+            <div
+              class="footer-police"
+              style="margin-top: 3px"
+            >
+              <a
+                target="_blank"
+                href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001931"
+                style="
+                  display: inline-block;
+                  text-decoration: none;
+                  height: 20px;
+                  line-height: 20px;
+                "
+              >
+                <img
+                  src="static/image/police.png"
+                  style="float: left"
+                />
+                <p style="float: left; margin: 0 0 0 5px">
+                  晋公网安备 14070202000170号
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script
+    type="text/javascript"
+    src="https://webapi.amap.com/maps?v=2.0&key=a032ca0e72f785ebaa551ff7c1306ad2"
+  ></script>
+  <script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
+  <script src="https://webapi.amap.com/loader.js"></script>
+  <script src="static/js/index.js"></script>
+  <script type="text/javascript">
+    //初始化地图
+    var map = new AMap.Map('mapContainer', {
+      viewMode: '3D', //3D模式
+      zoom: 4, //初始化地图层级
+      center: [112.53, 37.87], //中心点
+      resizeEnable: true
+    })
+    if (!isSupportCanvas()) {
+      alert(
+        '热力图仅对支持canvas的浏览器适用,您所使用的浏览器不能使用热力图功能,请换个浏览器试试~'
+      )
+    }
+    //判断浏览区是否支持canvas
+    function isSupportCanvas() {
+      var elem = document.createElement('canvas')
+      return !!(elem.getContext && elem.getContext('2d'))
+    }
+    getMapData()
+    // 请求地图数据
+    function getMapData() {
+      var xhr = new XMLHttpRequest()
+      xhr.onload = function () {
+        if (xhr.status == 200) {
+          var data = JSON.parse(xhr.responseText)
+          // console.log(data);
+          var heatmap
+          map.plugin(['AMap.HeatMap'], function () {
+            //初始化heatmap对象
+            heatmap = new AMap.HeatMap(map, {
+              radius: 50, //给定半径
+              opacity: [0, 0.8]
+            })
+            heatMapData = data.locations
+            // console.log(heatMapData);
+            var haha = heatMapData.map((v) => {
+              return {
+                lng: v.longitude,
+                lat: v.latitude,
+                count: 80
+              }
+            })
+            // console.log(haha)
+            //设置数据集：该数据为北京部分“公园”数据
+            heatmap.setDataSet({
+              data: haha,
+              max: 100
+            })
+          })
+
+          // 设置地图点标记
+          for (let i = 0; i < heatMapData.length; i++) {
+            let marker
+            marker = new AMap.Marker({
+              position: [heatMapData[i].longitude, heatMapData[i].latitude],
+              title: heatMapData[i].region,
+              clickable: true, //设计点标记是否可以点击
+              map: map,
+              icon: 'https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png',
+              offset: new AMap.Pixel(0, 0)
+            })
+            // marker.on('click',markerClick);//给点标记绑定点击事件markerClick
+            // marker.emit('click',{
+            //   target:marker
+            // })
+          }
+          map.setFitView()
+        }
+      }
+      xhr.open('GET', '/sxqyhapi/new/location/infos', true)
+      xhr.send()
+    }
+  </script>
+
+  <script>
+    // 页面顶部数据
+    var numbers = document.getElementsByClassName('number')
+    var numberList = [20, 8, 3, 2]
+    for (var i = 0; i < numbers.length; i++) {
+      numbers[i].innerHTML = numberList[i]
+    }
+
+    // 一级菜单内容
+    var firstMenu = document.getElementById('firstMenu')
+    var firstMenuList = [
+      '价格指数',
+      '人民生活',
+      '财政金融',
+      '固定资产投资',
+      '海关进出口',
+      '农业',
+      '交通运输、邮电',
+      '国内贸易',
+      '旅游',
+      '教育',
+      '科技',
+      '卫生',
+      '人口与从业人员',
+      '国民经济核算',
+      '工业'
+    ]
+    var iconList = [
+      'icon-bumengaikuang',
+      'icon-jishuzhuanyi',
+      'icon-kexuejishu',
+      'icon-kexuejishu2',
+      'icon-nongyekeji2',
+      'icon-zhengceguizhang2',
+      'icon-kexueshiyan',
+      'icon-qiye',
+      'icon-heiban',
+      'icon-chanxueyanhezuo',
+      'icon-zhuanlichengguo',
+      'icon-xiaoyuanfengjing',
+      'icon-xiaoyuanshenghuo',
+      'icon-a-xiaoyuanfuwufuwudating',
+      'icon-a-xiaobaoxueshuqikan'
+    ]
+    for (var i = 0; i < firstMenuList.length; i++) {
+      firstMenu.innerHTML +=
+        `<li class='firstMenuLi'>
+                            <div class='firstMenuLiTitle'>
+                              <i class='icon iconfont ` +
+        iconList[i] +
+        `'></i>
+                              <span>` +
+        firstMenuList[i] +
+        `<span>
+                            </div>
+                            <ul class='secondMenu'></ul>
+                          </li>
+  `
+    }
+    // 一级菜单的点击事件
+    var firstMenuLis = document.getElementsByClassName('firstMenuLi')
+    for (var i = 0; i < firstMenuLis.length; i++) {
+      var index = true
+      firstMenuLis[i].onclick = function () {
+        for (var i = 0; i < firstMenuLis.length; i++) {
+          firstMenuLis[i].children[1].style.display = 'none'
+        }
+        if (index) {
+          this.children[1].style.display = 'block'
+          index = false
+        } else {
+          this.children[1].style.display = 'none'
+          index = true
+        }
+      }
+    }
+
+    // 地图右边窗口
+    var mapRightDemo = document.getElementById('mapRightDemo')
+    var rightDemoCtr = mapRightDemo.children[1]
+    rightCtrCreat(1, 2019)
+    function rightCtrCreat(id, year) {
+      // 获取2019年数据
+      var xhr = new XMLHttpRequest()
+
+      xhr.open('GET', '/sxqyhapi/new/niandu/rank/' + id, true)
+      xhr.setRequestHeader('Content-Type', 'application/json', true)
+      xhr.send(JSON.stringify())
+      xhr.onload = function () {
+        if (xhr.status == 200) {
+          var data = JSON.parse(xhr.responseText)
+          console.log(data)
+          var rightCtrInfo = data.rank
+          if (rightCtrInfo == null || rightCtrInfo.length == 0) {
+            rightDemoCtr.innerHTML = '<li><p>抱歉！此项暂时没有数据！</p></li>'
+            return
+          }
+          rightDemoCtr.innerHTML = null
+          for (let i = 0; i < rightCtrInfo.length - 1; ++i) {
+            for (let j = 0; j < rightCtrInfo.length - 1 - i; ++j) {
+              let a = parseFloat(rightCtrInfo[j].ysum)
+              let b = parseFloat(rightCtrInfo[j + 1].ysum)
+              if (a - b < 0) {
+                let temp = rightCtrInfo[j]
+                rightCtrInfo[j] = rightCtrInfo[j + 1]
+                rightCtrInfo[j + 1] = temp
+              }
+            }
+          }
+          console.log(rightCtrInfo)
+          for (var i = 0; i < rightCtrInfo.length; i++) {
+            rightDemoCtr.innerHTML +=
+              `<li>
+                                            <p class='rightCtrTitle'>` +
+              rightCtrInfo[i].name +
+              `</p>
+                                            <p class='rightCtrInfo'>介绍：` +
+              rightCtrInfo[i].labelcn +
+              `</p>
+                                            <p class='rightCtrValue'>值为：` +
+              rightCtrInfo[i].ysum +
+              `</p>
+                                            <p class='rightCtrRank'>排名为：` +
+              (i + 1) +
+              `</p>
+                                        </li>`
+            rightDemoCtr.style.display = 'block'
+          }
+        }
+        rightTitleClick()
+      }
+    }
+
+    // 地图右边窗口的点击事件
+    var rightDemoTitle = mapRightDemo.children[0]
+    rightTitleClick()
+
+    function rightTitleClick() {
+      var index = true
+      rightDemoCtr.style.display = 'block'
+
+      rightDemoTitle.onclick = function () {
+        if (index) {
+          rightDemoCtr.style.display = 'block'
+          index = false
+        } else {
+          rightDemoCtr.style.display = 'none'
+          index = true
+        }
+      }
+    }
+
+    // 二级菜单内容
+    var json = {
+      list: [
+        [
+          {
+            name: '居民消费价格指数(%)',
+            id: '居民消费价格指数'
+          },
+          {
+            name: '商品零售价格指数(%)',
+            id: '商品零售价格指数'
+          },
+          {
+            name: '工业生产者出厂价格指数(%)',
+            id: '工业生产者出厂价格指数'
+          },
+          {
+            name: '工业生产者购进价格指数(%)',
+            id: '工业生产者购进价格指数'
+          }
+        ],
+        [
+          {
+            name: '城镇居民人均可支配收入',
+            id: '城镇居民人均可支配收入'
+          },
+          {
+            name: '农村居民人均可支配收入',
+            id: '农村居民人均可支配收入'
+          }
+        ],
+        [
+          {
+            name: '一般公共预算收入(万元)',
+            id: '一般公共预算收入'
+          },
+          {
+            name: '一般公共预算支出(万元)',
+            id: '一般公共预算支出'
+          },
+          {
+            name: '金融机构人民币各项存款(万元)',
+            id: '金融机构人民币各项存款'
+          }
+        ],
+        [
+          {
+            name: '全社会固定资产投资增速(%)',
+            id: '全社会固定资产投资增速'
+          }
+        ],
+        [
+          {
+            name: '进出口总额($)(万美元)',
+            id: '进出口总额($)'
+          },
+          {
+            name: '出口总额($)(万美元)',
+            id: '出口总额($)'
+          },
+          {
+            name: '进口总额($)(万美元)',
+            id: '进口总额($)'
+          }
+        ],
+        [
+          {
+            name: '粮食产量(万吨)',
+            id: '粮食产量'
+          },
+          {
+            name: '肉类总产量(%)',
+            id: '肉类总产量'
+          }
+        ],
+        [
+          {
+            name: '货物运输量(万吨)',
+            id: '货物运输量'
+          },
+          {
+            name: '旅客客运量(万人)',
+            id: '旅客客运量'
+          },
+          {
+            name: '民用汽车拥有量',
+            id: '民用汽车拥有量'
+          }
+        ],
+        [
+          {
+            name: '社会消费品零售总额(万元)',
+            id: '社会消费品零售总额'
+          }
+        ],
+        [
+          {
+            name: '国内旅游接待人数(万人)',
+            id: '国内旅游接待人数'
+          },
+          {
+            name: '接待入境过夜游客人数(人次)',
+            id: '接待入境过夜游客人数'
+          },
+          {
+            name: '旅游总收入(亿元)',
+            id: '旅游总收入'
+          }
+        ],
+        [
+          {
+            name: '高等学校数(所)',
+            id: '高等学校数'
+          },
+          {
+            name: '高等学校在校学生数',
+            id: '高等学校在校学生数'
+          },
+          {
+            name: '普通中学在校学生数(万人)',
+            id: '普通中学在校学生数'
+          },
+          {
+            name: '小学在校学生数(万人)',
+            id: '小学在校学生数'
+          }
+        ],
+        [],
+        [
+          {
+            name: '卫生机构数(个)',
+            id: '卫生机构数'
+          },
+          {
+            name: '卫生机构床位数(个)',
+            id: '卫生机构床位数'
+          },
+          {
+            name: '卫生技术人员(人)',
+            id: '卫生技术人员'
+          }
+        ],
+        [
+          {
+            name: '年末常住人口(万人)',
+            id: '年末常住人口'
+          },
+          {
+            name: '全社会从业人数(万人)',
+            id: '全社会从业人数'
+          }
+        ],
+        [
+          {
+            name: '地区生产总值(万元)',
+            id: '地区生产总值'
+          },
+          {
+            name: '人均地区生产总值',
+            id: '人均地区生产总值'
+          },
+          {
+            name: '地区生产总值指数(上年=100)',
+            id: '地区生产总值指数'
+          }
+        ],
+        [
+          {
+            name: '全社会用电量(万千瓦小时)',
+            id: '全社会用电量'
+          },
+          {
+            name: '工业用电量(万千瓦小时)',
+            id: '工业用电量'
+          }
+        ]
+      ]
+    }
+    var secondMenuLists = document.getElementsByClassName('secondMenu')
+    for (var i = 0; i < secondMenuLists.length; i++) {
+      for (var j = 0; j < json.list[i].length; j++) {
+        secondMenuLists[i].innerHTML +=
+          '<li id="' +
+          json.list[i][j].id +
+          '">' +
+          json.list[i][j].name +
+          '</li>'
+      }
+      // 二级菜单的点击事件
+      var secondMenuLis = secondMenuLists[i].children
+      // console.log(secondMenuLis);
+      for (var j = 0; j < secondMenuLis.length; j++) {
+        secondMenuLis[j].onclick = function () {
+          // 获取对应题目
+          // console.log(secondMenuText);
+          var SecondMenuId = this.id
+          console.log(SecondMenuId)
+          rightDemoTitle.innerHTML = SecondMenuId
+          rightCtrCreat(SecondMenuId, 2019)
+        }
+      }
+    }
+
+    // // 搜索时间框点击事件
+    // var TimeInput = document.getElementById('input');
+    // var TimeList = document.getElementById('TimeList');
+    // var index2 = true;
+    // TimeInput.onclick = function () {
+    //     if (index2) {
+    //         TimeList.style.display = 'block';
+    //         index2 = false;
+    //     } else {
+    //         TimeList.style.display = 'none';
+    //         index2 = true;
+    //     }
+    // }
+
+    //获取搜索框内的内容
+    // var timeInputText = TimeInput.children[0];
+    // var TimeListLis = TimeList.children;
+    // var Year = 2021;
+    // for (var i = 0; i < TimeListLis.length; i++) {
+    //     TimeListLis[i].onclick = function () {
+    //         timeInputText.innerHTML = this.innerHTML;
+    //         // console.log(this.innerHTML);
+    //         // console.log(timeInputText.innerHTML);
+    //         Year = parseInt((this.innerHTML).replace(/[^0-9]/, ''));
+    //         // console.log(typeof(Year));
+    //         TimeList.style.display = 'none';
+    //         // 获取年份之后更新排名数据
+    //         rightCtrCreat(1, Year);
+    //         // 获取热力图数据
+    //     }
+    // }
+  </script>
+  <!-- 导航条 -->
+  <script>
+    var quit = document.getElementById('quit')
+    quit.onclick = function () {
+      window.location.href = 'index.html'
+      localStorage.setItem('login', 'false')
+    }
+
+    var btn1 = document.getElementById('btn1')
+    btn1.onclick = function () {
+      window.location.href = 'data.html'
+    }
+    var btn2 = document.getElementById('btn2')
+    btn2.onclick = function () {
+      window.location.href = 'map.html'
+    }
+    var btn3 = document.getElementById('btn3')
+    btn3.onclick = function () {
+      window.location.href = 'xiangqing.html'
+    }
+    var btn4 = document.getElementById('btn4')
+    btn4.onclick = function () {
+      window.location.href = 'shanxifengcai.html'
+    }
+    var btn5 = document.getElementById('btn5')
+    btn5.onclick = function () {
+      window.location.href = "form.html" 
+      // window.location.href="data.html"
+    }
+  </script>
+</html>

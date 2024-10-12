@@ -1,0 +1,150 @@
+@charset"UTF-8";
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../image/背景1_2.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-color: rgb(10,25,51);
+    background-color:#183158;
+}
+
+.el-header {
+    background-color: #B3C0D1;
+    color: #333;
+    line-height: 60px;
+}
+
+.el-aside {
+    color: #333;
+}
+
+.layui-fluid {
+    margin-top: 120px;
+    width: 1200px;
+}
+
+/* .layui-fluid {
+    min-height: 800px;
+} */
+
+.chart {
+    height: 500px;
+    width: 1000px;
+    /* background-color: aquamarine; */
+    margin: 0 auto;
+}
+
+.layui-tab {
+    min-height: 550px;
+    margin-bottom: 40px;
+}
+
+#main_chart1 {
+    width: 800px;
+    height: 480px;
+}
+
+#main_chart2 {
+    width: 800px;
+}
+
+.layui-tab-card {
+    box-shadow: none;
+    /* background-color: white; */
+    margin-top: 58px;
+    background-color: rgba(96, 143, 184, 0.2);
+}
+
+.layui-btn {
+    background-color: #183158;
+}
+
+.icon-icon_Monitor,
+.headline {
+    display: inline-block;
+    color: rgba(104, 202, 230, 0.95);
+    font-size: 30px;
+    font-weight: 500;
+}
+.layui-tree-txt{
+    color:#fff;
+}
+
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: #183158;
+}
+.layui-tab-title li {
+    color:white;
+}
+.layui-card-body{
+    border-right:2px solid #919395;
+    border-bottom:none;
+    color: black;
+}
+.layui-card{
+    background-color: rgb(96, 143, 184, 0.2);
+    color: black;
+}
+.layui-tab-title{
+    border-right:1px solid #eee;
+}
+.layui-tree-iconArrow:after{
+    z-index:99;
+}
+/*改样式*/
+.layui-tree-entry:hover{
+    background-color: rgb(96, 143, 184, 0.2);
+}
+.layui-table-body :hover{
+    background-color: rgb(96, 143, 184, 0.01);
+}
+.layui-table {
+    background-color: rgb(96, 143, 184, 0.2);
+    color: white;
+}
+.layui-tab-title .layui-this{
+    color: white;
+}
+tr:hover{
+    background-color: white;
+    color: black;
+}
+/* th:hover{
+    background-color: rgb(96, 143, 184, 0.2);
+    color: black;
+} */
+/* tbody:hover{
+    background-color: white!important;
+    color: black;
+} */
+.layui-table-page .layui-laypage input{
+    background-color: rgb(96, 143, 184, 0.01);
+    color: white;
+}
+.layui-laypage input:focus, .layui-laypage select:focus {
+    border-color: #fff!important;
+}
+.layui-table-page .layui-laypage button{
+    background-color: rgb(96, 143, 184, 0.01);
+    color: white;
+    border:1px solid white;
+}
+.layui-table-page .layui-laypage span{
+color:#999999;
+}
+a{
+    color: white!important;
+}
+.layui-table-view select[lay-ignore]{
+    background-color: rgb(96, 143, 184, 0.01);
+}
+select{
+    background-color: rgb(96, 143, 184, 0.01);
+    color:white; 
+}
+select:focus {
+    outline: none;
+    box-shadow: inherit;
+    color: black;
+}

@@ -1,0 +1,158 @@
+<link href="./static/css/font.css" rel="stylesheet">
+<div class="rightContent infoContainer__2VE9M">
+  <div class="title noMenu">
+    <p>联系信息</p>
+  </div>
+  <div class="warning">联系人信息邮箱可用于报告接收，城市信息接收等。</div>
+  <div class="alertText__Q4-h6">
+    <!-- react-text: 5558 -->还可以添加&nbsp;
+    <!-- /react-text --><strong style="color: rgb(68, 85, 102);">8</strong><!-- react-text: 5560 -->&nbsp;个
+    <!-- /react-text -->
+  </div>
+  <div class="listBox contactsList__38sHF">
+    <table class="contact-table" cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <th width="250">邮箱</th>
+          <th>姓名</th><th>手机</th>
+          <th>部门</th><th>职位</th>
+          <th width="80">操作</th>
+        </tr>
+      </thead>
+      <tbody class="table-tbody" id="table-tbody"></tbody>
+    </table>
+    <div class="noDataPNG__2pxW-">
+      <p>
+        <!-- react-text: 5602 -->
+        <!-- /react-text -->
+        <!-- react-text: 5603 -->
+        <!-- /react-text -->
+      </p>
+    </div>
+  </div>
+  <div class="addContainer__10S0g">
+    <div class="addItem__1dwOm">
+      <form class="ant-form ant-form-inline">
+        <div class="ant-row ant-form-item formItem__2io0P">
+          <div class="ant-form-item-control-wrapper">
+            <div class="ant-form-item-control "><input type="text" placeholder="邮箱(必填)"
+                class="ant-input ant-input-lg input__sJCle" value="" id="email" data-__meta="[object Object]">
+            </div>
+          </div>
+        </div>
+        <div class="ant-row ant-form-item formItem__2io0P">
+          <div class="ant-form-item-control-wrapper">
+            <div class="ant-form-item-control "><input type="text" placeholder="姓名(选填)"
+                class="ant-input ant-input-lg input__sJCle" value="" id="name" data-__meta="[object Object]">
+            </div>
+          </div>
+        </div>
+        <div class="ant-row ant-form-item formItem__2io0P">
+          <div class="ant-form-item-control-wrapper">
+            <div class="ant-form-item-control "><input type="text" placeholder="11位手机号码(选填)"
+                class="ant-input ant-input-lg input__sJCle" value="" id="mobilePhone"
+                data-__meta="[object Object]"></div>
+          </div>
+        </div>
+        <div class="ant-row ant-form-item formItem__2io0P">
+          <div class="ant-form-item-control-wrapper">
+            <div class="ant-form-item-control "><input type="text" placeholder="部门(选填)"
+                class="ant-input ant-input-lg input__sJCle" value="" id="section"
+                data-__meta="[object Object]"></div>
+          </div>
+        </div>
+        <div class="ant-row ant-form-item formItem__2io0P">
+          <div class="ant-form-item-control-wrapper">
+            <div class="ant-form-item-control "><input type="text" placeholder="职位(选填)"
+                class="ant-input ant-input-lg input__sJCle" value="" id="position"
+                data-__meta="[object Object]"></div>
+          </div>
+        </div>
+        <div class="ant-row ant-form-item formItem__2io0P">
+          <div class="ant-form-item-control-wrapper">
+            <div class="ant-form-item-control "><button type="primary"
+                class="btn btn-blue addBtn__2Nj5N">添加</button></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  var trs=document.getElementsByClassName("locked__ZHfXs");
+  var tds=document.getElementsByClassName('ant-input-disabled');
+
+  var xhr=new XMLHttpRequest;
+  console.log(1);
+
+  xhr.open('GET',"http://pmnqpm4.nat.ipyingshe.com/contactinfo/list",true);
+  xhr.setRequestHeader('Content-Type', 'application/json', true);
+  xhr.send(JSON.stringify());
+  xhr.onload=function(){
+    debugger
+    if(xhr.status == 200){
+      // debugger
+      let data=JSON.parse(xhr.responseText);
+      console.log(data);
+      var tableTbody=document.getElementById("table-tbody");
+      var data2=data.page.list;
+      for(var i=0;i<data2.length;i++){
+        tableTbody.innerHTML+=`
+            <tr class="locked__ZHfXs">
+              <td>
+                <div class="ant-row ant-form-item">
+                  <div class="ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control has-success">
+                      <input type="text" placeholder="邮箱(必填)" disabled="" value="${data2[i].email}" id="email1119" data-__meta="[object Object]" class="ant-input ant-input-lg ant-input-disabled">
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ant-row ant-form-item">
+                  <div class="ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control has-success">
+                      <input type="text" placeholder="姓名(选填)" disabled="" value="${data2[i].name}" id="name1119" data-__meta="[object Object]" class="ant-input ant-input-lg ant-input-disabled">
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ant-row ant-form-item">
+                  <div class="ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control has-success">
+                      <input type="text" placeholder="11位手机号码(选填)" disabled="" value="${data2[i].tel}" id="mobilePhone1119" data-__meta="[object Object]" class="ant-input ant-input-lg ant-input-disabled">
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ant-row ant-form-item">
+                  <div class="ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control has-success">
+                      <input type="text" placeholder="部门(选填)"  disabled="" value="${data2[i].department}" id="section1119" data-__meta="[object Object]" class="ant-input ant-input-lg ant-input-disabled">
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ant-row ant-form-item">
+                  <div class="ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control has-success">
+                      <input type="text" placeholder="职位(选填)" disabled="" value="${data2[i].position}" id="position1119" data-__meta="[object Object]" class="ant-input ant-input-lg ant-input-disabled">
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <span class="handleIcon__1roOE">
+                  <img src="/static/image/649b8a09cfb30f8d36ef7dd4e4c68d87.png">
+                </span>
+              </td>
+            </tr> 
+            `
+      } 
+    }
+  }
+</script>
