@@ -68,7 +68,7 @@ import { useRegionStore } from "@/stores/indicators";
 const regionStore = useRegionStore()
 
 const chart = ref();
-const regions = ["中国",'晋中', '大同', '阳泉', '太原']
+const regions = ["中国",'商业型城市', '太原', '山西大学哲学院', '工业型城市','苏州']
 const selectedRegions = ref(['中国'])
 const primaryIndicators = ref<any[]>([]);
 
@@ -223,7 +223,7 @@ const legendselectchanged = (e: any) => {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   .btn{
     margin: 0;
   }
