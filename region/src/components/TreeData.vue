@@ -10,7 +10,9 @@ interface Tree {
 
 const expandedKeys = ref<any[]>(["1-1", "1-2", "1-3", "1-4", "1-5", "1-6"])
 
-const handleNodeClick = (data: Tree) => {
+    const selectedNodeKey = ref<string | number | null>(null); 
+const handleNodeClick = (data: Tree,node:any) => {
+    selectedNodeKey.value = node.key;
     console.log(data)
 }
 const data = ref<Tree[]>([])
@@ -28,41 +30,34 @@ const defaultProps = {
     children: 'children',
     label: 'label',
 }
+
+
+
 </script>
 
 <template>
     <el-tree :data="data" :props="defaultProps" node-key="id" :default-expanded-keys="expandedKeys"
-        @node-click="handleNodeClick" class="tree"/>
+        @node-click="handleNodeClick" class="tree" />
 </template>
 
 <style scoped lang="scss">
 .tree {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
+    color: #00f0ff; /* 霓虹蓝 */
+    // background: radial-gradient(circle, rgba(25,25,50,0.9), rgba(0,0,20,0.8)); /* 深色渐变背景 */
+    background: linear-gradient(to bottom right, #2a2a4d, #2a2a4d);
+    border: 1px solid rgba(0, 255, 255, 0.3); /* 霓虹边框 */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /* 外发光效果 */
     overflow-y: auto;
     height: 100%;
-    font-size: 14px;
-    letter-spacing: 1px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    padding: 15px; /* 增加内边距 */
+    --el-tree-node-hover-bg-color: #1f66cf;
+    transition: background 0.3s, box-shadow 0.3s;
+    &:hover {
+        background: radial-gradient(circle, rgba(30,30,60,0.9), rgba(0,0,30,0.9));
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+}
 }
 
-.tree::-webkit-scrollbar {
-    /*滚动条整体样式*/
-    width: 10px;
-    /*高宽分别对应横竖滚动条的尺寸*/
-    height: 1px;
-}
-
-.tree::-webkit-scrollbar-thumb {
-    /*滚动条里面小方块*/
-    border-radius: 10px;
-    box-shadow: inset 0 0 5px rgba(146, 146, 146, 0.2);
-    background: #d5d3d3;
-}
-
-.tree::-webkit-scrollbar-track {
-    /*滚动条里面轨道*/
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    background: #ededed;
-}
 </style>
