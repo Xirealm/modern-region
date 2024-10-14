@@ -44,7 +44,7 @@ const option: any = ref({
     left: '5',
     top:'5',
     textStyle: {
-      color: '#000',
+      color: '#fff',
     }
   },
   legend: {
@@ -64,7 +64,7 @@ const option: any = ref({
     axisLabel: {
       interval: 0,
       rotate: 25,
-      color: '#000',
+      color: '#fff',
       fontSize:'13'
     },
   },
@@ -73,6 +73,10 @@ const option: any = ref({
     {
       type: "bar",
       barMaxWidth: '50',
+      animationEasing: 'elasticOut',
+      animationDelay: function (idx:any) {
+        return Math.random() * 500;
+      }
     },
   ],
 });
@@ -125,5 +129,45 @@ defineExpose({
 .chart {
   height: 100%;
   width: 100%;
+  /* background: linear-gradient(to bottom right, #2a2a4d, #2a2a4d);
+   */
+   background: linear-gradient(to bottom right, #2a2a4d, #2a2a4d);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  animation: pulse 3s;
 }
+.chart::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  pointer-events: none;
+  animation: pulse 2s ;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+}
+.echarts-bar {
+  transition: transform 0.3s ease;
+}
+
+
 </style>
