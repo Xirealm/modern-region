@@ -22,7 +22,7 @@
     </el-popover>
     <el-popover
       placement="bottom"
-      :width="520"
+      :width="300"
       trigger="hover"
     >
       <template #reference>
@@ -154,7 +154,7 @@ const option:any = ref({
     left: '5',
     top:'5',
     textStyle: {
-      color: '#fff',
+      color: '#000',
     }
   },
   /**取消生成动画 */
@@ -189,7 +189,7 @@ const option:any = ref({
       { name: "个人生活指标", max: 100 },
     ],
     axisName: {
-      color: '#fff',
+      color: '#000',
       fontSize:"14"
     },
     /**位置 */
@@ -209,107 +209,42 @@ const legendselectchanged = (e: any) => {
 }
 </script>
 
-
 <style scoped>
-.chart1 {
+.chart1{
   position: relative;
-  background: linear-gradient(to bottom right, #2a2a4d, #2a2a4d);
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
-
 .chart {
   height: 100%;
 }
-
-.increase-btn,
-.delete-btn {
+.increase-btn{
   position: absolute;
-  top: 5px;
+  top:5px;
+  right:5px;
   z-index: 10000;
-  color: white;
-  border: none;
-  background: transparent;
-  font-size: 16px;
-  transition: 0.3s;
-  
 }
 .delete-btn{
-  margin-right: 20px;
+  position: absolute;
+  top:5px;
+  right:140px;
+  z-index: 10000;
 }
-.increase-btn {
-  right: 5px;
-  border: 2px solid rgba(0, 255, 255, 0.7);
-  border-radius: 5px;
-  padding: 5px 10px;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
-}
-
-.increase-btn:hover {
-  background: rgba(0, 255, 255, 0.3);
-  transform: scale(1.05);
-}
-
-.delete-btn {
-  right: 140px;
-  border: 2px solid rgba(255, 0, 0, 0.7);
-  border-radius: 5px;
-  padding: 5px 10px;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-}
-
-.delete-btn:hover {
-  background: rgba(255, 0, 0, 0.3);
-  transform: scale(1.05);
-}
-
-.btn-box {
+.btn-box{
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 500px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  .btn{
+    margin: 0;
+  }
 }
-
-.btn {
-  margin: 0;
-  color: white;
-  background: rgba(255, 255, 255, 0.15);
-  border: none;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.05);
-}
-
-.tags-box {
+.tags-box{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4,1fr);
   gap: 8px;
+  .tag{
+    font-size: 14px;
+  }
 }
-
-.tag {
-  font-size: 14px;
-  background: rgba(255, 255, 255, 0.2);
-  color: #00ffcc; /* 保持字体颜色为明亮色，以提高可见性 */
-  border-radius: 5px;
-  padding: 5px;
-  transition: 0.3s;
-}
-
-.tag:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-/* 调整文本颜色以增强可读性 */
-.text {
-  color: #ffffff; /* 让文字更清晰 */
-}
-
 </style>

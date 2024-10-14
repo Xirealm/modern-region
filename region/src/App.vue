@@ -43,11 +43,7 @@ const chart2Changed = () => {
 <template>
   <el-container>
     <el-header class="header">
-      <div class="img" >
-        
-      </div>
-     
-      <h1 class="title" color="red">区域现代化</h1>
+      <h1 class="title">山西区域现代化</h1>
     </el-header>
     <el-main class="main">
       <el-row style="height: 100%" justify="space-between">
@@ -82,106 +78,73 @@ const chart2Changed = () => {
   margin: 0;
   padding: 0;
 }
-
-body {
-  background: linear-gradient(135deg, #2b2d42, #8d99ae);
-  overflow: hidden;
-}
-
 .header {
-  display:flex ;
-  flex-direction: column;
-  position: relative;
   text-align: center;
-  height: 10vh;
-  background: #101C3D;
-  backdrop-filter: blur(5px);
+  height: 8vh;
   .title {
-    height: 10vh;
-    line-height: 10vh;
+    height: 8vh;
+    line-height: 8vh;
     letter-spacing: 2px;
     font-size: 36px;
     font-weight: 500;
-    color: #edf2f4;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
   }
 }
-
 .main {
-  background-color:#07162f;
-  height: 90vh;
+  background-color: rgba(216, 216, 216, 0.406);
+  height: 92vh;
   padding: 30px;
   .tree-box {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: white;
     border-radius: 12px;
     border: 1px solid var(--el-border-color);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--el-box-shadow-lighter);
     padding: 10px 5px;
     height: 100%;
-    transition: transform 0.3s;
-    
-    &:hover {
-      transform: scale(1.05);
-    }
   }
-
   .charts {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    // background-color: bisque;
     padding: 0 0 0 40px;
-
     .line1 {
-      height: 45%;
+      height: 49%;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-
-      .chart1, .chart2 {
-        background-color: rgba(255, 255, 255, 0.9);
+      .chart1 {
+        background-color: white;
         height: 100%;
         border-radius: 12px;
         border: 1px solid var(--el-border-color);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-
-        &:hover {
-          transform: scale(1.05);
-        }
+        box-shadow: var(--el-box-shadow-lighter)
       }
-    }
-
-    .line2 {
-      margin-top: 1px;
-      height: 42%;
-      display: grid;
-      grid-template-columns: 5fr 1fr;
-      gap: 50px;
-
-      .chart3, .chart4 {
-        background-color: rgba(255, 255, 255, 0.9);
+      .chart2 {
+        background-color: white;
+        height: 100%;
         border-radius: 12px;
         border: 1px solid var(--el-border-color);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-
-        &:hover {
-          transform: scale(1.05);
-        }
+        box-shadow: var(--el-box-shadow-lighter)
+      }
+    }
+    .line2 {
+      height: 48%;
+      display: grid;
+      grid-template-columns: 5fr 1fr;
+      gap: 20px;
+      .chart3 {
+        background-color: rgb(255, 255, 255);
+        border-radius: 12px;
+        border: 1px solid var(--el-border-color);
+        box-shadow: var(--el-box-shadow-lighter)
+      }
+      .chart4 {
+        background-color: white;
+        border-radius: 12px;
+        border: 1px solid var(--el-border-color);
+        box-shadow: var(--el-box-shadow-lighter)
       }
     }
   }
-}
-.img{
-  margin-top: 20px;
-  border-radius: 8px; 
-  left: 100px;
-  position: absolute;
-  background-image: url('../../region/assets/logo.png');
-  background-color: rgba(255, 255, 255, 0.7);
-  background-repeat: no-repeat;
-  // background:linear-gradient(to bottom right, #9407d1, #aaaadc);
-width: 250px;
-height: 100px;
 }
 </style>

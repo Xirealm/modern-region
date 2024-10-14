@@ -79,9 +79,8 @@ const exportPDF = async (region: string) => {
 
 
 <template>
-    
+    <h2>上传区域现代化评价</h2>
     <div class="box">
-        <h2>上传区域现代化评价</h2>
         <div class="btn-box">
             <!-- <input type="file" name="upLoad" id="upLoad" class="fileSelect" @change = "file" > -->
             <!--  <el-upload class="upload-demo" action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15" :limit="3"> -->
@@ -117,13 +116,8 @@ const exportPDF = async (region: string) => {
 
 <style lang="scss">
 h2 {
-    // font-size: 18px;
+    font-size: 18px;
     text-align: center;
-    color: #00d4ff;
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.7), 0 0 20px rgba(0, 212, 255, 0.5);
-    // margin-bottom: 15px;
-    margin-top: 20px;
-    font-size: 24px;
 }
 
 .box {
@@ -131,12 +125,8 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
-    // margin-top: 20px;
-    padding: 10px;
-    background: linear-gradient(to bottom right, #2a2a4d, #4b4b6b);;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), inset 0 0 15px rgba(0, 255, 255, 0.1);
+    height: 60%;
+    margin-top: 25%;
 }
 
 .fileSelect {
@@ -144,46 +134,15 @@ h2 {
     display: none;
 }
 
-.btn-box {
-    margin:50px 0;
-    position: relative;
-    display: flex;
-    justify-content: center; /* 水平居中对齐 */
-    gap: 0px; /* 按钮之间的间距 */
-    flex-wrap: wrap; /* 自动换行，适配不同的屏幕宽度 */
-    overflow: hidden;
-    .el-button {
-        height: 50px;
-        background: linear-gradient(90deg, #6808d4, #0099ff);
-        color: #fff;
-        border: none;
-        border-radius: 12px; /* 圆角按钮 */
-        padding: 12px 48px; /* 按钮的内边距调整，确保大小一致 */
-        font-size: 18px; /* 字体大小适中 */
-        box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
-        transition: background 0.5s, transform 0.3s ease;
-        &:hover {
-            background: linear-gradient(90deg, #00ff6e, #00d4ff);
-            transform: scale(1.05); /* 稍微缩放效果 */
-            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
+.btn-box2 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .btn{
+        margin: 0;
     }
 }
-}
-.el-popover {
-    .btn {
-        background: linear-gradient(90deg, #00d4ff, #0057ff);
-        color: #fff;
-        border-radius: 8px;
-        padding: 8px 16px;
-        margin: 3px;
-        text-shadow: 0 0 5px rgba(0, 255, 255, 0.7);
-        transition: all 0.3s ease;
-        &:hover {
-            background: linear-gradient(90deg, #0057ff, #00d4ff);
-            transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(0, 0, 255, 0.3);
-        }
-    }
-}
-
 </style>
