@@ -1,474 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- ========== Meta Tags ========== -->
-    <meta charset="utf-8" />
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="IE=edge"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
-    <meta
-      name="description"
-      content="山西区域现代化"
-    />
 
-    <!-- ========== Page Title ========== -->
-    <title>山西区域现代化</title>
+<head>
+  <!-- ========== Meta Tags ========== -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="区域现代化" />
 
-    <!-- ========== Start Stylesheet ========== -->
-    <link
-      href="static/css/bootstrap.min1.css"
-      rel="stylesheet"
-    />
-    <link
-      href="static/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="static/css/bootsnav1.css"
-      rel="stylesheet"
-    />
-    <link
-      href="static/css/style1.css"
-      rel="stylesheet"
-    />
-    <link
-      href="static/css/style0.css"
-      rel="stylesheet"
-    />
-    <!-- ========== End Stylesheet ========== -->
+  <!-- ========== Page Title ========== -->
+  <title>区域现代化</title>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+  <!-- ========== Start Stylesheet ========== -->
+  <link href="static/css/bootstrap.min1.css" rel="stylesheet" />
+  <link href="static/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="static/css/bootsnav1.css" rel="stylesheet" />
+  <link href="static/css/style1.css" rel="stylesheet" />
+  <link href="static/css/style0.css" rel="stylesheet" />
+  <!-- ========== End Stylesheet ========== -->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
       <script src="assets/js/html5/html5shiv.min.js"></script>
       <script src="assets/js/html5/respond.min.js"></script>
     <![endif]-->
 
-    <!-- ========== Google Fonts ========== -->
-    <!-- <link href="static/css/css2.css" rel="stylesheet"> -->
-  </head>
+  <!-- ========== Google Fonts ========== -->
+  <!-- <link href="static/css/css2.css" rel="stylesheet"> -->
+</head>
 
-  <body class="dark-layout">
-    <div>
-      <!-- Preloader Start -->
-      <div class="se-pre-con"></div>
-      <!-- Preloader Ends -->
+<body class="dark-layout">
+  <div>
+    <!-- Preloader Start -->
+    <div class="se-pre-con"></div>
+    <!-- Preloader Ends -->
 
-      <!-- Header 
+    <!-- Header 
     ============================================= -->
-      <header id="home">
-        <!-- Start Navigation -->
-        <nav
-          class="navbar bg-gray navbar-default attr-border navbar-fixed dark no-background bootsnav"
-          style="position: fixed; font-size: 30px; background-color: #183158"
-        >
-          <div class="container-full">
-            <!-- Start Atribute Navigation -->
-            <div
-              class="attr-nav"
-              id="logOut"
-            >
-              <ul>
-                <li><a href="login.html">登录</a></li>
-                <li><a href="register.html">注册</a></li>
-              </ul>
-            </div>
-            <div
-              class="attr-nav"
-              id="logIn"
-              style="
+    <header id="home">
+      <!-- Start Navigation -->
+      <nav class="navbar bg-gray navbar-default attr-border navbar-fixed dark no-background bootsnav"
+        style="position: fixed; font-size: 30px; background-color: #183158">
+        <div class="container-full">
+          <!-- Start Atribute Navigation -->
+          <div class="attr-nav" id="logOut">
+            <ul>
+              <li><a href="login.html">登录</a></li>
+              <li><a href="register.html">注册</a></li>
+            </ul>
+          </div>
+          <div class="attr-nav" id="logIn" style="
                 margin-left: 15px;
                 min-height: 90px;
                 padding-left: 10px;
                 position: relative;
                 z-index: 1;
                 display: none;
-              "
-            >
-              <a href="geren.html"
-                ><img
-                  id="personal"
-                  src="static/image/user_1.png"
-                  alt=""
-                  style="
+              ">
+            <a href="geren.html"><img id="personal" src="static/image/user_1.png" alt="" style="
                     position: absolute;
                     margin-left: -50px;
                     margin-top: 30px;
-                  "
-                  title="个人中心"
-              /></a>
-              <a href=""
-                ><img
-                  id="quit"
-                  src="static/image/quit.png"
-                  alt=""
-                  style="margin-top: 30px; margin-left: 10px"
-                  title="退出登录"
-              /></a>
-            </div>
-            <!-- End Atribute Navigation -->
+                  " title="个人中心" /></a>
+            <a href=""><img id="quit" src="static/image/quit.png" alt="" style="margin-top: 30px; margin-left: 10px"
+                title="退出登录" /></a>
+          </div>
+          <!-- End Atribute Navigation -->
 
-            <!-- Start Header Navigation -->
-            <div class="navbar-header">
-              <button
-                type="button"
-                class="navbar-toggle"
-                data-toggle="collapse"
-                data-target="#navbar-menu"
-              >
-                <i class="fa fa-bars"></i>
-              </button>
-              <!-- <a class="navbar-brand" href="index.html" style="margin-top: 15px;">
+          <!-- Start Header Navigation -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+              <i class="fa fa-bars"></i>
+            </button>
+            <!-- <a class="navbar-brand" href="index.html" style="margin-top: 15px;">
                         山西区域化
                     </a> -->
-              <a href="index.html">
-                <img
-                  src="static/image/login1.png"
-                  alt=""
-                  style="margin-top: 22%"
-                />
-              </a>
-            </div>
-            <!-- End Header Navigation -->
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div
-              class="collapse navbar-collapse"
-              id="navbar-menu"
-              style="float: left"
-            >
-              <ul
-                class="nav navbar-nav navbar-right"
-                data-in="fadeInDown"
-                data-out="fadeOutUp"
-              >
-                <li class="dropdown">
-                  <span
-                    style="cursor: pointer"
-                    id="btn1"
-                    >数据中心</span
-                  >
-                </li>
-                <li class="dropdown">
-                  <span
-                    style="cursor: pointer"
-                    id="btn2"
-                    >空间视窗</span
-                  >
-                </li>
-                <li class="dropdown">
-                  <span
-                    style="cursor: pointer"
-                    id="btn3"
-                    >区域可视化</span
-                  >
-                </li>
-                <li class="dropdown">
-                  <span
-                    style="cursor: pointer"
-                    id="btn4"
-                    >山西风采</span
-                  >
-                </li>
-                
-                <li class="dropdown">
-                  <span style="cursor:pointer;" id="btn5">专家智库</span>
-                </li>
-              </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+            <a href="index.html">
+              <img src="static/image/login1.png" alt="" style="margin-top: 70%" />
+            </a>
           </div>
-        </nav>
-        <!-- End Navigation -->
-      </header>
-      <!-- End Header -->
+          <!-- End Header Navigation -->
 
-      <!-- Start Banner 
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-menu" style="float: left">
+            <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+              <li class="dropdown">
+                <span style="cursor: pointer" id="btn1">数据中心</span>
+              </li>
+              <li class="dropdown">
+                <span style="cursor: pointer" id="btn2">空间视窗</span>
+              </li>
+              <li class="dropdown">
+                <span style="cursor: pointer" id="btn3">区域可视化</span>
+              </li>
+              <!-- <li class="dropdown">
+                <span style="cursor: pointer" id="btn4">山西风采</span>
+              </li> -->
+
+              <li class="dropdown">
+                <span style="cursor:pointer;" id="btn5">专家智库</span>
+              </li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+      </nav>
+      <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Banner 
     ============================================= -->
-      <div
-        class="banner-area less-content text-center shape-top pad-top-phone-110p text-combo bg-gray"
-        style="height: 150%"
-      >
-        <div class="item">
-          <div class="box-table">
-            <div
-              class="box-cell"
-              style="
+    <div class="banner-area less-content text-center shape-top pad-top-phone-110p text-combo bg-gray"
+      style="height: 150%">
+      <div class="item">
+        <div class="box-table">
+          <div class="box-cell" style="
                 background-image: url(static/image/背景1_2.png);
                 background-repeat: no-repeat;
                 background-position-x: center;
                 background-color: rgb(10, 25, 51);
-              "
-            >
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-8 offset-lg-2">
-                    <div
-                      class="content"
-                      style="margin-top: 300px"
-                    >
-                      <h2
-                        class="wow fadeInDown"
-                        data-wow-duration="1s"
-                        style="font-size: 45px"
-                      >
-                        山西区域化
-                      </h2>
-                      <div class="banner-con">城市</div>
-                      <!-- <div class="banner-con1"></div> -->
-                      <div class="banner-con">收入</div>
-                      <!-- <div class="banner-con1"></div> -->
-                      <div class="banner-con">GDP</div>
-                      <!-- <div class="banner-con1"></div> -->
-                      <div class="banner-con">人均GDP</div>
-                      <!-- <div class="banner-con1"></div> -->
-                      <div class="banner-con">人均可支配收入</div>
-                      <!-- <div class="banner-con1"></div> -->
-                      <div class="banner-con">综合</div>
-                      <!-- <div class="banner-con1"></div> -->
-                      <form
-                        action="#"
-                        class="wow fadeInLeft"
-                        data-wow-duration="1.4s"
-                        style="width: 100%; margin-top: 100px"
-                      >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="search"
-                          placeholder="请输入城市名，如“太原市”"
-                        />
-                        <div id="listbox"></div>
-                        <button
-                          type="button"
-                          id="searchBtn"
-                        >
-                          查询<i class="fa fa-paper-plane"></i>
-                        </button>
-                      </form>
-                      <form
-                        action="#"
-                        class="wow fadeInLeft"
-                        data-wow-duration="1.4s"
-                        style="width: 100%; margin-top: 100px; display: none"
-                      >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="search"
-                          placeholder="请输入公共预算收入,如“373.23亿元”"
-                        />
-                        <div id="listbox"></div>
-                        <button
-                          type="button"
-                          id="searchBtn"
-                        >
-                          查询<i class="fa fa-paper-plane"></i>
-                        </button>
-                      </form>
-                      <form
-                        action="#"
-                        class="wow fadeInLeft"
-                        data-wow-duration="1.4s"
-                        style="width: 100%; margin-top: 100px; display: none"
-                      >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="search"
-                          placeholder="请输入GDP,如“3884.48亿元”"
-                        />
-                        <div id="listbox"></div>
-                        <button
-                          type="button"
-                          id="searchBtn"
-                        >
-                          查询<i class="fa fa-paper-plane"></i>
-                        </button>
-                      </form>
-                      <form
-                        action="#"
-                        class="wow fadeInLeft"
-                        data-wow-duration="1.4s"
-                        style="width: 100%; margin-top: 100px; display: none"
-                      >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="search"
-                          placeholder="请输入人均GDP,如“8.83万元”"
-                        />
-                        <div id="listbox"></div>
-                        <button
-                          type="button"
-                          id="searchBtn"
-                        >
-                          查询<i class="fa fa-paper-plane"></i>
-                        </button>
-                      </form>
-                      <form
-                        action="#"
-                        class="wow fadeInLeft"
-                        data-wow-duration="1.4s"
-                        style="width: 100%; margin-top: 100px; display: none"
-                      >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="search"
-                          placeholder="请输入人均可支配收入,如“3.1万元”"
-                        />
-                        <div id="listbox"></div>
-                        <button
-                          type="button"
-                          id="searchBtn"
-                        >
-                          查询<i class="fa fa-paper-plane"></i>
-                        </button>
-                      </form>
-                      <form
-                        action="#"
-                        class="wow fadeInLeft"
-                        data-wow-duration="1.4s"
-                        style="width: 100%; margin-top: 100px; display: none"
-                      >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="search"
-                          placeholder="请输入城市名或组合关键词,多关键词用空格隔开，如“太原市 373.23亿元”"
-                        />
-                        <div id="listbox"></div>
-                        <button
-                          type="button"
-                          id="searchBtn"
-                        >
-                          查询<i class="fa fa-paper-plane"></i>
-                        </button>
-                      </form>
-                      <div style="margin-top: 60px">
-                        热搜关键词：<a
-                          href="http://www.qianlima.com/02001100022dd/"
-                          style="
+              ">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                  <div class="content" style="margin-top: 300px">
+                    <h2 class="wow fadeInDown" data-wow-duration="1s" style="font-size: 45px">
+                      区域化
+                    </h2>
+                    <div class="banner-con">城市</div>
+                    <!-- <div class="banner-con1"></div> -->
+                    <div class="banner-con">收入</div>
+                    <!-- <div class="banner-con1"></div> -->
+                    <div class="banner-con">GDP</div>
+                    <!-- <div class="banner-con1"></div> -->
+                    <div class="banner-con">人均GDP</div>
+                    <!-- <div class="banner-con1"></div> -->
+                    <div class="banner-con">人均可支配收入</div>
+                    <!-- <div class="banner-con1"></div> -->
+                    <div class="banner-con">综合</div>
+                    <!-- <div class="banner-con1"></div> -->
+                    <form action="#" class="wow fadeInLeft" data-wow-duration="1.4s"
+                      style="width: 100%; margin-top: 100px">
+                      <input type="text" class="form-control" id="search" placeholder="请输入城市名，如“太原市”" />
+                      <div id="listbox"></div>
+                      <button type="button" id="searchBtn">
+                        查询<i class="fa fa-paper-plane"></i>
+                      </button>
+                    </form>
+                    <form action="#" class="wow fadeInLeft" data-wow-duration="1.4s"
+                      style="width: 100%; margin-top: 100px; display: none">
+                      <input type="text" class="form-control" id="search" placeholder="请输入公共预算收入,如“373.23亿元”" />
+                      <div id="listbox"></div>
+                      <button type="button" id="searchBtn">
+                        查询<i class="fa fa-paper-plane"></i>
+                      </button>
+                    </form>
+                    <form action="#" class="wow fadeInLeft" data-wow-duration="1.4s"
+                      style="width: 100%; margin-top: 100px; display: none">
+                      <input type="text" class="form-control" id="search" placeholder="请输入GDP,如“3884.48亿元”" />
+                      <div id="listbox"></div>
+                      <button type="button" id="searchBtn">
+                        查询<i class="fa fa-paper-plane"></i>
+                      </button>
+                    </form>
+                    <form action="#" class="wow fadeInLeft" data-wow-duration="1.4s"
+                      style="width: 100%; margin-top: 100px; display: none">
+                      <input type="text" class="form-control" id="search" placeholder="请输入人均GDP,如“8.83万元”" />
+                      <div id="listbox"></div>
+                      <button type="button" id="searchBtn">
+                        查询<i class="fa fa-paper-plane"></i>
+                      </button>
+                    </form>
+                    <form action="#" class="wow fadeInLeft" data-wow-duration="1.4s"
+                      style="width: 100%; margin-top: 100px; display: none">
+                      <input type="text" class="form-control" id="search" placeholder="请输入人均可支配收入,如“3.1万元”" />
+                      <div id="listbox"></div>
+                      <button type="button" id="searchBtn">
+                        查询<i class="fa fa-paper-plane"></i>
+                      </button>
+                    </form>
+                    <form action="#" class="wow fadeInLeft" data-wow-duration="1.4s"
+                      style="width: 100%; margin-top: 100px; display: none">
+                      <input type="text" class="form-control" id="search"
+                        placeholder="请输入城市名或组合关键词,多关键词用空格隔开，如“太原市 373.23亿元”" />
+                      <div id="listbox"></div>
+                      <button type="button" id="searchBtn">
+                        查询<i class="fa fa-paper-plane"></i>
+                      </button>
+                    </form>
+                    <div style="margin-top: 60px">
+                      热搜关键词：<a href="http://www.qianlima.com/02001100022dd/" style="
                             font-size: 1rem;
                             color: white;
                             font-weight: 50px;
-                          "
-                          >山西人民政府网</a
-                        >
-                        <a
-                          href="http://wjw.shanxi.gov.cn/?ivk_sa=1023345q"
-                          style="
+                          ">人民政府网</a>
+                      <a href="http://wjw.shanxi.gov.cn/?ivk_sa=1023345q" style="
                             font-size: 1rem;
                             color: white;
                             font-weight: 50px;
-                          "
-                          >山西省卫生健康委员会</a
-                        >
-                        <a
-                          href="http://gzw.shanxi.gov.cn/"
-                          style="
+                          ">卫生健康委员会</a>
+                      <a href="http://gzw.shanxi.gov.cn/" style="
                             font-size: 1rem;
                             color: white;
                             font-weight: 50px;
-                          "
-                          >山西国资网</a
-                        >
-                      </div>
+                          ">国资网</a>
                     </div>
                   </div>
                 </div>
-                <div class="title3">指标信息</div>
-                <div class="title4">
-                  区域现代化的指标有助于现代化建设中发挥监测和促进作用，进而科学地反映地方经济社会的实际发展水平，明确政策重点和工作方向
+              </div>
+              <div class="title3">指标信息</div>
+              <div class="title4">
+                区域现代化的指标有助于现代化建设中发挥监测和促进作用，进而科学地反映地方经济社会的实际发展水平，明确政策重点和工作方向
+              </div>
+              <div class="features-con" style="margin-left: 0">
+                <img src="static/image/pic1.jpg" />
+                <div class="features-con-title1" onclick="window.location.href='xiangqing.html'">
+                  经济发展
                 </div>
-                <div
-                  class="features-con"
-                  style="margin-left: 0"
-                >
-                  <img src="static/image/pic1.jpg" />
-                  <div
-                    class="features-con-title1"
-                    onclick="window.location.href='xiangqing.html'"
-                  >
-                    经济发展
-                  </div>
-                  <div class="features-con-title2">
-                    <br />人均GDP: 45328元<br />失业率: 2.7%<br />地方财政收入:
-                    1867.002亿元<br />工资平均水平: 61547元<br />商品出口额:
-                    4715466万元 <br />研发经费支出占GDP比重: 1.05%
-                  </div>
+                <div class="features-con-title2">
+                  <br />人均GDP: 45328元<br />失业率: 2.7%<br />地方财政收入:
+                  1867.002亿元<br />工资平均水平: 61547元<br />商品出口额:
+                  4715466万元 <br />研发经费支出占GDP比重: 1.05%
                 </div>
-                <div class="features-con">
-                  <img src="static/image/pic1-2.jpg" />
-                  <div
-                    class="features-con-title1"
-                    onclick="window.location.href='data.html'"
-                  >
-                    资源环境
-                  </div>
-                  <div class="features-con-title2">
-                    <br />煤炭储量: 2709.01亿吨<br />湖泊水质: 优<br />自然保护区面积:
-                    110.24万公顷<br />工业污水排放量: 14.8亿吨<br />污水排放处理率:
-                    92% <br />环境保护支出与财政支出比: 1.92%
-                  </div>
+              </div>
+              <div class="features-con">
+                <img src="static/image/pic1-2.jpg" />
+                <div class="features-con-title1" onclick="window.location.href='data.html'">
+                  资源环境
                 </div>
-                <div class="features-con">
-                  <img src="static/image/pic1-3.jpg" />
-                  <div
-                    class="features-con-title1"
-                    onclick="window.location.href='map.html'"
-                  >
-                    社会民生
-                  </div>
-                  <div class="features-con-title2">
-                    <br />人口平均预期寿命: 74.92岁<br />人均可支配收入:
-                    31034.8元<br />城乡居民收入比: 264.126%<br />基本社会保障覆盖率:
-                    92%<br />住房支出占人均收入比例: 247.45%
-                    <br />民生支出占财政支出83.4%
-                  </div>
+                <div class="features-con-title2">
+                  <br />煤炭储量: 2709.01亿吨<br />湖泊水质: 优<br />自然保护区面积:
+                  110.24万公顷<br />工业污水排放量: 14.8亿吨<br />污水排放处理率:
+                  92% <br />环境保护支出与财政支出比: 1.92%
                 </div>
-                <div
-                  class="features-con"
-                  style="margin-right: 0"
-                >
-                  <img src="static/image/pic1-4.jpg" />
-                  <div
-                    class="features-con-title1"
-                    onclick="window.location.href='xiangqing.html'"
-                  >
-                    旅游发展
-                  </div>
-                  <div class="features-con-title2">
-                    <br />年接待国内游客数: 70378万人<br />年接待国外游客数:
-                    71.347万人<br />旅游收入占全省GDP的比重: 47.1%<br />5A级景区数量:
-                    8个<br />第三产业就业人员比例: 44.1% <br />旅游总收入:
-                    6728.7亿元
-                  </div>
+              </div>
+              <div class="features-con">
+                <img src="static/image/pic1-3.jpg" />
+                <div class="features-con-title1" onclick="window.location.href='map.html'">
+                  社会民生
+                </div>
+                <div class="features-con-title2">
+                  <br />人口平均预期寿命: 74.92岁<br />人均可支配收入:
+                  31034.8元<br />城乡居民收入比: 264.126%<br />基本社会保障覆盖率:
+                  92%<br />住房支出占人均收入比例: 247.45%
+                  <br />民生支出占财政支出83.4%
+                </div>
+              </div>
+              <div class="features-con" style="margin-right: 0">
+                <img src="static/image/pic1-4.jpg" />
+                <div class="features-con-title1" onclick="window.location.href='xiangqing.html'">
+                  旅游发展
+                </div>
+                <div class="features-con-title2">
+                  <br />年接待国内游客数: 70378万人<br />年接待国外游客数:
+                  71.347万人<br />旅游收入占全省GDP的比重: 47.1%<br />5A级景区数量:
+                  8个<br />第三产业就业人员比例: 44.1% <br />旅游总收入:
+                  6728.7亿元
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- End Banner -->
+    </div>
+    <!-- End Banner -->
 
-      <!-- Start Skill Area
+    <!-- Start Skill Area
     ============================================= -->
-      <div
-        class="skill-area circular-shape default-padding"
-        style="height: 700px; background-color: rgb(10, 25, 51)"
-      >
-        <div class="container">
-          <div class="skill-items">
-            <div class="skill-title1">城市信息</div>
-            <div class="skill-cons">
-              <!-- <div class="skill-con">
+    <div class="skill-area circular-shape default-padding" style="height: 700px; background-color: rgb(10, 25, 51)">
+      <div class="container">
+        <div class="skill-items">
+          <div class="skill-title1">城市信息</div>
+          <div class="skill-cons">
+            <!-- <div class="skill-con">
                             <img class="skill-con-pic" src="static/image/pic2.jpg">
                             <div class="skill-con-title1">太原市</div>
                             <div class="skill-con-title2">GDP: 3884.48亿元<br>人均GDP: 8.83万元<br>公共预算收入: 373.23亿元<br>人口数量: 442.15万人
@@ -492,103 +298,67 @@
                             <div class="skill-con-title2">GDP: 3884.48亿元<br>人均GDP: 8.83万元<br>公共预算收入: 373.23亿元<br>人口数量: 442.15万人
                             </div>
                         </div> -->
-            </div>
           </div>
         </div>
       </div>
-      <!-- End Skill Area -->
+    </div>
+    <!-- End Skill Area -->
 
-      <!-- Start Blog Area
+    <!-- Start Blog Area
     ============================================= -->
-      <div
-        class="blog-area bg-gray default-padding bottom-less"
-        style="height: 600px; background-color: rgb(10, 25, 51)"
-      >
-        <div class="container">
-          <span
-            class="skill-more"
-            onclick="window.location.href='more.html'"
-            >查看更多</span
-          >
-          <div class="blog-title1">新闻要闻</div>
-          <div class="blog-cons"></div>
-        </div>
+    <div class="blog-area bg-gray default-padding bottom-less" style="height: 600px; background-color: rgb(10, 25, 51)">
+      <div class="container">
+        <span class="skill-more" onclick="window.location.href='more.html'">查看更多</span>
+        <div class="blog-title1">新闻要闻</div>
+        <div class="blog-cons"></div>
       </div>
-      <!-- End Blog Area -->
+    </div>
+    <!-- End Blog Area -->
 
-      <!-- Star Footer
+    <!-- Star Footer
     ============================================= -->
-      <div class="footer">
-        <div class="footer-content">
-          <div class="footer-list">
-            <ul class="">
-              <li>产品系列</li>
-              <li>
-                <a
-                  href="data.html"
-                  class="higgs-footer-hover"
-                  >数据中心</a
-                >
-              </li>
-              <li>
-                <a
-                  href="map.html"
-                  class="higgs-footer-hover"
-                  >空间视窗</a
-                >
-              </li>
-              <li>
-                <a
-                  href="xiangqing.html"
-                  class="higgs-footer-hover"
-                  >区域可视化</a
-                >
-              </li>
-              <li>
-                <a
-                  href="shanxifengcai.html"
-                  class="higgs-footer-hover"
-                  >山西风采</a
-                >
-              </li>
-             
-              <li><a href="form.html" class="higgs-footer-hover">专家智库</a></li>
-            </ul>
-            <ul class="">
-              <li>关于我们</li>
-              <li>
-                <a
-                  target="_blank"
-                  href="#"
-                  class="higgs-footer-hover"
-                  >研究方向</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  href="#"
-                  class="higgs-footer-hover"
-                  >专家团队</a
-                >
-              </li>
-            </ul>
-            <ul class="">
-              <li>详细介绍</li>
-              <li>
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-list">
+          <ul class="">
+            <li>产品系列</li>
+            <li>
+              <a href="data.html" class="higgs-footer-hover">数据中心</a>
+            </li>
+            <li>
+              <a href="map.html" class="higgs-footer-hover">空间视窗</a>
+            </li>
+            <li>
+              <a href="xiangqing.html" class="higgs-footer-hover">区域可视化</a>
+            </li>
+            <!-- <li>
+              <a href="shanxifengcai.html" class="higgs-footer-hover">山西风采</a>
+            </li> -->
+
+            <li><a href="form.html" class="higgs-footer-hover">专家智库</a></li>
+          </ul>
+          <ul class="">
+            <li>关于我们</li>
+            <li>
+              <a target="_blank" href="#" class="higgs-footer-hover">研究方向</a>
+            </li>
+            <li>
+              <a target="_blank" href="#" class="higgs-footer-hover">专家团队</a>
+            </li>
+          </ul>
+          <!-- <ul class="">
+            <li>详细介绍</li>
+            <li>
+              <span>
                 <span>
-                  <span>
-                    <span
-                      style="
+                  <span style="
                         color: rgb(38, 208, 255);
                         font-size: 16px;
                         font-weight: 700;
-                      "
-                    >
+                      ">
                     山西省区域现代化研究中心
-                    </span>
-                    <span
-                      style="
+                  </span>
+                  <span style="
                         color: rgb(41, 46, 51);
                         padding: 0px 11px;
                         margin-left: 6px;
@@ -597,172 +367,142 @@
                         font-size: 12px;
                         border-radius: 4px;
                         display: inline-block;
-                      "
-                    >
-                      <a href="http://base.ipbd.net/pslab/contact.html"
-                        >联系我们</a
-                      >
-                    </span>
+                      ">
+                    <a href="http://base.ipbd.net/pslab/contact.html">联系我们</a>
                   </span>
                 </span>
-              </li>
-              <li>
-                <a href="http://base.ipbd.net/pslab/index.html"
-                  >http://base.ipbd.net/pslab/index.html</a
-                >
-              </li>
-            </ul>
-            <ul class="footer-lastUl">
-              <li>关注方式</li>
-              <li>
-                <span>
-                  <span
-                    class="wechat"
-                    style="position: relative; cursor: pointer"
-                  >
-                    <img
-                      src="static/image/weixin.png"
-                      style="margin-right: 10px"
-                    />
-                    <span>公众号</span>
-                  </span>
+              </span>
+            </li>
+            <li>
+              <a href="http://base.ipbd.net/pslab/index.html">http://base.ipbd.net/pslab/index.html</a>
+            </li>
+          </ul> -->
+          <ul class="footer-lastUl">
+            <li>关注方式</li>
+            <li>
+              <span>
+                <span class="wechat" style="position: relative; cursor: pointer">
+                  <img src="static/image/weixin.png" style="margin-right: 10px" />
+                  <span>公众号</span>
                 </span>
-              </li>
-              <div class="code">
-                <img
-                  src="static/image/QR.jpg"
-                  width="150px"
-                  height="150px"
-                />
-              </div>
-            </ul>
-          </div>
-          <div class="footer-details">
-            <div class="footer-details-box">
-              <p>
-                Copyright©2020-2020 &nbsp;BusinessBigData.
-                All&nbsp;Rights&nbsp;Reserved&nbsp;&nbsp;
-              </p>
-              <span>建议分辨率：1920*1080及以上</span
-              ><span>建议浏览器：Chrome浏览器能带来更好使用体验</span
-              ><span>Chrome及最新IE浏览器</span
-              ><a
-                target="_blank"
-                href="https://browsehappy.com/"
-                >下载</a
-              >
-              <div
-                class="footer-police"
-                style="margin-top: 3px"
-              >
-                <a
-                  target="_blank"
-                  href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001931"
-                  style="
+              </span>
+            </li>
+            <div class="code">
+              <img src="static/image/QR.jpg" width="150px" height="150px" />
+            </div>
+          </ul>
+        </div>
+        <div class="footer-details">
+          <div class="footer-details-box">
+            <p>
+              Copyright©2020-2020 &nbsp;BusinessBigData.
+              All&nbsp;Rights&nbsp;Reserved&nbsp;&nbsp;
+            </p>
+            <span>建议分辨率：1920*1080及以上</span><span>建议浏览器：Chrome浏览器能带来更好使用体验</span><span>Chrome及最新IE浏览器</span><a
+              target="_blank" href="https://browsehappy.com/">下载</a>
+            <!-- <div class="footer-police" style="margin-top: 3px">
+              <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001931"
+                style="
                     display: inline-block;
                     text-decoration: none;
                     height: 20px;
                     line-height: 20px;
-                  "
-                >
-                  <img
-                    src="static/image/police.png"
-                    style="float: left"
-                  />
-                  <p style="float: left; margin: 0 0 0 5px">
-                    晋公网安备 14070202000170号
-                  </p>
-                </a>
-              </div>
-            </div>
+                  ">
+                <img src="static/image/police.png" style="float: left" />
+                <p style="float: left; margin: 0 0 0 5px">
+                  晋公网安备 14070202000170号
+                </p>
+              </a>
+            </div> -->
           </div>
         </div>
       </div>
     </div>
-    <!-- End Footer-->
-    <script>
-      var logIn = document.getElementById('logIn')
-      var logOut = document.getElementById('logOut')
-      var personal = document.getElementById('personal')
-      var quit = document.getElementById('quit')
-      var btn1 = document.getElementById('btn1')
-      var btn2 = document.getElementById('btn2')
-      var btn3 = document.getElementById('btn3')
-      var btn4 = document.getElementById('btn4')
-      var btn5 = document.getElementById('btn5')
-      if (localStorage['login'] === 'true') {
-        logOut.style.display = 'none'
-        logIn.style.display = 'block'
-        btn1.onclick = function () {
-          window.location.href = 'data.html'
-        }
-        btn2.onclick = function () {
-          window.location.href = 'map.html'
-        }
-        btn3.onclick = function () {
-          window.location.href = 'xiangqing.html'
-        }
-        btn4.onclick = function () {
-          window.location.href = 'shanxifengcai.html'
-        }
-        btn5.onclick = function () {
-          window.location.href = "form.html" 
-          // window.location.href="data.html"
-        }
-      } else {
-        logOut.style.display = 'block'
-        logIn.style.display = 'none'
-        btn1.onclick = function () {
-          window.location.href = 'login.html'
-        }
-        btn2.onclick = function () {
-          window.location.href = 'login.html'
-        }
-        btn3.onclick = function () {
-          window.location.href = 'login.html'
-        }
-        btn4.onclick = function () {
-          window.location.href = 'login.html'
-        }
-        btn5.onclick = function () {
-          window.location.href = 'login.html'
-        }
+  </div>
+  <!-- End Footer-->
+  <script>
+    var logIn = document.getElementById('logIn')
+    var logOut = document.getElementById('logOut')
+    var personal = document.getElementById('personal')
+    var quit = document.getElementById('quit')
+    var btn1 = document.getElementById('btn1')
+    var btn2 = document.getElementById('btn2')
+    var btn3 = document.getElementById('btn3')
+    var btn4 = document.getElementById('btn4')
+    var btn5 = document.getElementById('btn5')
+    if (localStorage['login'] === 'true') {
+      logOut.style.display = 'none'
+      logIn.style.display = 'block'
+      btn1.onclick = function () {
+        window.location.href = 'data.html'
       }
-      quit.onclick = function () {
-        localStorage.setItem('login', 'false')
+      btn2.onclick = function () {
+        window.location.href = 'map.html'
       }
+      btn3.onclick = function () {
+        window.location.href = 'xiangqing.html'
+      }
+      btn4.onclick = function () {
+        window.location.href = 'shanxifengcai.html'
+      }
+      btn5.onclick = function () {
+        window.location.href = "form.html"
+        // window.location.href="data.html"
+      }
+    } else {
+      logOut.style.display = 'block'
+      logIn.style.display = 'none'
+      btn1.onclick = function () {
+        window.location.href = 'login.html'
+      }
+      btn2.onclick = function () {
+        window.location.href = 'login.html'
+      }
+      btn3.onclick = function () {
+        window.location.href = 'login.html'
+      }
+      btn4.onclick = function () {
+        window.location.href = 'login.html'
+      }
+      btn5.onclick = function () {
+        window.location.href = 'login.html'
+      }
+    }
+    quit.onclick = function () {
+      localStorage.setItem('login', 'false')
+    }
 
-      var searchBtn = document.getElementById('searchBtn')
-      var search = document.getElementById('search')
-      searchBtn.onclick = function () {
-        xhr.open('POST', '/sxqyhapi/yun/region/listByName')
-        xhr.setRequestHeader('Content-Type', 'application/json', true) //请求头
-        xhr.send(
-          JSON.stringify({
-            name: search.value
-          })
-        )
-        xhr.onload = function () {
-          // debugger
-          console.log(xhr.response)
-          if (xhr.status == 200) {
-            console.log('接收成功')
-            window.location.href =
-              'xiangqing.html?name=' + encodeURI(search.value)
-          }
+    var searchBtn = document.getElementById('searchBtn')
+    var search = document.getElementById('search')
+    searchBtn.onclick = function () {
+      xhr.open('POST', '/sxqyhapi/yun/region/listByName')
+      xhr.setRequestHeader('Content-Type', 'application/json', true) //请求头
+      xhr.send(
+        JSON.stringify({
+          name: search.value
+        })
+      )
+      xhr.onload = function () {
+        // debugger
+        console.log(xhr.response)
+        if (xhr.status == 200) {
+          console.log('接收成功')
+          window.location.href =
+            'xiangqing.html?name=' + encodeURI(search.value)
         }
       }
+    }
 
-      var container = document.querySelector('.skill-cons')
-      var xhr1 = new XMLHttpRequest()
-      xhr1.onload = function () {
-        if (xhr1.status == 200) {
-          var data = JSON.parse(xhr1.responseText)
-          console.log(data.cityInfos)
-          data = data.cityInfos.slice(0, 4)
-          container.innerHTML = data
-            .map((v, i) => {
-              return `
+    var container = document.querySelector('.skill-cons')
+    var xhr1 = new XMLHttpRequest()
+    xhr1.onload = function () {
+      if (xhr1.status == 200) {
+        var data = JSON.parse(xhr1.responseText)
+        console.log(data.cityInfos)
+        data = data.cityInfos.slice(0, 4)
+        container.innerHTML = data
+          .map((v, i) => {
+            return `
                     <div class="skill-con">
                             
                             <img class="skill-con-pic" src=${v.img}>
@@ -771,73 +511,72 @@
                          </div>
                      </div>
                             `
-            })
-            .join('')
-        }
+          })
+          .join('')
       }
-      xhr1.open('GET', '/sxqyhapi/new/cityinfo/infos', true)
-      xhr1.setRequestHeader('Content-Type', 'application/json')
-      xhr1.send(JSON.stringify())
+    }
+    xhr1.open('GET', '/sxqyhapi/new/cityinfo/infos', true)
+    xhr1.setRequestHeader('Content-Type', 'application/json')
+    xhr1.send(JSON.stringify())
 
-      var container1 = document.querySelector('.blog-cons')
-      var xhr2 = new XMLHttpRequest()
-      xhr2.onload = function () {
-        if (xhr2.status == 200) {
-          var data = JSON.parse(xhr2.responseText)
-          console.log(data.news)
-          data = data.news
+    var container1 = document.querySelector('.blog-cons')
+    var xhr2 = new XMLHttpRequest()
+    xhr2.onload = function () {
+      if (xhr2.status == 200) {
+        var data = JSON.parse(xhr2.responseText)
+        console.log(data.news)
+        data = data.news
 
-          container1.innerHTML = data
-            .map((n, m) => {
-              return `
-                <div class="blog-con" onclick="window.open(news.html?id=${
-                  n.id
-                },'_self')">
+        container1.innerHTML = data
+          .map((n, m) => {
+            return `
+                <div class="blog-con" onclick="window.open(news.html?id=${n.id
+              },'_self')">
                 <div class="blog-con-title1">
                     <div style="font-size: 2rem;padding-top: 13px;">${n.createTime.slice(
-                      8,
-                      10
-                    )}</div>
+                8,
+                10
+              )}</div>
                     <div style="font-size: 0.8rem;">${n.createTime.slice(
-                      0,
-                      7
-                    )}</div>
+                0,
+                7
+              )}</div>
                 </div>
-                <div class="blog-con-title2"><a href="news.html?id=${
-                  n.id
-                }" style="color:white;">${n.title}</a></div>
+                <div class="blog-con-title2"><a href="news.html?id=${n.id
+              }" style="color:white;">${n.title}</a></div>
                 <div class="blog-con-title3">来源：省政府办公厅</div>
                 </div> 
                             `
-            })
-            .join('')
-        }
+          })
+          .join('')
       }
-      xhr2.open('GET', '/sxqyhapi/new/news/info', true)
-      xhr2.setRequestHeader('Content-Type', 'application/json')
-      xhr2.send(JSON.stringify())
-    </script>
-    <!-- jQuery Frameworks
+    }
+    xhr2.open('GET', '/sxqyhapi/new/news/info', true)
+    xhr2.setRequestHeader('Content-Type', 'application/json')
+    xhr2.send(JSON.stringify())
+  </script>
+  <!-- jQuery Frameworks
     ============================================= -->
-    <script src="static/js/jquery-1.12.4.min.js"></script>
-    <!-- <script src="static/js/popper.min.js"></script> -->
-    <script src="static/js/bootstrap.min1.js"></script>
-    <script src="static/js/equal-height.min.js"></script>
-    <script src="static/js/jquery.appear.js"></script>
-    <script src="static/js/jquery.easing.min.js"></script>
-    <script src="static/js/jquery.magnific-popup.min.js"></script>
-    <!-- <script src="static/js/modernizr.custom.13711.js"></script> -->
-    <script src="static/js/owl.carousel.min.js"></script>
-    <script src="static/js/wow.min.js"></script>
-    <!-- <script src="static/js/progress-bar.min.js"></script> -->
-    <!-- <script src="static/js/isotope.pkgd.min.js"></script> -->
-    <script src="static/js/imagesloaded.pkgd.min.js"></script>
-    <script src="static/js/count-to.js"></script>
-    <script src="static/js/YTPlayer.min.js"></script>
-    <!-- <script src="static/js/circle-progress.js"></script> -->
-    <script src="static/js/bootsnav.js"></script>
-    <script src="static/js/main1.js"></script>
-    <script src="static/js/search.js"></script>
-    <script src="static/js/index.js"></script>
-  </body>
+  <script src="static/js/jquery-1.12.4.min.js"></script>
+  <!-- <script src="static/js/popper.min.js"></script> -->
+  <script src="static/js/bootstrap.min1.js"></script>
+  <script src="static/js/equal-height.min.js"></script>
+  <script src="static/js/jquery.appear.js"></script>
+  <script src="static/js/jquery.easing.min.js"></script>
+  <script src="static/js/jquery.magnific-popup.min.js"></script>
+  <!-- <script src="static/js/modernizr.custom.13711.js"></script> -->
+  <script src="static/js/owl.carousel.min.js"></script>
+  <script src="static/js/wow.min.js"></script>
+  <!-- <script src="static/js/progress-bar.min.js"></script> -->
+  <!-- <script src="static/js/isotope.pkgd.min.js"></script> -->
+  <script src="static/js/imagesloaded.pkgd.min.js"></script>
+  <script src="static/js/count-to.js"></script>
+  <script src="static/js/YTPlayer.min.js"></script>
+  <!-- <script src="static/js/circle-progress.js"></script> -->
+  <script src="static/js/bootsnav.js"></script>
+  <script src="static/js/main1.js"></script>
+  <script src="static/js/search.js"></script>
+  <script src="static/js/index.js"></script>
+</body>
+
 </html>

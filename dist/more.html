@@ -1,149 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="IE=edge"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>首页——查看更多</title>
-    <link
-      rel="stylesheet"
-      href="static/css/bootsnav1.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="static/css/more.css"
-    />
-    <link
-      href="static/css/font.css"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <div>
-      <nav
-        class="navbar bg-gray navbar-default attr-border navbar-fixed dark no-background bootsnav"
-        style="position: fixed"
-      >
-        <div class="container-full">
-          <!-- Start Atribute Navigation -->
-          <!-- <div class="attr-nav" id="logOut">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>首页——查看更多</title>
+  <link rel="stylesheet" href="static/css/bootsnav1.css" />
+  <link rel="stylesheet" type="text/css" href="static/css/more.css" />
+  <link href="static/css/font.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div>
+    <nav class="navbar bg-gray navbar-default attr-border navbar-fixed dark no-background bootsnav"
+      style="position: fixed">
+      <div class="container-full">
+        <!-- Start Atribute Navigation -->
+        <!-- <div class="attr-nav" id="logOut">
                         <ul>
                             <li><a href="login.html">登录</a></li>
                             <li><a href="register.html">注册</a></li>
                         </ul>
                     </div> -->
-          <div
-            class="attr-nav"
-            id="logIn"
-            style="
+        <div class="attr-nav" id="logIn" style="
               margin-left: 15px;
               min-height: 90px;
               padding-left: 10px;
               position: relative;
               z-index: 1;
-            "
-          >
-            <a href="geren.html"
-              ><img
-                id="personal"
-                src="static/image/user_1.png"
-                alt=""
-                style="position: absolute; margin-left: -50px; margin-top: 30px"
-                title="个人中心"
-            /></a>
-            <a href="javascript:void(0);"
-              ><img
-                id="quit"
-                src="static/image/quit.png"
-                alt=""
-                style="margin-top: 30px; margin-left: 10px"
-                title="退出登录"
-            /></a>
-          </div>
-          <!-- End Atribute Navigation -->
+            ">
+          <a href="geren.html"><img id="personal" src="static/image/user_1.png" alt=""
+              style="position: absolute; margin-left: -50px; margin-top: 30px" title="个人中心" /></a>
+          <a href="javascript:void(0);"><img id="quit" src="static/image/quit.png" alt=""
+              style="margin-top: 30px; margin-left: 10px" title="退出登录" /></a>
+        </div>
+        <!-- End Atribute Navigation -->
 
-          <!-- Start Header Navigation -->
-          <div class="navbar-header">
-            <button
-              type="button"
-              class="navbar-toggle"
-              data-toggle="collapse"
-              data-target="#navbar-menu"
-            >
-              <i class="fa fa-bars"></i>
-            </button>
-            <!-- <a class="navbar-brand" href="index.html" style="margin-top: 15px;">
+        <!-- Start Header Navigation -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+            <i class="fa fa-bars"></i>
+          </button>
+          <!-- <a class="navbar-brand" href="index.html" style="margin-top: 15px;">
                         山西区域化
                     </a> -->
-            <a href="index.html">
-              <img
-                src="static/image/login1.png"
-                alt=""
-                style="margin-top: 22%"
-              />
-            </a>
-          </div>
-          <!-- End Header Navigation -->
+          <a href="index.html">
+            <img src="static/image/login1.png" alt="" style="margin-top:70%" />
+          </a>
+        </div>
+        <!-- End Header Navigation -->
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div
-            class="collapse navbar-collapse"
-            id="navbar-menu"
-            style="float: left"
-          >
-            <ul
-              class="nav navbar-nav navbar-right"
-              data-in="fadeInDown"
-              data-out="fadeOutUp"
-            >
-              <li class="dropdown">
-                <span
-                  style="cursor: pointer"
-                  id="btn1"
-                  >数据中心</span
-                >
-              </li>
-              <li class="dropdown">
-                <span
-                  style="cursor: pointer"
-                  id="btn2"
-                  >空间视窗</span
-                >
-              </li>
-              <li class="dropdown">
-                <span
-                  style="cursor: pointer"
-                  id="btn3"
-                  >区域可视化</span
-                >
-              </li>
-              <li class="dropdown">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-menu" style="float: left">
+          <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+            <li class="dropdown">
+              <span style="cursor: pointer" id="btn1">数据中心</span>
+            </li>
+            <li class="dropdown">
+              <span style="cursor: pointer" id="btn2">空间视窗</span>
+            </li>
+            <li class="dropdown">
+              <span style="cursor: pointer" id="btn3">区域可视化</span>
+            </li>
+            <!-- <li class="dropdown">
                 <span
                   style="cursor: pointer"
                   id="btn4"
                   >山西风采</span
                 >
-              </li>
-           
+              </li> -->
 
-              <li class="dropdown">
-                <span style="cursor:pointer;" id="btn5">专家智库</span>
+
+            <li class="dropdown">
+              <span style="cursor:pointer;" id="btn5">专家智库</span>
             </li>
-            </ul>
-          </div>
-          <!-- /.navbar-collapse -->
+          </ul>
         </div>
-      </nav>
-      <!-- <div class="skill-title1">城市信息</div> -->
-      <!-- <div class="pic" id="box">
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- <div class="skill-title1">城市信息</div> -->
+    <!-- <div class="pic" id="box">
             <div class="screen">
                 <ul>
                     <li><img src="static/image/pic1.jpg" width="1300" height="200" /></li>
@@ -156,78 +94,56 @@
             </div>
             <div id="arr"><span id="left">&lt;</span><span id="right">&gt;</span></div>
         </div> -->
-      <div class="container">
-        <div class="box">
-          <!-- <div class="skill-con">
+    <div class="container">
+      <div class="box">
+        <!-- <div class="skill-con">
                 <img class="skill-con-pic" src="static/image/pic2-2.jpg">
                 <div class="skill-con-title1">大同市</div>
                 <div class="skill-con-title2">GDP: 3884.48亿元<br>人均GDP: 8.83万元<br>公共预算收入: 373.23亿元<br>人口数量: 442.15万人
                 </div>
             </div> -->
-          <!-- <div class="skill-con">
+        <!-- <div class="skill-con">
                 <img class="skill-con-pic" src="static/image/pic2-2.jpg">
                 <div class="skill-con-title1">大同市</div>
                 <div class="skill-con-title2">GDP: 3884.48亿元<br>人均GDP: 8.83万元<br>公共预算收入: 373.23亿元<br>人口数量: 442.15万人
                 </div>
             </div> -->
-        </div>
       </div>
-      <div class="footer">
-        <div class="footer-content">
-          <div class="footer-list">
-            <ul class="">
-              <li>产品系列</li>
-              <li>
-                <a
-                  href="data.html"
-                  class="higgs-footer-hover"
-                  >数据中心</a
-                >
-              </li>
-              <li>
-                <a
-                  href="map.html"
-                  class="higgs-footer-hover"
-                  >空间视窗</a
-                >
-              </li>
-              <li>
-                <a
-                  href="xiangqing.html"
-                  class="higgs-footer-hover"
-                  >区域可视化</a
-                >
-              </li>
-              <li>
+    </div>
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-list">
+          <ul class="">
+            <li>产品系列</li>
+            <li>
+              <a href="data.html" class="higgs-footer-hover">数据中心</a>
+            </li>
+            <li>
+              <a href="map.html" class="higgs-footer-hover">空间视窗</a>
+            </li>
+            <li>
+              <a href="xiangqing.html" class="higgs-footer-hover">区域可视化</a>
+            </li>
+            <!-- <li>
                 <a
                   href="#"
                   class="higgs-footer-hover"
                   >山西风采</a
                 >
-              </li>
-            
-              <li><a href="form.html" class="higgs-footer-hover">专家智库</a></li>
-            </ul>
-            <ul class="">
-              <li>关于我们</li>
-              <li>
-                <a
-                  target="_blank"
-                  href="#"
-                  class="higgs-footer-hover"
-                  >研究方向</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  href="#"
-                  class="higgs-footer-hover"
-                  >专家团队</a
-                >
-              </li>
-            </ul>
-            <ul class="">
+              </li> -->
+
+            <li><a href="form.html" class="higgs-footer-hover">专家智库</a></li>
+          </ul>
+          <ul class="">
+            <li>关于我们</li>
+            <li>
+              <a target="_blank" href="#" class="higgs-footer-hover">研究方向</a>
+            </li>
+            <li>
+              <a target="_blank" href="#" class="higgs-footer-hover">专家团队</a>
+            </li>
+          </ul>
+          <!-- <ul class="">
               <li>详细介绍</li>
               <li>
                 <span>
@@ -265,50 +181,31 @@
                   >http://base.ipbd.net/pslab/index.html</a
                 >
               </li>
-            </ul>
-            <ul class="footer-lastUl">
-              <li>关注方式</li>
-              <li>
-                <span>
-                  <span
-                    class="wechat"
-                    style="position: relative; cursor: pointer"
-                  >
-                    <img
-                      src="static/image/weixin.png"
-                      style="margin-right: 10px"
-                    />
-                    <span>公众号</span>
-                  </span>
+            </ul> -->
+          <ul class="footer-lastUl">
+            <li>关注方式</li>
+            <li>
+              <span>
+                <span class="wechat" style="position: relative; cursor: pointer">
+                  <img src="static/image/weixin.png" style="margin-right: 10px" />
+                  <span>公众号</span>
                 </span>
-              </li>
-              <div
-                class="code"
-                style="position: absolute; display: none"
-              >
-                <img
-                  src="static/image/QR.jpg"
-                  width="150px"
-                  height="150px"
-                />
-              </div>
-            </ul>
-          </div>
-          <div class="footer-details">
-            <div class="footer-details-box">
-              <p>
-                Copyright©2020-2020 &nbsp;BusinessBigData.
-                All&nbsp;Rights&nbsp;Reserved&nbsp;&nbsp;
-              </p>
-              <span>建议分辨率：1920*1080及以上</span
-              ><span>建议浏览器：Chrome浏览器能带来更好使用体验</span
-              ><span>Chrome及最新IE浏览器</span
-              ><a
-                target="_blank"
-                href="https://browsehappy.com/"
-                >下载</a
-              >
-              <div
+              </span>
+            </li>
+            <div class="code" style="position: absolute; display: none">
+              <img src="static/image/QR.jpg" width="150px" height="150px" />
+            </div>
+          </ul>
+        </div>
+        <div class="footer-details">
+          <div class="footer-details-box">
+            <p>
+              Copyright©2020-2020 &nbsp;BusinessBigData.
+              All&nbsp;Rights&nbsp;Reserved&nbsp;&nbsp;
+            </p>
+            <span>建议分辨率：1920*1080及以上</span><span>建议浏览器：Chrome浏览器能带来更好使用体验</span><span>Chrome及最新IE浏览器</span><a
+              target="_blank" href="https://browsehappy.com/">下载</a>
+            <!-- <div
                 class="footer-police"
                 style="margin-top: 3px"
               >
@@ -330,47 +227,47 @@
                     晋公网安备 14070202000170号
                   </p>
                 </a>
-              </div>
-            </div>
+              </div> -->
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="static/js/index.js"></script>
-    <!-- 导航条 -->
-    <script>
-      var btn1 = document.getElementById('btn1')
-      btn1.onclick = function () {
-        window.location.href = 'data.html'
-      }
-      var btn2 = document.getElementById('btn2')
-      btn2.onclick = function () {
-        window.location.href = 'map.html'
-      }
-      var btn3 = document.getElementById('btn3')
-      btn3.onclick = function () {
-        window.location.href = 'xiangqing.html'
-      }
-      var btn4 = document.getElementById('btn4')
-      btn4.onclick = function () {
-        window.location.href = 'shanxifengcai.html'
-      }
-      var btn5 = document.getElementById('btn5')
-      btn5.onclick = function () {
-        window.location.href = "form.html" 
-        // window.location.href="data.html"
-      }
+  <script src="static/js/index.js"></script>
+  <!-- 导航条 -->
+  <script>
+    var btn1 = document.getElementById('btn1')
+    btn1.onclick = function () {
+      window.location.href = 'data.html'
+    }
+    var btn2 = document.getElementById('btn2')
+    btn2.onclick = function () {
+      window.location.href = 'map.html'
+    }
+    var btn3 = document.getElementById('btn3')
+    btn3.onclick = function () {
+      window.location.href = 'xiangqing.html'
+    }
+    var btn4 = document.getElementById('btn4')
+    btn4.onclick = function () {
+      window.location.href = 'shanxifengcai.html'
+    }
+    var btn5 = document.getElementById('btn5')
+    btn5.onclick = function () {
+      window.location.href = "form.html"
+      // window.location.href="data.html"
+    }
 
-      var container = document.querySelector('.box')
-      var xhr = new XMLHttpRequest()
-      xhr.onload = function () {
-        if (xhr.status == 200) {
-          var data = JSON.parse(xhr.responseText)
-          console.log(data)
-          container.innerHTML = data.cityInfos
-            .map((v, i) => {
-              return `
+    var container = document.querySelector('.box')
+    var xhr = new XMLHttpRequest()
+    xhr.onload = function () {
+      if (xhr.status == 200) {
+        var data = JSON.parse(xhr.responseText)
+        console.log(data)
+        container.innerHTML = data.cityInfos
+          .map((v, i) => {
+            return `
                         <div class="skill-con">
                             
                            <img class="skill-con-pic" src=${v.img}>
@@ -379,14 +276,15 @@
                         </div>
                     </div>
                             `
-            })
-            .join('')
-        }
+          })
+          .join('')
       }
-      xhr.open('GET', '/sxqyhapi/new/cityinfo/infos', true)
-      xhr.setRequestHeader('Content-Type', 'application/json')
-      xhr.send(JSON.stringify())
-    </script>
-    <!-- <script src="static/js/more.js"></script> -->
-  </body>
+    }
+    xhr.open('GET', '/sxqyhapi/new/cityinfo/infos', true)
+    xhr.setRequestHeader('Content-Type', 'application/json')
+    xhr.send(JSON.stringify())
+  </script>
+  <!-- <script src="static/js/more.js"></script> -->
+</body>
+
 </html>

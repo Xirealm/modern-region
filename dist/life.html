@@ -31,7 +31,8 @@
     <header id="home">
 
         <!-- Start Navigation -->
-        <nav class="navbar bg-gray navbar-default attr-border navbar-fixed dark no-background bootsnav" style="position: fixed;background-color: #183158;">
+        <nav class="navbar bg-gray navbar-default attr-border navbar-fixed dark no-background bootsnav"
+            style="position: fixed;background-color: #183158;">
             <div class="container-full">
                 <!-- Start Atribute Navigation -->
                 <!-- <div class="attr-nav" id="logOut">
@@ -40,9 +41,12 @@
                             <li><a href="register.html">注册</a></li>
                         </ul>
                     </div> -->
-                <div class="attr-nav" id="logIn" style="margin-left: 15px; min-height: 90px; padding-left: 10px; position: relative; z-index: 1;">
-                    <a href="geren.html"><img id="personal" src="static/image/user_1.png" alt="" style="position: absolute;margin-left: -50px;margin-top: 30px;" title="个人中心"></a>
-                    <a href="javascript:void(0);"><img id="quit" src="static/image/quit.png" alt="" style="margin-top: 30px;margin-left: 10px;" title="退出登录"></a>
+                <div class="attr-nav" id="logIn"
+                    style="margin-left: 15px; min-height: 90px; padding-left: 10px; position: relative; z-index: 1;">
+                    <a href="geren.html"><img id="personal" src="static/image/user_1.png" alt=""
+                            style="position: absolute;margin-left: -50px;margin-top: 30px;" title="个人中心"></a>
+                    <a href="javascript:void(0);"><img id="quit" src="static/image/quit.png" alt=""
+                            style="margin-top: 30px;margin-left: 10px;" title="退出登录"></a>
                 </div>
                 <!-- End Atribute Navigation -->
 
@@ -55,7 +59,7 @@
                         山西区域化
                     </a> -->
                     <a href="index.html">
-                        <img src="static/image/login1.png" alt="" style="margin-top: 22%;">
+                        <img src="static/image/login1.png" alt="" style="margin-top:70%;">
                     </a>
                 </div>
                 <!-- End Header Navigation -->
@@ -72,10 +76,10 @@
                         <li class="dropdown">
                             <span style="cursor:pointer;" id="btn3">区域可视化</span>
                         </li>
-                        <li class="dropdown">
+                        <!-- <li class="dropdown">
                             <span style="cursor:pointer;" id="btn4">山西风采</span>
-                        </li>
-                     
+                        </li> -->
+
                         <li class="dropdown">
                             <span style="cursor:pointer;" id="btn5">专家智库</span>
                         </li>
@@ -126,7 +130,7 @@
                     <div class="layui-tab-content" style="height: 100px;">
                         <!--基本信息-->
                         <div class="layui-tab-item layui-show">
-    
+
                             <table class="layui-table" id="rtTable" lay-filter="rtTable">
                             </table>
                         </div>
@@ -154,8 +158,8 @@
                     <li><a href="data.html" class="higgs-footer-hover">数据中心</a></li>
                     <li><a href="map.html" class="higgs-footer-hover">空间视窗</a></li>
                     <li><a href="xiangqing.html" class="higgs-footer-hover">区域可视化</a></li>
-                    <li><a href="#" class="higgs-footer-hover">山西风采</a></li>
-               
+                    <!-- <li><a href="#" class="higgs-footer-hover">山西风采</a></li> -->
+
                     <li><a href="form.html" class="higgs-footer-hover">专家智库</a></li>
                 </ul>
                 <ul class="">
@@ -163,7 +167,7 @@
                     <li><a target="_blank" href="#" class="higgs-footer-hover">研究方向</a></li>
                     <li><a target="_blank" href="#" class="higgs-footer-hover">专家团队</a></li>
                 </ul>
-                <ul class="">
+                <!-- <ul class="">
                     <li>详细介绍</li>
                     <li>
                         <span>
@@ -180,7 +184,7 @@
                     </li>
                     <li><a href="http://base.ipbd.net/pslab/index.html">http://base.ipbd.net/pslab/index.html</a>
                     </li>
-                </ul>
+                </ul> -->
                 <ul class="footer-lastUl">
                     <li>关注方式</li>
                     <li>
@@ -202,14 +206,14 @@
                     </p>
                     <span>建议分辨率：1920*1080及以上</span><span>建议浏览器：Chrome浏览器能带来更好使用体验</span><span>Chrome及最新IE浏览器</span><a
                         target="_blank" href="https://browsehappy.com/">下载</a>
-                    <div class="footer-police" style="margin-top:3px">
+                    <!-- <div class="footer-police" style="margin-top:3px">
                         <a target="_blank"
                             href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002001931"
                             style="display: inline-block;text-decoration: none;height: 20px;line-height: 20px;">
                             <img src="static/image/police.png" style="float: left;">
                             <p style="float: left;margin: 0 0 0 5px;">晋公网安备 14070202000170号</p>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -248,11 +252,11 @@
                 let newCol = [{ field: 'name', align: 'center', title: '地区名' },
                 { field: 'labelcn', align: 'center', sort: true, title: '指标' }];
 
-                for(let i = 0; i < year; ++ i) {
+                for (let i = 0;i < year;++i) {
                     let nowYear = 2020 - i;
                     newCol.push(
-                    { field: 'y' + nowYear, align: 'center', sort: true, title: nowYear + '年' }
-                );
+                        { field: 'y' + nowYear, align: 'center', sort: true, title: nowYear + '年' }
+                    );
                 }
                 myCol = newCol;
                 ins1(nowId, "dict_code", "");
@@ -307,8 +311,8 @@
                 dataType: 'json',
                 success: res => {
                     var myData = res.nianduTreeEntities;
-                    for(let i = 0; i < myData.length; ++ i) {
-                        if(myData[i].id == "10016") {
+                    for (let i = 0;i < myData.length;++i) {
+                        if (myData[i].id == "10016") {
                             myData[i].spread = true;
                         }
                     }
@@ -339,20 +343,20 @@
                 url: haha,
                 dataType: 'json',
                 type: 'get',
-                success: (res) => {   
+                success: (res) => {
                     var data2 = [];
-                    for(let i = 0; i < BigYear && i < 14; ++ i) {
+                    for (let i = 0;i < BigYear && i < 14;++i) {
                         let nowYear = 2020 - i;
                         data2.push(nowYear + '');
                     };
                     var data1 = res.page.list;
                     var xAixsData = [];
                     var yAxisData = [];
-                    var bingtuData=[];
-                    for (var i = 0; i < data2.length; i++) {
+                    var bingtuData = [];
+                    for (var i = 0;i < data2.length;i++) {
                         xAixsData.push(data2[i]);
                         yAxisData.push(data1[i].ysum)
-                        bingtuData.push({value:data1[i].ysum,name:data2[i]})
+                        bingtuData.push({ value: data1[i].ysum, name: data2[i] })
                     }
                     var myChart = echarts.init(document.getElementById('main_chart1'));
                     option = {
@@ -376,20 +380,20 @@
                         xAxis: {
                             type: 'category',
                             data: xAixsData,
-                            axisLine:{
-                                    lineStyle:{
-                                        color:'#fff',
-                                    }
+                            axisLine: {
+                                lineStyle: {
+                                    color: '#fff',
                                 }
+                            }
                         },
                         yAxis: {
                             type: 'value',
                             boundaryGap: [0, 0.01],
-                            axisLine:{
-                                    lineStyle:{
-                                        color:'#fff',
-                                    }
+                            axisLine: {
+                                lineStyle: {
+                                    color: '#fff',
                                 }
+                            }
                         },
                         series: [
                             {
@@ -413,9 +417,9 @@
                             orient: 'vertical',
                             left: 10,
                             data: xAixsData,
-                            textStyle:{
-                                color:'#fff',
-                                }
+                            textStyle: {
+                                color: '#fff',
+                            }
                         },
                         toolbox: {
                             feature: {
@@ -456,31 +460,32 @@
     </script>
     <script>
         var quit = document.getElementById("quit");
-        quit.onclick = function() {
+        quit.onclick = function () {
             window.location.href = "index.html";
             localStorage.setItem("login", "false");
         }
-    
+
         var btn1 = document.getElementById("btn1");
-        btn1.onclick = function() {
+        btn1.onclick = function () {
             window.location.href = "data.html"
         }
         var btn2 = document.getElementById("btn2");
-        btn2.onclick = function() {
+        btn2.onclick = function () {
             window.location.href = "map.html"
         }
         var btn3 = document.getElementById("btn3");
-        btn3.onclick = function() {
+        btn3.onclick = function () {
             window.location.href = "xiangqing.html"
         }
         var btn4 = document.getElementById("btn4");
-        btn4.onclick = function() { window.location.href="shanxifengcai.html"
+        btn4.onclick = function () {
+            window.location.href = "shanxifengcai.html"
         }
         var btn5 = document.getElementById("btn5");
-        btn5.onclick = function() { 
+        btn5.onclick = function () {
             window.location.href = "form.html" // window.location.href="data.html"
         }
-        </script>
+    </script>
     <script src="static/js/index.js"></script>
 
 </html>

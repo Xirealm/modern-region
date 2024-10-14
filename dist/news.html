@@ -1,229 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Document</title>
-    <link
-      href="static/css/bootstrap.min1.css"
-      rel="stylesheet"
-    />
-    <link
-      href="static/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="static/css/bootsnav1.css"
-      rel="stylesheet"
-    />
-    <!-- <link
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="static/css/bootstrap.min1.css" rel="stylesheet" />
+  <link href="static/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="static/css/bootsnav1.css" rel="stylesheet" />
+  <!-- <link
       href="static/css/style1.css"
       rel="stylesheet"
     /> -->
-    <link
-      href="static/css/style0.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="dark-layout">
-    <div>
-      <!-- Preloader Start -->
-      <div class="se-pre-con"></div>
-      <!-- Preloader Ends -->
+  <link href="static/css/style0.css" rel="stylesheet" />
+</head>
 
-      <!-- Header 
+<body class="dark-layout">
+  <div>
+    <!-- Preloader Start -->
+    <div class="se-pre-con"></div>
+    <!-- Preloader Ends -->
+
+    <!-- Header 
     ============================================= -->
-      <header id="home">
-        <!-- Start Navigation -->
-        <nav
-          class="navbar bg-gray navbar-default attr-border navbar-fixed dark no-background bootsnav"
-          style="position: fixed; font-size: 30px; background-color: #183158"
-        >
-          <div class="container-full">
-            <!-- Start Atribute Navigation -->
-            <div
-              class="attr-nav"
-              id="logOut"
-            >
-              <ul>
-                <li><a href="login.html">登录</a></li>
-                <li><a href="register.html">注册</a></li>
-              </ul>
-            </div>
-            <div
-              class="attr-nav"
-              id="logIn"
-              style="
+    <header id="home">
+      <!-- Start Navigation -->
+      <nav class="navbar bg-gray navbar-default attr-border navbar-fixed dark no-background bootsnav"
+        style="position: fixed; font-size: 30px; background-color: #183158">
+        <div class="container-full">
+          <!-- Start Atribute Navigation -->
+          <div class="attr-nav" id="logOut">
+            <ul>
+              <li><a href="login.html">登录</a></li>
+              <li><a href="register.html">注册</a></li>
+            </ul>
+          </div>
+          <div class="attr-nav" id="logIn" style="
                 margin-left: 15px;
                 min-height: 90px;
                 padding-left: 10px;
                 position: relative;
                 z-index: 1;
                 display: none;
-              "
-            >
-              <a href="geren.html"
-                ><img
-                  id="personal"
-                  src="static/image/user_1.png"
-                  alt=""
-                  style="
+              ">
+            <a href="geren.html"><img id="personal" src="static/image/user_1.png" alt="" style="
                     position: absolute;
                     margin-left: -50px;
                     margin-top: 30px;
-                  "
-                  title="个人中心"
-              /></a>
-              <a href=""
-                ><img
-                  id="quit"
-                  src="static/image/quit.png"
-                  alt=""
-                  style="margin-top: 30px; margin-left: 10px"
-                  title="退出登录"
-              /></a>
-            </div>
-            <!-- End Atribute Navigation -->
+                  " title="个人中心" /></a>
+            <a href=""><img id="quit" src="static/image/quit.png" alt="" style="margin-top: 30px; margin-left: 10px"
+                title="退出登录" /></a>
+          </div>
+          <!-- End Atribute Navigation -->
 
-            <!-- Start Header Navigation -->
-            <div class="navbar-header">
-              <button
-                type="button"
-                class="navbar-toggle"
-                data-toggle="collapse"
-                data-target="#navbar-menu"
-              >
-                <i class="fa fa-bars"></i>
-              </button>
-              <!-- <a class="navbar-brand" href="index.html" style="margin-top: 15px;">
+          <!-- Start Header Navigation -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+              <i class="fa fa-bars"></i>
+            </button>
+            <!-- <a class="navbar-brand" href="index.html" style="margin-top: 15px;">
                         山西区域化
                     </a> -->
-              <a href="index.html">
-                <img
-                  src="static/image/login1.png"
-                  alt=""
-                  style="margin-top: 22%"
-                />
-              </a>
-            </div>
-            <!-- End Header Navigation -->
+            <a href="index.html">
+              <img src="static/image/login1.png" alt="" style="margin-top: 70%" />
+            </a>
+          </div>
+          <!-- End Header Navigation -->
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div
-              class="collapse navbar-collapse"
-              id="navbar-menu"
-              style="float: left"
-            >
-              <ul
-                class="nav navbar-nav navbar-right"
-                data-in="fadeInDown"
-                data-out="fadeOutUp"
-              >
-                <li class="dropdown">
-                  <span
-                    style="cursor: pointer"
-                    id="btn1"
-                    >数据中心</span
-                  >
-                </li>
-                <li class="dropdown">
-                  <span
-                    style="cursor: pointer"
-                    id="btn2"
-                    >空间视窗</span
-                  >
-                </li>
-                <li class="dropdown">
-                  <span
-                    style="cursor: pointer"
-                    id="btn3"
-                    >区域可视化</span
-                  >
-                </li>
-                <li class="dropdown">
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-menu" style="float: left">
+            <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+              <li class="dropdown">
+                <span style="cursor: pointer" id="btn1">数据中心</span>
+              </li>
+              <li class="dropdown">
+                <span style="cursor: pointer" id="btn2">空间视窗</span>
+              </li>
+              <li class="dropdown">
+                <span style="cursor: pointer" id="btn3">区域可视化</span>
+              </li>
+              <!-- <li class="dropdown">
                   <span
                     style="cursor: pointer"
                     id="btn4"
                     >山西风采</span
                   >
-                </li>
-             
-                <li class="dropdown">
-                  <span style="cursor:pointer;" id="btn5">专家智库</span>
+                </li> -->
+
+              <li class="dropdown">
+                <span style="cursor:pointer;" id="btn5">专家智库</span>
               </li>
-              </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+            </ul>
           </div>
-        </nav>
-        <!-- End Navigation -->
-      </header>
-      <!-- End Header -->
-      <main
-        style="
+          <!-- /.navbar-collapse -->
+        </div>
+      </nav>
+      <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+    <main style="
           display: flex;
           justify-content: center;
           background-color: #fff;
           min-height: 600px;
-        "
-      >
-        <div
-          style="
+        ">
+      <div style="
             width: 1000px;
             margin-top: 100px;
             height: 100%;
             background-color: #fff;
             padding: 10px 20px;
-          "
-        >
-          <h2
-            style="
+          ">
+        <h2 style="
               color: #000;
               height: 120px;
               display: flex;
               justify-content: center;
               align-items: center;
-            "
-            class="article_title"
-          ></h2>
-          <hr style="margin: 0 30px" />
-          <article style="margin: 30px 0"></article>
-          <hr style="margin: 0 30px" />
-          <div class="opt">
-            【
-            <a
-              onclick="window.print();"
-              href="#"
-              >打印此页</a
-            >
-            |
-            <a
-              onclick="window.close();"
-              href="#"
-              >返回顶部</a
-            >
-            】
-          </div>
-          <div
-            style="
+            " class="article_title"></h2>
+        <hr style="margin: 0 30px" />
+        <article style="margin: 30px 0"></article>
+        <hr style="margin: 0 30px" />
+        <div class="opt">
+          【
+          <a onclick="window.print();" href="#">打印此页</a>
+          |
+          <a onclick="window.close();" href="#">返回顶部</a>
+          】
+        </div>
+        <div style="
               background-color: #f8f8f8;
               border: 1px dashed #ccc;
               margin: 10px 55px 0;
               padding: 9px;
-            "
-          >
-            <h4
-              style="
+            ">
+          <h4 style="
                 border-bottom: 1px solid #d1d1d1;
                 height: 36px;
                 margin-bottom: 10px;
-              "
-            >
-              <span
-                style="
+              ">
+            <span style="
                   border-bottom: 1px solid #135a9c;
                   color: #135a9c;
                   display: inline-block;
@@ -231,19 +147,14 @@
                   margin-bottom: -1px;
                   padding: 0 10px;
                   position: relative;
-                "
-                >相关下载</span
-              >
-            </h4>
-            <h4
-              style="
+                ">相关下载</span>
+          </h4>
+          <h4 style="
                 border-bottom: 1px solid #d1d1d1;
                 height: 36px;
                 margin-bottom: 10px;
-              "
-            >
-              <span
-                style="
+              ">
+            <span style="
                   border-bottom: 1px solid #135a9c;
                   color: #135a9c;
                   display: inline-block;
@@ -251,74 +162,47 @@
                   margin-bottom: -1px;
                   padding: 0 10px;
                   position: relative;
-                "
-                >相关链接</span
-              >
-            </h4>
-          </div>
+                ">相关链接</span>
+          </h4>
         </div>
-      </main>
-      <!-- Star Footer
+      </div>
+    </main>
+    <!-- Star Footer
     ============================================= -->
-      <div
-        class="footer"
-        style="margin-top: 0"
-      >
-        <div class="footer-content">
-          <div class="footer-list">
-            <ul class="">
-              <li>产品系列</li>
-              <li>
-                <a
-                  href="data.html"
-                  class="higgs-footer-hover"
-                  >数据中心</a
-                >
-              </li>
-              <li>
-                <a
-                  href="map.html"
-                  class="higgs-footer-hover"
-                  >空间视窗</a
-                >
-              </li>
-              <li>
-                <a
-                  href="xiangqing.html"
-                  class="higgs-footer-hover"
-                  >区域可视化</a
-                >
-              </li>
-              <li>
+    <div class="footer" style="margin-top: 0">
+      <div class="footer-content">
+        <div class="footer-list">
+          <ul class="">
+            <li>产品系列</li>
+            <li>
+              <a href="data.html" class="higgs-footer-hover">数据中心</a>
+            </li>
+            <li>
+              <a href="map.html" class="higgs-footer-hover">空间视窗</a>
+            </li>
+            <li>
+              <a href="xiangqing.html" class="higgs-footer-hover">区域可视化</a>
+            </li>
+            <!-- <li>
                 <a
                   href="shanxifengcai.html"
                   class="higgs-footer-hover"
                   >山西风采</a
                 >
-              </li>
-            
-              <li><a href="form.html" class="higgs-footer-hover">专家智库</a></li>
-            </ul>
-            <ul class="">
-              <li>关于我们</li>
-              <li>
-                <a
-                  target="_blank"
-                  href="#"
-                  class="higgs-footer-hover"
-                  >研究方向</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  href="#"
-                  class="higgs-footer-hover"
-                  >专家团队</a
-                >
-              </li>
-            </ul>
-            <ul class="">
+              </li> -->
+
+            <li><a href="form.html" class="higgs-footer-hover">专家智库</a></li>
+          </ul>
+          <ul class="">
+            <li>关于我们</li>
+            <li>
+              <a target="_blank" href="#" class="higgs-footer-hover">研究方向</a>
+            </li>
+            <li>
+              <a target="_blank" href="#" class="higgs-footer-hover">专家团队</a>
+            </li>
+          </ul>
+          <!-- <ul class="">
               <li>详细介绍</li>
               <li>
                 <span>
@@ -356,47 +240,31 @@
                   >http://base.ipbd.net/pslab/index.html</a
                 >
               </li>
-            </ul>
-            <ul class="footer-lastUl">
-              <li>关注方式</li>
-              <li>
-                <span>
-                  <span
-                    class="wechat"
-                    style="position: relative; cursor: pointer"
-                  >
-                    <img
-                      src="static/image/weixin.png"
-                      style="margin-right: 10px"
-                    />
-                    <span>公众号</span>
-                  </span>
+            </ul> -->
+          <ul class="footer-lastUl">
+            <li>关注方式</li>
+            <li>
+              <span>
+                <span class="wechat" style="position: relative; cursor: pointer">
+                  <img src="static/image/weixin.png" style="margin-right: 10px" />
+                  <span>公众号</span>
                 </span>
-              </li>
-              <div class="code">
-                <img
-                  src="static/image/QR.jpg"
-                  width="150px"
-                  height="150px"
-                />
-              </div>
-            </ul>
-          </div>
-          <div class="footer-details">
-            <div class="footer-details-box">
-              <p>
-                Copyright©2020-2020 &nbsp;BusinessBigData.
-                All&nbsp;Rights&nbsp;Reserved&nbsp;&nbsp;
-              </p>
-              <span>建议分辨率：1920*1080及以上</span
-              ><span>建议浏览器：Chrome浏览器能带来更好使用体验</span
-              ><span>Chrome及最新IE浏览器</span
-              ><a
-                target="_blank"
-                href="https://browsehappy.com/"
-                >下载4</a
-              >
-              <div
+              </span>
+            </li>
+            <div class="code">
+              <img src="static/image/QR.jpg" width="150px" height="150px" />
+            </div>
+          </ul>
+        </div>
+        <div class="footer-details">
+          <div class="footer-details-box">
+            <p>
+              Copyright©2020-2020 &nbsp;BusinessBigData.
+              All&nbsp;Rights&nbsp;Reserved&nbsp;&nbsp;
+            </p>
+            <span>建议分辨率：1920*1080及以上</span><span>建议浏览器：Chrome浏览器能带来更好使用体验</span><span>Chrome及最新IE浏览器</span><a
+              target="_blank" href="https://browsehappy.com/">下载4</a>
+            <!-- <div
                 class="footer-police"
                 style="margin-top: 3px"
               >
@@ -418,63 +286,65 @@
                     晋公网安备 14070202000170号
                   </p>
                 </a>
-              </div>
-            </div>
+              </div> -->
           </div>
         </div>
       </div>
     </div>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script>
-      function getQueryString(name) {
-        const url_string = window.location.href
-        const url = new URL(url_string)
-        return url.searchParams.get(name)
+  </div>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    function getQueryString(name) {
+      const url_string = window.location.href
+      const url = new URL(url_string)
+      return url.searchParams.get(name)
+    }
+    const id = getQueryString('id')
+    const article = document.querySelector('article')
+    const title = document.querySelector('.article_title')
+    var myUrl = '/sxqyhapi/new/news/info/' + id
+    $.ajax({
+      url: myUrl,
+      dataType: 'json',
+      type: 'get',
+      success: (res) => {
+        const news = res.news
+        article.innerHTML = news.info
+        title.innerHTML = news.title
+        document.title = news.title
+      },
+      error: (e) => {
+        console.log(e)
       }
-      const id = getQueryString('id')
-      const article = document.querySelector('article')
-      const title = document.querySelector('.article_title')
-      var myUrl = '/sxqyhapi/new/news/info/' + id
-      $.ajax({
-        url: myUrl,
-        dataType: 'json',
-        type: 'get',
-        success: (res) => {
-          const news = res.news
-          article.innerHTML = news.info
-          title.innerHTML = news.title
-          document.title = news.title
-        },
-        error: (e) => {
-          console.log(e)
-        }
-      })
+    })
 
-      var quit = document.getElementById("quit");
-        quit.onclick = function() {
-            window.location.href = "index.html";
-            localStorage.setItem("login", "false");
-        }
-    
-        var btn1 = document.getElementById("btn1");
-        btn1.onclick = function() {
-            window.location.href = "data.html"
-        }
-        var btn2 = document.getElementById("btn2");
-        btn2.onclick = function() {
-            window.location.href = "map.html"
-        }
-        var btn3 = document.getElementById("btn3");
-        btn3.onclick = function() {
-            window.location.href = "xiangqing.html"
-        }
-        var btn4 = document.getElementById("btn4");
-        btn4.onclick = function() {  window.location.href="shanxifengcai.html"
-        }
-        var btn5 = document.getElementById("btn5");
-        btn5.onclick = function() {
-            window.location.href = "form.html" // window.location.href="data.html"
-        }
-    </script>
-  </body>
+    var quit = document.getElementById("quit");
+    quit.onclick = function () {
+      window.location.href = "index.html";
+      localStorage.setItem("login", "false");
+    }
+
+    var btn1 = document.getElementById("btn1");
+    btn1.onclick = function () {
+      window.location.href = "data.html"
+    }
+    var btn2 = document.getElementById("btn2");
+    btn2.onclick = function () {
+      window.location.href = "map.html"
+    }
+    var btn3 = document.getElementById("btn3");
+    btn3.onclick = function () {
+      window.location.href = "xiangqing.html"
+    }
+    var btn4 = document.getElementById("btn4");
+    btn4.onclick = function () {
+      window.location.href = "shanxifengcai.html"
+    }
+    var btn5 = document.getElementById("btn5");
+    btn5.onclick = function () {
+      window.location.href = "form.html" // window.location.href="data.html"
+    }
+  </script>
+</body>
+
 </html>
