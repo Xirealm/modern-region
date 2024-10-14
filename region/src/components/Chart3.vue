@@ -44,7 +44,7 @@ const option: any = ref({
     left: '5',
     top:'5',
     textStyle: {
-      color: '#000',
+      color: '#fff',
     }
   },
   legend: {
@@ -57,15 +57,15 @@ const option: any = ref({
     source: [],
   },
   textStyle: {
-    fontSize:'14'
+    fontSize: '14'
   },
   xAxis: {
     type: "category",
     axisLabel: {
       interval: 0,
       rotate: 25,
-      color: '#000',
-      fontSize:'13'
+      color: '#fff',
+      fontSize: '13'
     },
   },
   yAxis: {},

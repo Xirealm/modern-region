@@ -37,12 +37,13 @@ const defaultProps = {
 
 <style scoped lang="scss">
 .tree {
-    color: rgb(0, 0, 0);
+    color: white;
     background-color: transparent;
     overflow-y: auto;
     height: 100%;
     font-size: 14px;
     letter-spacing: 1px;
+    --el-tree-node-hover-bg-color:#ffffff55
 }
 
 .tree::-webkit-scrollbar {

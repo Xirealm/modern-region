@@ -63,32 +63,23 @@ const props = defineProps({
 
 const option:any = ref({
   color: [
-    "#ffa409",
-    "#ffa409",
-    "rgba(29, 193, 202, 0.8)",
-    "rgba(29, 193, 202, 0.8)",
-    "rgba(29, 193, 202, 0.8)",
-    "rgba(29, 35, 202, 0.8)",
-    "rgba(29, 35, 202, 0.8)",
-    "rgba(29, 35, 202, 0.8)",
-    "pink",
-    "pink",
-    "rgba(29, 202, 136, 0.8)",
-    "rgba(29, 202, 136, 0.8)",
-    "#4172c3",
-    "#4172c3",
-    "#4172c3",
+    "#acc2ef", "#acc2ef",
+    "#4d648d", "#4d648d", "#4d648d",
+    "#3D5A80", "#3D5A80", "#3D5A80",
+    "#374357", "#374357",
+    "#1f2b3e", "#1f2b3e",
+    "#1F3A5F", "#1F3A5F", "#1F3A5F",
   ],
   title: {
     text: "二级指标",
     left: '5',
     top:'5',
     textStyle: {
-      color: '#000',
+      color: '#fff',
     }
   },
   label: {
-    color: '#000',
+    color: '#fff',
     fontSize:'14'
   },
   tooltip: {
@@ -211,6 +202,7 @@ const onChange = async (value: any) => {
   position: absolute;
   right: 5px;
   top: 5px;
+  width: 200px;
   z-index: 1000;
 }
 </style>
