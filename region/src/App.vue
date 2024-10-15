@@ -8,7 +8,7 @@ import { onMounted, ref } from "vue";
 import { useSecondStore } from "./stores/indicators";
 import { useRegionStore } from "./stores/indicators";
 import axios from "axios";
-
+import '../../region/src/style/index.scss'
 const chart3 = ref()
 const secondStore = useSecondStore()
 const value: {[key: string]: any} = ref([])
@@ -43,6 +43,7 @@ const chart2Changed = () => {
 <template>
   <el-container>
     <el-header class="header">
+      <div class="img"></div>
       <h1 class="title">区域现代化评价指标</h1>
     </el-header>
     <el-main class="main">
@@ -79,9 +80,13 @@ const chart2Changed = () => {
   padding: 0;
 }
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   height: 8vh;
   background-color: #183158;
+  position: relative;
   .title {
     height: 8vh;
     line-height: 8vh;
@@ -90,6 +95,16 @@ const chart2Changed = () => {
     font-weight: 600;
     color: white;
   }
+  .img{
+  background-image: url('../../region/src/assets/logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  left: 100px;
+
+}
 }
 .main {
   // background-color: rgba(216, 216, 216, 0.406);
@@ -150,4 +165,5 @@ const chart2Changed = () => {
     }
   }
 }
+
 </style>

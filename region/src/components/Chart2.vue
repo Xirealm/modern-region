@@ -62,6 +62,7 @@ const props = defineProps({
 
 
 const option:any = ref({
+  
   color: [
     "#acc2ef", "#acc2ef",
     "#4d648d", "#4d648d", "#4d648d",
