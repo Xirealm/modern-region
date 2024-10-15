@@ -3,7 +3,7 @@
     <!-- 删去选中区域 -->
     <el-popover
       placement="bottom"
-      :width="300"
+      :width="400"
       trigger="hover">
       <template #reference>
         <el-button class="delete-btn">已选区域</el-button>
@@ -22,7 +22,7 @@
     </el-popover>
     <el-popover
       placement="bottom"
-      :width="300"
+      :width="340"
       trigger="hover"
     >
       <template #reference>
@@ -39,7 +39,6 @@
           {{ region }}
         </el-button>
       </div>
-
     </el-popover>
     <v-chart class="chart" :option="option" ref="chart" @legendselectchanged="legendselectchanged"/>
   </div>
@@ -84,7 +83,7 @@ const emit = defineEmits<{
     method: "post",
     url: "/api/getRegion/getRegionList"
   })
-  regions.value = res2.data.data
+  regions.value = res2.data.data  
 })();
 
 onMounted(async () => {
@@ -154,7 +153,7 @@ const option:any = ref({
     left: '5',
     top:'5',
     textStyle: {
-      color: '#000',
+      color: '#fff',
     }
   },
   /**取消生成动画 */
@@ -176,7 +175,8 @@ const option:any = ref({
     textStyle: {
       fontSize: '15',
       lineHeight:'15'
-    }
+    },
+    color:'#183158'
   },
   radar: {
     // shape: 'circle',
@@ -189,7 +189,7 @@ const option:any = ref({
       { name: "个人生活指标", max: 100 },
     ],
     axisName: {
-      color: '#000',
+      color: '#fff',
       fontSize:"14"
     },
     /**位置 */
@@ -234,14 +234,14 @@ const legendselectchanged = (e: any) => {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   .btn{
     margin: 0;
   }
 }
 .tags-box{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 8px;
   .tag{
     font-size: 14px;

@@ -88,15 +88,14 @@ const exportPDF = async (region: string) => {
             <!-- </el-upload> -->
             <el-upload class="upload-demo" action="/api/upload" :limit="1" :on-error="upLoadError"
                 :on-success="upLoadSuccess" :show-file-list="false">
-                <el-button type="primary" class="upLoad">上传评价数据文件</el-button>
+                <el-button type="primary" class="upLoad" color="#183158">上传评价数据文件</el-button>
             </el-upload>
-
             <!-- <el-button type="primary" class="upLoad"><label for="upLoad">上传评价数据文件</label></el-button> -->
         </div>
         <div class="btn-box">
-            <el-popover placement="bottom" :width="300" trigger="hover">
+            <el-popover placement="bottom" :width="240" trigger="hover">
                 <template #reference>
-                    <el-button type="primary" class="btn">专家在线评价系统</el-button>
+                    <el-button type="primary" class="btn" color="#183158">专家在线评价系统</el-button>
                 </template>
                 <div class="btn-box2">
                     <el-button v-for="region in regions" :key="region" class="btn" text @click="exportPDF(region)">
@@ -104,13 +103,10 @@ const exportPDF = async (region: string) => {
                     </el-button>
                 </div>
             </el-popover>
-
         </div>
         <div class="btn-box">
-            <el-button type="primary" class="btn" @click="fileUpload">下载评价模板文件</el-button>
+            <el-button type="primary" class="btn" @click="fileUpload" color="#183158">下载评价模板文件</el-button>
         </div>
-
-
     </div>
 </template>
 
@@ -118,6 +114,8 @@ const exportPDF = async (region: string) => {
 h2 {
     font-size: 18px;
     text-align: center;
+    color: white;
+    margin-top: 4px;
 }
 
 .box {
@@ -140,7 +138,7 @@ h2 {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     .btn{
         margin: 0;
     }
