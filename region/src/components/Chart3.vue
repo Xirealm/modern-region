@@ -39,12 +39,13 @@ const emit = defineEmits<{
 }>();
 
 const option: any = ref({
+  
   title: {
     text: "生产与流通指标",
     left: '5',
     top:'5',
     textStyle: {
-      color: '#fff',
+      color: '#000',
     }
   },
   legend: {
@@ -64,11 +65,16 @@ const option: any = ref({
     axisLabel: {
       interval: 0,
       rotate: 25,
-      color: '#fff',
+      color: '#000',
       fontSize: '13'
     },
   },
-  yAxis: {},
+  yAxis: {
+    // axisLabel:{
+    //   color: '#fff',
+    //   fontSize: '13'
+    // }
+  },
   series: [
     {
       type: "bar",

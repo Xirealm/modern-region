@@ -62,6 +62,7 @@ const props = defineProps({
 
 
 const option:any = ref({
+  
   color: [
     "#acc2ef", "#acc2ef",
     "#4d648d", "#4d648d", "#4d648d",
@@ -75,11 +76,11 @@ const option:any = ref({
     left: '5',
     top:'5',
     textStyle: {
-      color: '#fff',
+      color: '#000',
     }
   },
   label: {
-    color: '#fff',
+    color: '#000',
     fontSize:'14'
   },
   tooltip: {

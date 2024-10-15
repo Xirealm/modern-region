@@ -37,7 +37,7 @@ const defaultProps = {
 
 <style scoped lang="scss">
 .tree {
-    color: white;
+    color: black;
     background-color: transparent;
     overflow-y: auto;
     height: 100%;

@@ -35,6 +35,7 @@
           class="btn"
           @click = "increaseRegion(region)"
           text
+          type="primary"
           :disabled = "selectedRegions.includes(region)">
           {{ region }}
         </el-button>
@@ -137,6 +138,7 @@ const handleClose = (region: string) => {
 }
 
 const option:any = ref({
+  
   // color: [
   //   "rgba(202, 29, 29, 0.8)",
   //   "rgba(29, 35, 202, 0.8)",
@@ -144,6 +146,7 @@ const option:any = ref({
   //   "rgba(29, 193, 202, 0.8)",
   //   "rgba(245, 152, 59, 0.8)",
   // ],
+  
   textStyle: {
     fontSize: 14,
     color: "rgba(0,0,0,0.7)",
@@ -153,7 +156,7 @@ const option:any = ref({
     left: '5',
     top:'5',
     textStyle: {
-      color: '#fff',
+      color: '#000',
     }
   },
   /**取消生成动画 */
@@ -174,7 +177,8 @@ const option:any = ref({
     itemWidth: 12,
     textStyle: {
       fontSize: '15',
-      lineHeight:'15'
+      lineHeight:'15',
+      color: "#000",
     },
     color:'#183158'
   },
@@ -189,16 +193,36 @@ const option:any = ref({
       { name: "个人生活指标", max: 100 },
     ],
     axisName: {
-      color: '#fff',
+      color: '#000',
       fontSize:"14"
     },
     /**位置 */
     center: ["50%", "50%"],
+    // splitLine:{
+    //   lineStyle:{
+    //     color:'rgba(255,255,255,0.3)'
+    //   }
+    // },
+    // splitArea:{
+    //   areaStyle:{
+    //     color:['rgba(255,255,255,0.05)','rgba(255,255,255,0.1)']
+    //   }
+    // }
   },
   series: [
     {
       type: "radar",
       data: primaryIndicators.value,
+      // lineStyle:{
+      //   width:2,
+      //   color:"rgba(75,192,192,0.7)"
+      // },
+      // itemStyle:{
+      //   color:"rgba(75,192,192,0.7)"
+      // },
+      // areaStyle:{
+      //   color:"rgba(75,192,192,0.3)"
+      // }
     },
   ],
 });
@@ -211,6 +235,7 @@ const legendselectchanged = (e: any) => {
 
 <style scoped>
 .chart1{
+  /* background-color: var(--ep-color-primary); */
   position: relative;
 }
 .chart {

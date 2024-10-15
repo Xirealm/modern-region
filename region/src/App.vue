@@ -8,7 +8,7 @@ import { onMounted, ref } from "vue";
 import { useSecondStore } from "./stores/indicators";
 import { useRegionStore } from "./stores/indicators";
 import axios from "axios";
-
+import '../../region/src/style/index.scss'
 const chart3 = ref()
 const secondStore = useSecondStore()
 const value: {[key: string]: any} = ref([])
@@ -79,9 +79,13 @@ const chart2Changed = () => {
   padding: 0;
 }
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   height: 8vh;
   background-color: #183158;
+  position: relative;
   .title {
     height: 8vh;
     line-height: 8vh;
@@ -90,14 +94,24 @@ const chart2Changed = () => {
     font-weight: 600;
     color: white;
   }
+  .img{
+  background-image: url('../../region/src/assets/logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  left: 100px;
+
+}
 }
 .main {
   // background-color: rgba(216, 216, 216, 0.406);
-  background-color: #07162f;
+  background: linear-gradient(150deg, #ececec 0%, #b5b7bc90 100%);
   height: 92vh;
   padding: 30px;
   .tree-box {
-    background-color: rgba(200, 200, 200, 0.4);
+    background-color: white;
     border-radius: 15px;
     // border: 1px solid var(--el-border-color);
     box-shadow: var(--el-box-shadow-lighter);
@@ -116,14 +130,14 @@ const chart2Changed = () => {
       grid-template-columns: 1fr 1fr;
       gap: 20px;
       .chart1 {
-        background-color: #545d6c;
+        background-color: white;
         height: 100%;
         border-radius: 15px;
         // border: 1px solid var(--el-border-color);
         box-shadow: var(--el-box-shadow-lighter)
       }
       .chart2 {
-        background-color: #545d6c;
+        background-color: white;
         height: 100%;
         border-radius: 15px;
         // border: 1px solid var(--el-border-color);
@@ -136,13 +150,13 @@ const chart2Changed = () => {
       grid-template-columns: 5fr 1fr;
       gap: 20px;
       .chart3 {
-        background-color: #545d6c;
+        background-color: white;
         border-radius: 15px;
         // border: 1px solid var(--el-border-color);
         box-shadow: var(--el-box-shadow-lighter)
       }
       .chart4 {
-        background-color: #545d6c;
+        background-color: white;
         border-radius: 15px;
         // border: 1px solid var(--el-border-color);
         box-shadow: var(--el-box-shadow-lighter)
@@ -150,4 +164,5 @@ const chart2Changed = () => {
     }
   }
 }
+
 </style>
