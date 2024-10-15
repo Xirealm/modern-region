@@ -76,11 +76,11 @@ const option:any = ref({
     left: '5',
     top:'5',
     textStyle: {
-      color: '#fff',
+      color: '#000',
     }
   },
   label: {
-    color: '#fff',
+    color: '#000',
     fontSize:'14'
   },
   tooltip: {

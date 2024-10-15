@@ -34,7 +34,7 @@
           :key="region"
           class="btn"
           @click = "increaseRegion(region)"
-          plain
+          text
           type="primary"
           :disabled = "selectedRegions.includes(region)">
           {{ region }}
@@ -156,7 +156,7 @@ const option:any = ref({
     left: '5',
     top:'5',
     textStyle: {
-      color: '#fff',
+      color: '#000',
     }
   },
   /**取消生成动画 */
@@ -178,8 +178,7 @@ const option:any = ref({
     textStyle: {
       fontSize: '15',
       lineHeight:'15',
-      color: "#fff",
-      fontWeight: 'bold',
+      color: "#000",
     },
     color:'#183158'
   },
@@ -194,21 +193,21 @@ const option:any = ref({
       { name: "个人生活指标", max: 100 },
     ],
     axisName: {
-      color: '#fff',
+      color: '#000',
       fontSize:"14"
     },
     /**位置 */
     center: ["50%", "50%"],
-    splitLine:{
-      lineStyle:{
-        color:'rgba(255,255,255,0.3)'
-      }
-    },
-    splitArea:{
-      areaStyle:{
-        color:['rgba(255,255,255,0.05)','rgba(255,255,255,0.1)']
-      }
-    }
+    // splitLine:{
+    //   lineStyle:{
+    //     color:'rgba(255,255,255,0.3)'
+    //   }
+    // },
+    // splitArea:{
+    //   areaStyle:{
+    //     color:['rgba(255,255,255,0.05)','rgba(255,255,255,0.1)']
+    //   }
+    // }
   },
   series: [
     {

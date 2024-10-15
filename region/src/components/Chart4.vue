@@ -114,7 +114,7 @@ const exportPDF = async (region: string) => {
 h2 {
     font-size: 18px;
     text-align: center;
-    color: white;
+    color: black;
     margin-top: 4px;
 }
 

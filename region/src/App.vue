@@ -43,7 +43,6 @@ const chart2Changed = () => {
 <template>
   <el-container>
     <el-header class="header">
-      <div class="img"></div>
       <h1 class="title">区域现代化评价指标</h1>
     </el-header>
     <el-main class="main">
@@ -108,11 +107,11 @@ const chart2Changed = () => {
 }
 .main {
   // background-color: rgba(216, 216, 216, 0.406);
-  background-color: #07162f;
+  background: linear-gradient(150deg, #ececec 0%, #b5b7bc90 100%);
   height: 92vh;
   padding: 30px;
   .tree-box {
-    background-color: rgba(200, 200, 200, 0.4);
+    background-color: white;
     border-radius: 15px;
     // border: 1px solid var(--el-border-color);
     box-shadow: var(--el-box-shadow-lighter);
@@ -131,14 +130,14 @@ const chart2Changed = () => {
       grid-template-columns: 1fr 1fr;
       gap: 20px;
       .chart1 {
-        background-color: #545d6c;
+        background-color: white;
         height: 100%;
         border-radius: 15px;
         // border: 1px solid var(--el-border-color);
         box-shadow: var(--el-box-shadow-lighter)
       }
       .chart2 {
-        background-color: #545d6c;
+        background-color: white;
         height: 100%;
         border-radius: 15px;
         // border: 1px solid var(--el-border-color);
@@ -151,13 +150,13 @@ const chart2Changed = () => {
       grid-template-columns: 5fr 1fr;
       gap: 20px;
       .chart3 {
-        background-color: #545d6c;
+        background-color: white;
         border-radius: 15px;
         // border: 1px solid var(--el-border-color);
         box-shadow: var(--el-box-shadow-lighter)
       }
       .chart4 {
-        background-color: #545d6c;
+        background-color: white;
         border-radius: 15px;
         // border: 1px solid var(--el-border-color);
         box-shadow: var(--el-box-shadow-lighter)
