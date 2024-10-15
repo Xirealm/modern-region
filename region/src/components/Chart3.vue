@@ -39,6 +39,7 @@ const emit = defineEmits<{
 }>();
 
 const option: any = ref({
+  
   title: {
     text: "生产与流通指标",
     left: '5',
@@ -68,7 +69,12 @@ const option: any = ref({
       fontSize: '13'
     },
   },
-  yAxis: {},
+  yAxis: {
+    axisLabel:{
+      color: '#fff',
+      fontSize: '13'
+    }
+  },
   series: [
     {
       type: "bar",

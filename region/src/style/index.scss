@@ -1,0 +1,9 @@
+
+@forward '../../../region/node_modules/element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #183158,
+    ),
+  ),
+);
+@use "../../../region/node_modules/element-plus/theme-chalk/src/index.scss"; 

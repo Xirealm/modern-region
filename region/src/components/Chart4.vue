@@ -95,10 +95,10 @@ const exportPDF = async (region: string) => {
         <div class="btn-box">
             <el-popover placement="bottom" :width="240" trigger="hover">
                 <template #reference>
-                    <el-button type="primary" class="btn" color="#183158">专家在线评价系统</el-button>
+                    <el-button  class="btn" color="#183158" type="primary" >专家在线评价系统</el-button>
                 </template>
                 <div class="btn-box2">
-                    <el-button v-for="region in regions" :key="region" class="btn" text @click="exportPDF(region)">
+                    <el-button v-for="region in regions" :key="region" class="btn" plain type="primary" @click="exportPDF(region)">
                         {{ region }}
                     </el-button>
                 </div>
@@ -125,6 +125,7 @@ h2 {
     justify-content: space-between;
     height: 60%;
     margin-top: 25%;
+    
 }
 
 .fileSelect {
